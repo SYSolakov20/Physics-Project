@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+
+$backgroundColor: rgba(231, 231, 231, 1);
+$CardsBgColor: rgba(255, 255, 255, 1);
+
+.websiteBody {
+  margin: 0;
+  overflow-x: hidden;
+}
+.Page {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+.Page-outer {
+  z-index: 1;
+}
+.Frame {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  margin-left: 0;
+  height: 3632px;
+  min-width: 200px;
+  max-width: 1920px;
+  margin: auto;
+  background-color: #ffffff;
+}
+.Frame-outer {
+  z-index: 2;
+}
+.waves-1 {
+  position: relative;
+  z-index: 4;
+  pointer-events: none;
+  margin-left: 0px;
+  width: 1920px;
+  min-width: 1920px;
+  height: 821px;
+  margin-top: 0px;
+  margin-bottom: 2811px;
+  min-height: 821px;
+}
+.wave-1-outer {
+  pointer-events: none;
+  z-index: 4;
+  position: relative;
+  display: flex;
+}
