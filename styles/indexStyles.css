@@ -52,4 +52,109 @@
   display: -ms-flexbox;
   display: flex;
 }
+
+.Rectangle-1 {
+  position: relative;
+  z-index: 3;
+  pointer-events: none;
+  margin-left: 0px;
+  width: 1920px;
+  min-width: 1920px;
+  height: 3632px;
+  margin-top: -3632px;
+  margin-bottom: 0px;
+  min-height: 3632px;
+  background-color: #e7e7e7;
+}
+
+.Rectangle-1-outer {
+  pointer-events: none;
+  z-index: 3;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ChessIt {
+  position: relative;
+  z-index: 7;
+  pointer-events: none;
+  margin-left: 129px;
+  width: 363px;
+  min-width: 363px;
+  margin-top: -3554px;
+  margin-bottom: 3403px;
+  min-height: 151px;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: #e7e7e7;
+  font-style: normal;
+  font-family: TeX Gyre Adventor;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 153px;
+}
+
+.ChessIt-outer {
+  pointer-events: none;
+  z-index: 7;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main {
+  position: relative;
+  z-index: 16;
+  pointer-events: none;
+  margin-left: 1029px;
+  width: 739px;
+  min-width: 739px;
+  height: 576px;
+  margin-top: -3501px;
+  margin-bottom: 2925px;
+  min-height: 576px;
+}
+
+.main-outer {
+  pointer-events: none;
+  z-index: 16;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.iMac-Pro-Front-View- {
+  position: relative;
+  z-index: 14;
+  pointer-events: none;
+  margin-left: 1110px;
+  width: 573px;
+  min-width: 573px;
+  height: 476px;
+  margin-top: -3386px;
+  margin-bottom: 2910px;
+  min-height: 476px;
+}
+
+.iMac-Pro-Front-View--outer {
+  pointer-events: none;
+  z-index: 14;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 /*# sourceMappingURL=indexStyles.css.map */
