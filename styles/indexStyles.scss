@@ -159,3 +159,81 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   position: relative;
   display: flex;
 }
+.Group-1{
+  position:relative;
+  z-index:17;
+  pointer-events:none;
+  margin-left:365px;
+  width:1189px;
+  min-width:1189px;
+  height:716px;
+  margin-top:-2465px;
+  margin-bottom:1749px;
+  min-height:716px;
+}
+.Group-1-outer{
+  pointer-events:none;
+  z-index:17;
+  position:relative;
+  display:flex;
+}
+.Rectangle-7{
+  position:relative;
+  z-index:22;
+  pointer-events:none;
+  margin-left:873px;
+  width:316px;
+  min-width:316px;
+  height:316px;
+  margin-top:0px;
+  margin-bottom:400px;
+  min-height:316px;
+  background-color:$CardsBgColor;
+  border-radius:30px;
+}
+.Rectangle-7-outer{
+  pointer-events:none;
+  z-index:22;
+  position:relative;
+  display:flex;
+}
+.Rectangle-5{
+  position:relative;
+  z-index:20;
+  pointer-events:none;
+  margin-left:445px;
+  width:316px;
+  min-width:316px;
+  height:316px;
+  margin-top:-716px;
+  margin-bottom:400px;
+  min-height:316px;
+  background-color:$CardsBgColor;
+  border-radius:30px;
+}
+.Rectangle-5-outer{
+  pointer-events:none;
+  z-index:20;
+  position:relative;
+  display:flex;
+}
+.Rectangle-3{
+  position:relative;
+  z-index:18;
+  pointer-events:none;
+  margin-left:0px;
+  width:316px;
+  min-width:316px;
+  height:316px;
+  margin-top:-716px;
+  margin-bottom:400px;
+  min-height:316px;
+  background-color:$CardsBgColor;
+  border-radius:30px;
+}
+.Rectangle-3-outer{
+  pointer-events:none;
+  z-index:18;
+  position:relative;
+  display:flex;
+}
