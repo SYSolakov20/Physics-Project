@@ -157,4 +157,43 @@
   display: -ms-flexbox;
   display: flex;
 }
+
+.BENEFITS {
+  position: relative;
+  z-index: 33;
+  pointer-events: none;
+  margin-left: 806px;
+  width: 308px;
+  min-width: 308px;
+  margin-top: -2663px;
+  margin-bottom: 2613px;
+  min-height: 50px;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: #1c1c1c;
+  font-style: normal;
+  font-family: Comfortaa;
+  font-weight: 300;
+  font-size: 48px;
+  letter-spacing: 9.6px;
+  line-height: 24px;
+}
+
+.BENEFITS-outer {
+  pointer-events: none;
+  z-index: 33;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 /*# sourceMappingURL=indexStyles.css.map */

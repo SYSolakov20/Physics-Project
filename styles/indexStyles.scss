@@ -95,39 +95,67 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   display: flex;
 }
 
-.main{
-  position:relative;
-  z-index:16;
-  pointer-events:none;
-  margin-left:1029px;
-  width:739px;
-  min-width:739px;
-  height:576px;
-  margin-top:-3501px;
-  margin-bottom:2925px;
-  min-height:576px;
+.main {
+  position: relative;
+  z-index: 16;
+  pointer-events: none;
+  margin-left: 1029px;
+  width: 739px;
+  min-width: 739px;
+  height: 576px;
+  margin-top: -3501px;
+  margin-bottom: 2925px;
+  min-height: 576px;
 }
-.main-outer{
-  pointer-events:none;
-  z-index:16;
-  position:relative;
-  display:flex;
+.main-outer {
+  pointer-events: none;
+  z-index: 16;
+  position: relative;
+  display: flex;
 }
-.iMac-Pro-Front-View-{
-  position:relative;
-  z-index:14;
-  pointer-events:none;
-  margin-left:1110px;
-  width:573px;
-  min-width:573px;
-  height:476px;
-  margin-top:-3386px;
-  margin-bottom:2910px;
-  min-height:476px;
+.iMac-Pro-Front-View- {
+  position: relative;
+  z-index: 14;
+  pointer-events: none;
+  margin-left: 1110px;
+  width: 573px;
+  min-width: 573px;
+  height: 476px;
+  margin-top: -3386px;
+  margin-bottom: 2910px;
+  min-height: 476px;
 }
-.iMac-Pro-Front-View--outer{
-  pointer-events:none;
-  z-index:14;
-  position:relative;
-  display:flex;
+.iMac-Pro-Front-View--outer {
+  pointer-events: none;
+  z-index: 14;
+  position: relative;
+  display: flex;
+}
+.BENEFITS {
+  position: relative;
+  z-index: 33;
+  pointer-events: none;
+  margin-left: 806px;
+  width: 308px;
+  min-width: 308px;
+  margin-top: -2663px;
+  margin-bottom: 2613px;
+  min-height: 50px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: rgba(28, 28, 28, 1);
+  font-style: normal;
+  font-family: Comfortaa;
+  font-weight: 300;
+  font-size: 48px;
+  letter-spacing: 9.6px;
+  line-height: 24px;
+}
+.BENEFITS-outer {
+  pointer-events: none;
+  z-index: 33;
+  position: relative;
+  display: flex;
 }
