@@ -95,39 +95,145 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   display: flex;
 }
 
-.main{
-  position:relative;
-  z-index:16;
-  pointer-events:none;
-  margin-left:1029px;
-  width:739px;
-  min-width:739px;
-  height:576px;
-  margin-top:-3501px;
-  margin-bottom:2925px;
-  min-height:576px;
+.main {
+  position: relative;
+  z-index: 16;
+  pointer-events: none;
+  margin-left: 1029px;
+  width: 739px;
+  min-width: 739px;
+  height: 576px;
+  margin-top: -3501px;
+  margin-bottom: 2925px;
+  min-height: 576px;
 }
-.main-outer{
+.main-outer {
+  pointer-events: none;
+  z-index: 16;
+  position: relative;
+  display: flex;
+}
+.iMac-Pro-Front-View- {
+  position: relative;
+  z-index: 14;
+  pointer-events: none;
+  margin-left: 1110px;
+  width: 573px;
+  min-width: 573px;
+  height: 476px;
+  margin-top: -3386px;
+  margin-bottom: 2910px;
+  min-height: 476px;
+}
+.iMac-Pro-Front-View--outer {
+  pointer-events: none;
+  z-index: 14;
+  position: relative;
+  display: flex;
+}
+.BENEFITS {
+  position: relative;
+  z-index: 33;
+  pointer-events: none;
+  margin-left: 806px;
+  width: 308px;
+  min-width: 308px;
+  margin-top: -2663px;
+  margin-bottom: 2613px;
+  min-height: 50px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: rgba(28, 28, 28, 1);
+  font-style: normal;
+  font-family: Comfortaa;
+  font-weight: 300;
+  font-size: 48px;
+  letter-spacing: 9.6px;
+  line-height: 24px;
+}
+.BENEFITS-outer {
+  pointer-events: none;
+  z-index: 33;
+  position: relative;
+  display: flex;
+}
+.Group-1{
+  position:relative;
+  z-index:17;
   pointer-events:none;
-  z-index:16;
+  margin-left:365px;
+  width:1189px;
+  min-width:1189px;
+  height:716px;
+  margin-top:-2465px;
+  margin-bottom:1749px;
+  min-height:716px;
+}
+.Group-1-outer{
+  pointer-events:none;
+  z-index:17;
   position:relative;
   display:flex;
 }
-.iMac-Pro-Front-View-{
+.Rectangle-7{
   position:relative;
-  z-index:14;
+  z-index:22;
   pointer-events:none;
-  margin-left:1110px;
-  width:573px;
-  min-width:573px;
-  height:476px;
-  margin-top:-3386px;
-  margin-bottom:2910px;
-  min-height:476px;
+  margin-left:873px;
+  width:316px;
+  min-width:316px;
+  height:316px;
+  margin-top:0px;
+  margin-bottom:400px;
+  min-height:316px;
+  background-color:$CardsBgColor;
+  border-radius:30px;
 }
-.iMac-Pro-Front-View--outer{
+.Rectangle-7-outer{
   pointer-events:none;
-  z-index:14;
+  z-index:22;
+  position:relative;
+  display:flex;
+}
+.Rectangle-5{
+  position:relative;
+  z-index:20;
+  pointer-events:none;
+  margin-left:445px;
+  width:316px;
+  min-width:316px;
+  height:316px;
+  margin-top:-716px;
+  margin-bottom:400px;
+  min-height:316px;
+  background-color:$CardsBgColor;
+  border-radius:30px;
+}
+.Rectangle-5-outer{
+  pointer-events:none;
+  z-index:20;
+  position:relative;
+  display:flex;
+}
+.Rectangle-3{
+  position:relative;
+  z-index:18;
+  pointer-events:none;
+  margin-left:0px;
+  width:316px;
+  min-width:316px;
+  height:316px;
+  margin-top:-716px;
+  margin-bottom:400px;
+  min-height:316px;
+  background-color:$CardsBgColor;
+  border-radius:30px;
+}
+.Rectangle-3-outer{
+  pointer-events:none;
+  z-index:18;
   position:relative;
   display:flex;
 }

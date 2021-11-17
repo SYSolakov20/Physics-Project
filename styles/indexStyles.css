@@ -157,4 +157,137 @@
   display: -ms-flexbox;
   display: flex;
 }
+
+.BENEFITS {
+  position: relative;
+  z-index: 33;
+  pointer-events: none;
+  margin-left: 806px;
+  width: 308px;
+  min-width: 308px;
+  margin-top: -2663px;
+  margin-bottom: 2613px;
+  min-height: 50px;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: #1c1c1c;
+  font-style: normal;
+  font-family: Comfortaa;
+  font-weight: 300;
+  font-size: 48px;
+  letter-spacing: 9.6px;
+  line-height: 24px;
+}
+
+.BENEFITS-outer {
+  pointer-events: none;
+  z-index: 33;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Group-1 {
+  position: relative;
+  z-index: 17;
+  pointer-events: none;
+  margin-left: 365px;
+  width: 1189px;
+  min-width: 1189px;
+  height: 716px;
+  margin-top: -2465px;
+  margin-bottom: 1749px;
+  min-height: 716px;
+}
+
+.Group-1-outer {
+  pointer-events: none;
+  z-index: 17;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Rectangle-7 {
+  position: relative;
+  z-index: 22;
+  pointer-events: none;
+  margin-left: 873px;
+  width: 316px;
+  min-width: 316px;
+  height: 316px;
+  margin-top: 0px;
+  margin-bottom: 400px;
+  min-height: 316px;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.Rectangle-7-outer {
+  pointer-events: none;
+  z-index: 22;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Rectangle-5 {
+  position: relative;
+  z-index: 20;
+  pointer-events: none;
+  margin-left: 445px;
+  width: 316px;
+  min-width: 316px;
+  height: 316px;
+  margin-top: -716px;
+  margin-bottom: 400px;
+  min-height: 316px;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.Rectangle-5-outer {
+  pointer-events: none;
+  z-index: 20;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Rectangle-3 {
+  position: relative;
+  z-index: 18;
+  pointer-events: none;
+  margin-left: 0px;
+  width: 316px;
+  min-width: 316px;
+  height: 316px;
+  margin-top: -716px;
+  margin-bottom: 400px;
+  min-height: 316px;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.Rectangle-3-outer {
+  pointer-events: none;
+  z-index: 18;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 /*# sourceMappingURL=indexStyles.css.map */
