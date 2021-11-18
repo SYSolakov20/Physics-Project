@@ -1,5 +1,9 @@
 #include <iostream>
 #include <iomanip>
+#define RED     "\033[31m"
+#define YELLOW  "\033[33m"
+#define RESET   "\033[0m"
+#define BOLDYELLOW  "\033[1m\033[33m"
 
 using namespace std;
 
@@ -40,13 +44,12 @@ void simpleSimulation()
 	switchOff:
 		{
 			system("cls");
-			system("color 0f");
 			cout << " ============= +| |- ===============" << endl;
 			cout << "||" << setw(35) << "||" << endl;
 			cout << "||" << setw(35) << "||" << endl;
 			cout << "||" << setw(35) << "||" << endl;
 			cout << "||" << setw(35) << "||" << endl;
-			cout << "/ " << setw(37) << "( x )" << endl;
+			cout << RED << "/ " << RESET << setw(37) << "( x )" << endl;
 			cout << "||" << setw(35) << "||" << endl;
 			cout << "||" << setw(35) << "||" << endl;
 			cout << "||" << setw(35) << "||" << endl;
@@ -87,14 +90,13 @@ void simpleSimulation()
 	switchOn:
 		{
 			system("cls");
-			system("color f0");
 			cout << " ============= +| |- ===============" << endl;
 			cout << "||" << setw(35) << "||" << endl;
 			cout << "||" << setw(35) << "||" << endl;
 			cout << "||" << setw(35) << "||" << endl;
-			cout << "||" << setw(35) << "||" << endl;
-			cout << "| " << setw(37) << "( x )" << endl;
-			cout << "||" << setw(35) << "||" << endl;
+			cout << "||" << setw(42) << BOLDYELLOW << "||" << RESET <<endl;
+			cout << "| " << setw(37) << YELLOW << "( x )" <<RESET<< endl;
+			cout << "||" << setw(42) << BOLDYELLOW << "||" << RESET << endl;
 			cout << "||" << setw(35) << "||" << endl;
 			cout << "||" << setw(35) << "||" << endl;
 			cout << "||" << setw(35) << "||" << endl;
