@@ -1,5 +1,6 @@
-#include <iostream>
+﻿#include <iostream>
 #include <iomanip>
+
 #define RED     "\033[31m"
 #define YELLOW  "\033[33m"
 #define RESET   "\033[0m"
@@ -33,9 +34,11 @@ void simulationMenu()
 	cout << endl << " Select >> ";
 }
 
+
+
 void simpleSimulation()
 {
-	int now;
+	int nextChoise;
 
 	goto switchOff;
 
@@ -44,17 +47,34 @@ void simpleSimulation()
 	switchOff:
 		{
 			system("cls");
-			cout << " ============= +| |- ===============" << endl;
-			cout << "||" << setw(35) << "||" << endl;
-			cout << "||" << setw(35) << "||" << endl;
-			cout << "||" << setw(35) << "||" << endl;
-			cout << "||" << setw(35) << "||" << endl;
-			cout << RED << "/ " << RESET << setw(37) << "( x )" << endl;
-			cout << "||" << setw(35) << "||" << endl;
-			cout << "||" << setw(35) << "||" << endl;
-			cout << "||" << setw(35) << "||" << endl;
-			cout << "||" << setw(35) << "||" << endl;
-			cout << " ===================================" << endl << endl;
+
+			cout << endl;
+			cout << " " << char(201);
+			for (int i = 0; i < 14; i++)
+			{
+				cout << char(205);
+			}
+			cout << " +| |- ";
+			for (int i = 0; i < 14; i++)
+			{
+				cout << char(205);
+			}
+			cout << char(187) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << RED << " / " << RESET << setw(37) << "( x )" << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(200);
+			for (int i = 0; i < 35; i++)
+			{
+				cout << char(205);
+			}
+			cout << char(188) << endl << endl;
 
 			cout << " What do you want to do now?" << endl;
 			cout << " ________________________________________" << endl << endl;
@@ -62,25 +82,25 @@ void simpleSimulation()
 			cout << " 2) Information about this simulation" << endl;
 			cout << " 3) Go back to simulation menu" << endl;
 			cout << " Select >> ";
-			cin >> now;
+			cin >> nextChoise;
 
-			if (now == 1)
+			if (nextChoise == 1)
 			{
 				goto switchOn;
 			}
-			else if (now == 2)
+			else if (nextChoise == 2)
 			{
 				system("cls");
 				cout << "Some information" << endl;
 				cout << "When you are ready press 1 " << endl;
-				cin >> now;
+				cin >> nextChoise;
 
-				if (now == 1)
+				if (nextChoise == 1)
 				{
 					goto switchOff;
 				}
 			}
-			else if (now == 3)
+			else if (nextChoise == 3)
 			{
 				break;
 
@@ -90,17 +110,34 @@ void simpleSimulation()
 	switchOn:
 		{
 			system("cls");
-			cout << " ============= +| |- ===============" << endl;
-			cout << "||" << setw(35) << "||" << endl;
-			cout << "||" << setw(35) << "||" << endl;
-			cout << "||" << setw(35) << "||" << endl;
-			cout << "||" << setw(42) << BOLDYELLOW << "||" << RESET <<endl;
-			cout << "| " << setw(37) << YELLOW << "( x )" <<RESET<< endl;
-			cout << "||" << setw(42) << BOLDYELLOW << "||" << RESET << endl;
-			cout << "||" << setw(35) << "||" << endl;
-			cout << "||" << setw(35) << "||" << endl;
-			cout << "||" << setw(35) << "||" << endl;
-			cout << " ===================================" << endl << endl;
+
+			cout << endl;
+			cout << " " << char(201);
+			for (int i = 0; i < 14; i++)
+			{
+				cout << char(205);
+			}
+			cout << " +| |- ";
+			for (int i = 0; i < 14; i++)
+			{
+				cout << char(205);
+			}
+			cout << char(187) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET <<endl;
+			cout << " | " << setw(37) << YELLOW << "( x )" << RESET<< endl;
+			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(200);
+			for (int i = 0; i < 35; i++)
+			{
+				cout << char(205);
+			}
+			cout << char(188) << endl << endl;
 
 			cout << " What do you want to do now?" << endl;
 			cout << " ________________________________________" << endl << endl;
@@ -108,25 +145,25 @@ void simpleSimulation()
 			cout << " 2) Information about this simulation" << endl;
 			cout << " 3) Go back to simulation menu" << endl;
 			cout << " Select >> ";
-			cin >> now;
+			cin >> nextChoise;
 
-			if (now == 1)
+			if (nextChoise == 1)
 			{
 				goto switchOff;
 			}
-			else if (now == 2)
+			else if (nextChoise == 2)
 			{
 				system("cls");
 				cout << "Some information" << endl;
 				cout << "When you are ready press 1 " << endl;
-				cin >> now;
+				cin >> nextChoise;
 
-				if (now == 1)
+				if (nextChoise == 1)
 				{
 					goto switchOn;
 				}
 			}
-			else if (now == 3)
+			else if (nextChoise == 3)
 			{
 				break;
 
