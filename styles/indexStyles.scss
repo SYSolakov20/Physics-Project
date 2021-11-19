@@ -190,6 +190,19 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   min-height:316px;
   background-color:$CardsBgColor;
   border-radius:30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.TextInCards{
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #000000;
 }
 .Rectangle-7-outer{
   pointer-events:none;
@@ -404,4 +417,12 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   z-index:27;
   position:relative;
   display:flex;
+}
+.wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.quote{
+    font-size: 19px;
 }
