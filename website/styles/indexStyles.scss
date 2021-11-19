@@ -1,0 +1,442 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+
+$backgroundColor: rgba(231, 231, 231, 1);
+$CardsBgColor: rgba(255, 255, 255, 1);
+
+.websiteBody {
+  margin: 0;
+  overflow-x: hidden;
+}
+.Page {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+.Page-outer {
+  z-index: 1;
+}
+.Frame {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  margin-left: 0;
+  height: 3632px;
+  min-width: 200px;
+  max-width: 1920px;
+  margin: auto;
+  background-color: #ffffff;
+}
+.Frame-outer {
+  z-index: 2;
+}
+.waves-1 {
+  position: relative;
+  z-index: 4;
+  pointer-events: none;
+  margin-left: 0px;
+  width: 1920px;
+  min-width: 1920px;
+  height: 821px;
+  margin-top: 0px;
+  margin-bottom: 2811px;
+  min-height: 821px;
+}
+.wave-1-outer {
+  pointer-events: none;
+  z-index: 4;
+  position: relative;
+  display: flex;
+}
+.Rectangle-1 {
+  position: relative;
+  z-index: 3;
+  pointer-events: none;
+  margin-left: 0px;
+  width: 1920px;
+  min-width: 1920px;
+  height: 3632px;
+  margin-top: -3632px;
+  margin-bottom: 0px;
+  min-height: 3632px;
+  background-color: $backgroundColor;
+}
+.Rectangle-1-outer {
+  pointer-events: none;
+  z-index: 3;
+  position: relative;
+  display: flex;
+}
+.ChessIt {
+  position: relative;
+  z-index: 7;
+  pointer-events: none;
+  margin-left: 129px;
+  width: 363px;
+  min-width: 363px;
+  margin-top: -3554px;
+  margin-bottom: 3403px;
+  min-height: 151px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: $backgroundColor;
+  font-style: normal;
+  font-family: TeX Gyre Adventor;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 153px;
+}
+.ChessIt-outer {
+  pointer-events: none;
+  z-index: 7;
+  position: relative;
+  display: flex;
+}
+
+.main {
+  position: relative;
+  z-index: 16;
+  pointer-events: none;
+  margin-left: 1029px;
+  width: 739px;
+  min-width: 739px;
+  height: 576px;
+  margin-top: -3501px;
+  margin-bottom: 2925px;
+  min-height: 576px;
+}
+.main-outer {
+  pointer-events: none;
+  z-index: 16;
+  position: relative;
+  display: flex;
+}
+.iMac-Pro-Front-View- {
+  position: relative;
+  z-index: 14;
+  pointer-events: none;
+  margin-left: 1110px;
+  width: 573px;
+  min-width: 573px;
+  height: 476px;
+  margin-top: -3386px;
+  margin-bottom: 2910px;
+  min-height: 476px;
+}
+.iMac-Pro-Front-View--outer {
+  pointer-events: none;
+  z-index: 14;
+  position: relative;
+  display: flex;
+}
+.BENEFITS {
+  position: relative;
+  z-index: 33;
+  pointer-events: none;
+  margin-left: 806px;
+  width: 308px;
+  min-width: 308px;
+  margin-top: -2663px;
+  margin-bottom: 2613px;
+  min-height: 50px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: rgba(28, 28, 28, 1);
+  font-style: normal;
+  font-family: Comfortaa;
+  font-weight: 300;
+  font-size: 48px;
+  letter-spacing: 9.6px;
+  line-height: 24px;
+}
+.BENEFITS-outer {
+  pointer-events: none;
+  z-index: 33;
+  position: relative;
+  display: flex;
+}
+.Group-1{
+  position:relative;
+  z-index:17;
+  pointer-events:none;
+  margin-left:365px;
+  width:1189px;
+  min-width:1189px;
+  height:716px;
+  margin-top:-2465px;
+  margin-bottom:1749px;
+  min-height:716px;
+}
+.Group-1-outer{
+  pointer-events:none;
+  z-index:17;
+  position:relative;
+  display:flex;
+}
+.Rectangle-7{
+  position:relative;
+  z-index:22;
+  pointer-events:none;
+  margin-left:873px;
+  width:316px;
+  min-width:316px;
+  height:316px;
+  margin-top:0px;
+  margin-bottom:400px;
+  min-height:316px;
+  background-color:$CardsBgColor;
+  border-radius:30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.TextInCards{
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #000000;
+  margin-top: 70px;
+}
+.Rectangle-7-outer{
+  pointer-events:none;
+  z-index:22;
+  position:relative;
+  display:flex;
+}
+.Rectangle-5{
+  position:relative;
+  z-index:20;
+  pointer-events:none;
+  margin-left:445px;
+  width:316px;
+  min-width:316px;
+  height:316px;
+  margin-top:-716px;
+  margin-bottom:400px;
+  min-height:316px;
+  background-color:$CardsBgColor;
+  border-radius:30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Rectangle-5-outer{
+  pointer-events:none;
+  z-index:20;
+  position:relative;
+  display:flex;
+}
+.Rectangle-3{
+  position:relative;
+  z-index:18;
+  pointer-events:none;
+  margin-left:0px;
+  width:316px;
+  min-width:316px;
+  height:316px;
+  margin-top:-716px;
+  margin-bottom:400px;
+  min-height:316px;
+  background-color:$CardsBgColor;
+  border-radius:30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Rectangle-3-outer{
+  pointer-events:none;
+  z-index:18;
+  position:relative;
+  display:flex;
+}
+.Ellipse-3{
+  position:relative;
+  z-index:26;
+  pointer-events:none;
+  margin-left:890px;
+  width:73px;
+  min-width:73px;
+  height:73px;
+  margin-top:-685px;
+  margin-bottom:612px;
+  min-height:73px;
+}
+.Ellipse-3-outer{
+  pointer-events:none;
+  z-index:26;
+  position:relative;
+  display:flex;
+}
+.Ellipse-2{
+  position:relative;
+  z-index:25;
+  pointer-events:none;
+  margin-left:482px;
+  width:73px;
+  min-width:73px;
+  height:73px;
+  margin-top:-685px;
+  margin-bottom:612px;
+  min-height:73px;
+}
+.Ellipse-2-outer{
+  pointer-events:none;
+  z-index:25;
+  position:relative;
+  display:flex;
+}
+.Ellipse-1{
+  position:relative;
+  z-index:24;
+  pointer-events:none;
+  margin-left:35px;
+  width:73px;
+  min-width:73px;
+  height:73px;
+  margin-top:-685px;
+  margin-bottom:612px;
+  min-height:73px;
+}
+.Ellipse-1-outer{
+  pointer-events:none;
+  z-index:24;
+  position:relative;
+  display:flex;
+}
+.Rectangle-4{
+  position:relative;
+  z-index:23;
+  pointer-events:none;
+  margin-left:0px;
+  width:316px;
+  min-width:316px;
+  height:316px;
+  margin-top:-316px;
+  margin-bottom:0px;
+  min-height:316px;
+  background-color:$CardsBgColor;
+  border-radius:30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Rectangle-4-outer{
+  pointer-events:none;
+  z-index:23;
+  position:relative;
+  display:flex;
+}
+.Rectangle-8{
+  position:relative;
+  z-index:21;
+  pointer-events:none;
+  margin-left:873px;
+  width:316px;
+  min-width:316px;
+  height:316px;
+  margin-top:-316px;
+  margin-bottom:0px;
+  min-height:316px;
+  background-color:$CardsBgColor;
+  border-radius:30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Rectangle-8-outer{
+  pointer-events:none;
+  z-index:21;
+  position:relative;
+  display:flex;
+}
+.Rectangle-6{
+  position:relative;
+  z-index:19;
+  pointer-events:none;
+  margin-left:445px;
+  width:316px;
+  min-width:316px;
+  height:316px;
+  margin-top:-316px;
+  margin-bottom:0px;
+  min-height:316px;
+  background-color:$CardsBgColor;
+  border-radius:30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Rectangle-6-outer{
+  pointer-events:none;
+  z-index:19;
+  position:relative;
+  display:flex;
+}
+.Ellipse-6{
+  position:relative;
+  z-index:29;
+  pointer-events:none;
+  margin-left:35px;
+  width:73px;
+  min-width:73px;
+  height:73px;
+  margin-top:-294px;
+  margin-bottom:221px;
+  min-height:73px;
+}
+.Ellipse-6-outer{
+  pointer-events:none;
+  z-index:29;
+  position:relative;
+  display:flex;
+}
+.Ellipse-5{
+  position:relative;
+  z-index:28;
+  pointer-events:none;
+  margin-left:482px;
+  width:73px;
+  min-width:73px;
+  height:73px;
+  margin-top:-294px;
+  margin-bottom:221px;
+  min-height:73px;
+}
+.Ellipse-5-outer{
+  pointer-events:none;
+  z-index:28;
+  position:relative;
+  display:flex;
+}
+.Ellipse-4{
+  position:relative;
+  z-index:27;
+  pointer-events:none;
+  margin-left:890px;
+  width:73px;
+  min-width:73px;
+  height:73px;
+  margin-top:-287px;
+  margin-bottom:214px;
+  min-height:73px;
+}
+.Ellipse-4-outer{
+  pointer-events:none;
+  z-index:27;
+  position:relative;
+  display:flex;
+}
+.wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

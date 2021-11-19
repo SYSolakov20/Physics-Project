@@ -1,0 +1,40 @@
+$mainColor:white;
+$secondColor:#D1D1D1;
+$accentColor:#31A351;
+$specialColor:#5A5A5A;
+$mainTextColor:black;
+$secondTextColor:white;
+
+$inputColor:rgba(0, 0, 0, 0.5);
+
+$smallFontSize:1rem;
+$normalFontSize:1.5rem;
+$bigFontSize:2.5rem;
+$normalLetterSpacing:0.2em;
+$bigLetterSpacing:0.4em;
+
+@mixin flex($direction, $mainAxis){
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: $mainAxis;
+}
+
+html,body{
+    width:100%;
+    height:100%; 
+    padding: 0px;
+    margin:0px;
+    scroll-behavior: smooth;
+}
+body{
+    font-size:62.5%;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color:$mainTextColor;
+}
+
