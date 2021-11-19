@@ -409,6 +409,15 @@
   min-height: 316px;
   background-color: white;
   border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .Rectangle-4-outer {
@@ -433,6 +442,15 @@
   min-height: 316px;
   background-color: white;
   border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .Rectangle-8-outer {
@@ -457,6 +475,15 @@
   min-height: 316px;
   background-color: white;
   border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .Rectangle-6-outer {
@@ -544,9 +571,5 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.quote {
-  font-size: 19px;
 }
 /*# sourceMappingURL=indexStyles.css.map */

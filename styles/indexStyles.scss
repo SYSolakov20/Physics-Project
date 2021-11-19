@@ -324,6 +324,9 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   min-height:316px;
   background-color:$CardsBgColor;
   border-radius:30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .Rectangle-4-outer{
   pointer-events:none;
@@ -344,6 +347,9 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   min-height:316px;
   background-color:$CardsBgColor;
   border-radius:30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .Rectangle-8-outer{
   pointer-events:none;
@@ -364,6 +370,9 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   min-height:316px;
   background-color:$CardsBgColor;
   border-radius:30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .Rectangle-6-outer{
   pointer-events:none;
@@ -430,6 +439,4 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   justify-content: center;
   align-items: center;
 }
-.quote{
-    font-size: 19px;
-}
+
