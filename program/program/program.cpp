@@ -29,11 +29,158 @@ void simulationMenu()
 	cout << " 1) Simulation with lamp" << endl;
 	cout << " 2) Simulation with lamp and ammeter" << endl;
 	cout << " 3) Simulation with lamp and voltmeter" << endl;
-	cout << " 4) Back" << endl;
+	cout << " 4) Simulation with lamp, ammeter and voltmeter" << endl;
+	cout << " 5) Back" << endl;
 	cout << " ___________________________________________" << endl;
 	cout << endl << " Select >> ";
 }
 
+void ammeterSimulation()
+{
+	int nextChoise;
+
+	goto switchOff;
+
+	while (true)
+	{
+	switchOff:
+		{
+			system("cls");
+
+			cout << endl;
+			cout << " " << char(201);
+			for (int i = 0; i < 14; i++)
+			{
+				cout << char(205);
+			}
+			cout << " +| |- ";
+			for (int i = 0; i < 14; i++)
+			{
+				cout << char(205);
+			}
+			cout << char(187) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << RED << " / " << RESET << setw(37) << "( x )" << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(200);
+			for (int i = 0; i < 15; i++)
+			{
+				cout << char(205);
+			}
+			cout << "( A )";
+			for (int i = 0; i < 15; i++)
+			{
+				cout << char(205);
+			}
+			cout << char(188) << endl << endl;
+
+			cout << " What do you want to do now?" << endl;
+			cout << " ________________________________________" << endl << endl;
+			cout << " 1) Turn the lamp on" << endl;
+			cout << " 2) Information about this simulation" << endl;
+			cout << " 3) Go back to simulation menu" << endl;
+			cout << " Select >> ";
+			cin >> nextChoise;
+
+			if (nextChoise == 1)
+			{
+				goto switchOn;
+			}
+			else if (nextChoise == 2)
+			{
+				system("cls");
+				cout << "Some information" << endl;
+				cout << "When you are ready press 1 " << endl;
+				cin >> nextChoise;
+
+				if (nextChoise == 1)
+				{
+					goto switchOff;
+				}
+			}
+			else if (nextChoise == 3)
+			{
+				break;
+
+			}
+		}
+
+	switchOn:
+		{
+			system("cls");
+
+			cout << endl;
+			cout << " " << char(201);
+			for (int i = 0; i < 14; i++)
+			{
+				cout << char(205);
+			}
+			cout << " +| |- ";
+			for (int i = 0; i < 14; i++)
+			{
+				cout << char(205);
+			}
+			cout << char(187) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << endl;
+			cout << " | " << setw(37) << YELLOW << "( x )" << RESET << endl;
+			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(200);
+			for (int i = 0; i < 15; i++)
+			{
+				cout << char(205);
+			}
+			cout << "( A )";
+			for (int i = 0; i < 15; i++)
+			{
+				cout << char(205);
+			}
+			cout << char(188) << endl << endl;
+
+			cout << " What do you want to do now?" << endl;
+			cout << " ________________________________________" << endl << endl;
+			cout << " 1) Turn the lamp off" << endl;
+			cout << " 2) Information about this simulation" << endl;
+			cout << " 3) Go back to simulation menu" << endl;
+			cout << " Select >> ";
+			cin >> nextChoise;
+
+			if (nextChoise == 1)
+			{
+				goto switchOff;
+			}
+			else if (nextChoise == 2)
+			{
+				system("cls");
+				cout << "Some information" << endl;
+				cout << "When you are ready press 1 " << endl;
+				cin >> nextChoise;
+
+				if (nextChoise == 1)
+				{
+					goto switchOn;
+				}
+			}
+			else if (nextChoise == 3)
+			{
+				break;
+
+			}
+		}
+
+	}
+}
 
 
 void simpleSimulation()
@@ -177,8 +324,12 @@ int main()
 {
 	int activity;
 
-	Menu();
-	cin >> activity;
+	start:
+		{
+			Menu();
+			cin >> activity;
+		}
+	
 
 	int simulationChoise;
 
@@ -198,7 +349,23 @@ int main()
 				simpleSimulation();
 				goto simulations;
 			}
+			else if (simulationChoise == 2)
+			{
+				system("cls");
+				ammeterSimulation();
+				goto simulations;
+			}
+			else if (simulationChoise == 5)
+			{
+				system("cls");
+				goto start;
+			}
 		}
 
+	}
+	else if (activity == 4)
+	{
+		system("cls");
+		cout << "Bye!";
 	}
 }
