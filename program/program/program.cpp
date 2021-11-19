@@ -1,5 +1,7 @@
 ﻿#include <iostream>
 #include <iomanip>
+#include <fstream>
+#include <string>
 
 #define RED     "\033[31m"
 #define YELLOW  "\033[33m"
@@ -35,9 +37,10 @@ void simulationMenu()
 	cout << endl << " Select >> ";
 }
 
-void ammeterSimulation()
+void simpleSimulation()
 {
 	int nextChoise;
+	int finishReading;
 
 	goto switchOff;
 
@@ -46,6 +49,192 @@ void ammeterSimulation()
 	switchOff:
 		{
 			system("cls");
+			system("color 0f");
+
+			cout << endl;
+			cout << " " << char(201);
+			for (int i = 0; i < 14; i++)
+			{
+				cout << char(205);
+			}
+			cout << " +| |- ";
+			for (int i = 0; i < 14; i++)
+			{
+				cout << char(205);
+			}
+			cout << char(187) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << RED << " / " << RESET << setw(37) << "( x )" << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(200);
+			for (int i = 0; i < 35; i++)
+			{
+				cout << char(205);
+			}
+			cout << char(188) << endl << endl;
+
+			cout << " What do you want to do now?" << endl;
+			cout << " ________________________________________" << endl << endl;
+			cout << " 1) Turn the lamp on" << endl;
+			cout << " 2) Information about this simulation" << endl;
+			cout << " 3) Go back to simulation menu" << endl;
+			cout << " Select >> ";
+			cin >> nextChoise;
+
+			if (nextChoise == 1)
+			{
+				goto switchOn;
+			}
+			else if (nextChoise == 2)
+			{
+				system("cls");
+
+				cout << "This is information about our simple simulation" << endl;
+				
+				// Create a text string, which is used to output the text file
+				string Information;
+
+				// Read from the text file
+				ifstream readFile("Information/simpleInformation.txt");
+
+				//Read the file line by line
+				while (getline(readFile, Information))
+				{
+					system("color f0");
+					// Output the text from the file
+					cout << Information;
+				}
+
+				// Close the file
+				readFile.close();
+
+				cin >> finishReading;
+
+				if (finishReading == 1)
+				{
+					goto switchOff;
+				}
+				else
+				{
+
+				}
+			}
+			else if (nextChoise == 3)
+			{
+				break;
+
+			}
+		}
+
+	switchOn:
+		{
+			system("cls");
+			system("color 0f");
+
+			cout << endl;
+			cout << " " << char(201);
+			for (int i = 0; i < 14; i++)
+			{
+				cout << char(205);
+			}
+			cout << " +| |- ";
+			for (int i = 0; i < 14; i++)
+			{
+				cout << char(205);
+			}
+			cout << char(187) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << endl;
+			cout << " | " << setw(37) << YELLOW << "( x )" << RESET << endl;
+			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(200);
+			for (int i = 0; i < 35; i++)
+			{
+				cout << char(205);
+			}
+			cout << char(188) << endl << endl;
+
+			cout << " What do you want to do now?" << endl;
+			cout << " ________________________________________" << endl << endl;
+			cout << " 1) Turn the lamp off" << endl;
+			cout << " 2) Information about this simulation" << endl;
+			cout << " 3) Go back to simulation menu" << endl;
+			cout << " Select >> ";
+			cin >> nextChoise;
+
+			if (nextChoise == 1)
+			{
+				goto switchOff;
+			}
+			else if (nextChoise == 2)
+			{
+				system("cls");
+
+				cout << "This is information about our simple simulation" << endl;
+
+				// Create a text string, which is used to output the text file
+				string Information;
+
+				// Read from the text file
+				ifstream readFile("Information/simpleInformation.txt");
+
+				//Read the file line by line
+				while (getline(readFile, Information)) 
+				{
+					system("color f0");
+					// Output the text from the file
+					cout << Information;
+				}
+
+				// Close the file
+				readFile.close();
+
+				
+				cin >> finishReading;
+
+				if (finishReading == 1)
+				{
+					goto switchOn;
+				}
+				else 
+				{
+
+				}
+			}
+			else if (nextChoise == 3)
+			{
+				break;
+
+			}
+		}
+
+	}
+}
+
+void ammeterSimulation()
+{
+	int nextChoise;
+	int finishReading;
+
+	goto switchOff;
+
+	while (true)
+	{
+	switchOff:
+		{
+			system("cls");
+			system("color 0f");
 
 			cout << endl;
 			cout << " " << char(201);
@@ -95,14 +284,38 @@ void ammeterSimulation()
 			else if (nextChoise == 2)
 			{
 				system("cls");
-				cout << "Some information" << endl;
-				cout << "When you are ready press 1 " << endl;
-				cin >> nextChoise;
 
-				if (nextChoise == 1)
+				cout << "This is information about our ammeter simulation" << endl;
+
+				// Create a text string, which is used to output the text file
+				string Information;
+
+				// Read from the text file
+				ifstream readFile("Information/ammeterInformation.txt");
+
+				//Read the file line by line
+				while (getline(readFile, Information))
+				{
+					system("color f0");
+					// Output the text from the file
+					cout << Information;
+				}
+
+				// Close the file
+				readFile.close();
+
+
+				cin >> finishReading;
+
+				if (finishReading == 1)
 				{
 					goto switchOff;
 				}
+				else
+				{
+
+				}
+				
 			}
 			else if (nextChoise == 3)
 			{
@@ -114,6 +327,7 @@ void ammeterSimulation()
 	switchOn:
 		{
 			system("cls");
+			system("color 0f");
 
 			cout << endl;
 			cout << " " << char(201);
@@ -163,14 +377,38 @@ void ammeterSimulation()
 			else if (nextChoise == 2)
 			{
 				system("cls");
-				cout << "Some information" << endl;
-				cout << "When you are ready press 1 " << endl;
-				cin >> nextChoise;
 
-				if (nextChoise == 1)
+				cout << "This is information about our ammeter simulation" << endl;
+
+				// Create a text string, which is used to output the text file
+				string Information;
+
+				// Read from the text file
+				ifstream readFile("Information/ammeterInformation.txt");
+
+				//Read the file line by line
+				while (getline(readFile, Information))
+				{
+					system("color f0");
+					// Output the text from the file
+					cout << Information;
+				}
+
+				// Close the file
+				readFile.close();
+
+
+				cin >> finishReading;
+
+				if (finishReading == 1)
 				{
 					goto switchOn;
 				}
+				else
+				{
+
+				}
+				
 			}
 			else if (nextChoise == 3)
 			{
@@ -185,6 +423,7 @@ void ammeterSimulation()
 void voltmeterSimulation()
 {
 	int nextChoise;
+	int finishReading;
 
 	goto switchOff;
 
@@ -193,6 +432,7 @@ void voltmeterSimulation()
 	switchOff:
 		{
 			system("cls");
+			system("color 0f");
 
 			cout << endl;
 			cout << " " << char(201);
@@ -237,13 +477,36 @@ void voltmeterSimulation()
 			else if (nextChoise == 2)
 			{
 				system("cls");
-				cout << "Some information" << endl;
-				cout << "When you are ready press 1 " << endl;
-				cin >> nextChoise;
 
-				if (nextChoise == 1)
+				cout << "This is information about our voltmeter simulation" << endl;
+
+				// Create a text string, which is used to output the text file
+				string Information;
+
+				// Read from the text file
+				ifstream readFile("Information/voltmeterInformation.txt");
+
+				//Read the file line by line
+				while (getline(readFile, Information))
+				{
+					system("color f0");
+					// Output the text from the file
+					cout << Information;
+				}
+
+				// Close the file
+				readFile.close();
+
+
+				cin >> finishReading;
+
+				if (finishReading == 1)
 				{
 					goto switchOff;
+				}
+				else
+				{
+
 				}
 			}
 			else if (nextChoise == 3)
@@ -256,6 +519,7 @@ void voltmeterSimulation()
 	switchOn:
 		{
 			system("cls");
+			system("color 0f");
 
 			cout << endl;
 			cout << " " << char(201);
@@ -300,151 +564,36 @@ void voltmeterSimulation()
 			else if (nextChoise == 2)
 			{
 				system("cls");
-				cout << "Some information" << endl;
-				cout << "When you are ready press 1 " << endl;
-				cin >> nextChoise;
 
-				if (nextChoise == 1)
+				cout << "This is information about our voltmeter simulation" << endl;
+
+				// Create a text string, which is used to output the text file
+				string Information;
+
+				// Read from the text file
+				ifstream readFile("Information/voltmeterInformation.txt");
+
+				//Read the file line by line
+				while (getline(readFile, Information))
+				{
+					system("color f0");
+					// Output the text from the file
+					cout << Information;
+				}
+
+				// Close the file
+				readFile.close();
+
+
+				cin >> finishReading;
+
+				if (finishReading == 1)
 				{
 					goto switchOn;
 				}
-			}
-			else if (nextChoise == 3)
-			{
-				break;
-
-			}
-		}
-
-	}
-}
-
-
-void simpleSimulation()
-{
-	int nextChoise;
-
-	goto switchOff;
-
-	while (true)
-	{
-	switchOff:
-		{
-			system("cls");
-
-			cout << endl;
-			cout << " " << char(201);
-			for (int i = 0; i < 14; i++)
-			{
-				cout << char(205);
-			}
-			cout << " +| |- ";
-			for (int i = 0; i < 14; i++)
-			{
-				cout << char(205);
-			}
-			cout << char(187) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << RED << " / " << RESET << setw(37) << "( x )" << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(200);
-			for (int i = 0; i < 35; i++)
-			{
-				cout << char(205);
-			}
-			cout << char(188) << endl << endl;
-
-			cout << " What do you want to do now?" << endl;
-			cout << " ________________________________________" << endl << endl;
-			cout << " 1) Turn the lamp on" << endl;
-			cout << " 2) Information about this simulation" << endl;
-			cout << " 3) Go back to simulation menu" << endl;
-			cout << " Select >> ";
-			cin >> nextChoise;
-
-			if (nextChoise == 1)
-			{
-				goto switchOn;
-			}
-			else if (nextChoise == 2)
-			{
-				system("cls");
-				cout << "Some information" << endl;
-				cout << "When you are ready press 1 " << endl;
-				cin >> nextChoise;
-
-				if (nextChoise == 1)
+				else
 				{
-					goto switchOff;
-				}
-			}
-			else if (nextChoise == 3)
-			{
-				break;
 
-			}
-		}
-
-	switchOn:
-		{
-			system("cls");
-
-			cout << endl;
-			cout << " " << char(201);
-			for (int i = 0; i < 14; i++)
-			{
-				cout << char(205);
-			}
-			cout << " +| |- ";
-			for (int i = 0; i < 14; i++)
-			{
-				cout << char(205);
-			}
-			cout << char(187) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET <<endl;
-			cout << " | " << setw(37) << YELLOW << "( x )" << RESET<< endl;
-			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(200);
-			for (int i = 0; i < 35; i++)
-			{
-				cout << char(205);
-			}
-			cout << char(188) << endl << endl;
-
-			cout << " What do you want to do now?" << endl;
-			cout << " ________________________________________" << endl << endl;
-			cout << " 1) Turn the lamp off" << endl;
-			cout << " 2) Information about this simulation" << endl;
-			cout << " 3) Go back to simulation menu" << endl;
-			cout << " Select >> ";
-			cin >> nextChoise;
-
-			if (nextChoise == 1)
-			{
-				goto switchOff;
-			}
-			else if (nextChoise == 2)
-			{
-				system("cls");
-				cout << "Some information" << endl;
-				cout << "When you are ready press 1 " << endl;
-				cin >> nextChoise;
-
-				if (nextChoise == 1)
-				{
-					goto switchOn;
 				}
 			}
 			else if (nextChoise == 3)
@@ -460,6 +609,7 @@ void simpleSimulation()
 void ammmeterAndVoltmeterSimulation()
 {
 	int nextChoise;
+	int finishReading;
 
 	goto switchOff;
 
@@ -468,6 +618,7 @@ void ammmeterAndVoltmeterSimulation()
 	switchOff:
 		{
 			system("cls");
+			system("color 0f");
 
 			cout << endl;
 			cout << " " << char(201);
@@ -517,13 +668,36 @@ void ammmeterAndVoltmeterSimulation()
 			else if (nextChoise == 2)
 			{
 				system("cls");
-				cout << "Some information" << endl;
-				cout << "When you are ready press 1 " << endl;
-				cin >> nextChoise;
 
-				if (nextChoise == 1)
+				cout << "This is information about our ammeter and voltmeter simulation" << endl;
+
+				// Create a text string, which is used to output the text file
+				string Information;
+
+				// Read from the text file
+				ifstream readFile("Information/ammeterAndVoltmeterSimulation.txt");
+
+				//Read the file line by line
+				while (getline(readFile, Information))
+				{
+					system("color f0");
+					// Output the text from the file
+					cout << Information;
+				}
+
+				// Close the file
+				readFile.close();
+
+
+				cin >> finishReading;
+
+				if (finishReading == 1)
 				{
 					goto switchOff;
+				}
+				else
+				{
+
 				}
 			}
 			else if (nextChoise == 3)
@@ -536,6 +710,7 @@ void ammmeterAndVoltmeterSimulation()
 	switchOn:
 		{
 			system("cls");
+			system("color 0f");
 
 			cout << endl;
 			cout << " " << char(201);
@@ -585,13 +760,36 @@ void ammmeterAndVoltmeterSimulation()
 			else if (nextChoise == 2)
 			{
 				system("cls");
-				cout << "Some information" << endl;
-				cout << "When you are ready press 1 " << endl;
-				cin >> nextChoise;
 
-				if (nextChoise == 1)
+				cout << "This is information about our ammeter and voltmeter simulation" << endl;
+
+				// Create a text string, which is used to output the text file
+				string Information;
+
+				// Read from the text file
+				ifstream readFile("Information/ammeterAndVoltmeterSimulation.txt");
+
+				//Read the file line by line
+				while (getline(readFile, Information))
+				{
+					system("color f0");
+					// Output the text from the file
+					cout << Information;
+				}
+
+				// Close the file
+				readFile.close();
+
+
+				cin >> finishReading;
+
+				if (finishReading == 1)
 				{
 					goto switchOn;
+				}
+				else
+				{
+
 				}
 			}
 			else if (nextChoise == 3)
