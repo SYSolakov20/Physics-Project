@@ -447,66 +447,91 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   position: relative;
   display: flex;
 }
-.SecondaryText{
-  position:relative;
-  z-index:32;
-  margin-left:1003px;
-  width:495px;
-  min-width:495px;
-  height:232px;
-  margin-top:-1214px;
-  margin-bottom:982px;
-  min-height:232px;
+.SecondaryText {
+  position: relative;
+  z-index: 32;
+  margin-left: 1003px;
+  width: 495px;
+  min-width: 495px;
+  height: 232px;
+  margin-top: -1214px;
+  margin-bottom: 982px;
+  min-height: 232px;
   font-family: Comfortaa;
   font-size: 24px;
   line-height: 27px;
   letter-spacing: 0.1em;
 }
-.SecondaryText-outer{
-  z-index:32;
-  position:relative;
-  display:flex;
+.SecondaryText-outer {
+  z-index: 32;
+  position: relative;
+  display: flex;
 }
-.Group-3-outer{
-  pointer-events:none;
-  z-index:11;
-  position:relative;
-  display:flex;
+.Group-3-outer {
+  pointer-events: none;
+  z-index: 11;
+  position: relative;
+  display: flex;
 }
-.Group-3{
-  position:relative;
-  z-index:11;
-  margin-left:993px;
-  width:303px;
-  min-width:303px;
-  height:72px;
-  margin-top:-900px;
-  margin-bottom:828px;
-  min-height:72px;
-  filter:drop-shadow(5px 7px 20px rgba(0, 0, 0, 0.25));
+.Group-3 {
+  position: relative;
+  z-index: 11;
+  margin-left: 993px;
+  width: 303px;
+  min-width: 303px;
+  height: 72px;
+  margin-top: -900px;
+  margin-bottom: 828px;
+  min-height: 72px;
+  filter: drop-shadow(5px 7px 20px rgba(0, 0, 0, 0.25));
 }
-.Rectangle-2-outer{
-  z-index:12;
-  position:relative;
-  display:flex;
+.Rectangle-2-outer {
+  z-index: 12;
+  position: relative;
+  display: flex;
 }
-.Rectangle-2{
-  position:relative;
-  z-index:12;
-  margin-left:0px;
-  width:293px;
-  min-width:293px;
-  height:72px;
-  margin-top:0px;
-  margin-bottom:0px;
-  min-height:72px;
-  background-color:rgba(238, 238, 238, 1);
-  border-radius:40px;
+.Rectangle-2 {
+  position: relative;
+  z-index: 12;
+  margin-left: 0px;
+  width: 293px;
+  min-width: 293px;
+  height: 72px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  min-height: 72px;
+  background-color: rgba(238, 238, 238, 1);
+  border-radius: 40px;
   font-family: TeX Gyre Adventor;
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
   line-height: 55px;
-  color: #4542C1;
+  color: #4542c1;
   border: none;
+}
+.Copyright-c-2021-New {
+  position: relative;
+  z-index: 31;
+  margin-left: 717px;
+  width: 520px;
+  min-width: 520px;
+  margin-top: -176px;
+  margin-bottom: 106px;
+  min-height: 70px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  font-style: normal;
+  font-family: Comfortaa;
+  font-weight: 400;
+  font-size: 31px;
+  letter-spacing: 3.1px;
+  line-height: 35px;
+}
+.Copyright-c-2021-New-outer {
+  z-index: 31;
+  position: relative;
+  display: flex;
 }
