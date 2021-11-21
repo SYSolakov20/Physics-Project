@@ -572,4 +572,26 @@
       -ms-flex-align: center;
           align-items: center;
 }
+
+.iPhone-12-Pro-Mockup {
+  position: relative;
+  z-index: 6;
+  pointer-events: none;
+  margin-left: 171px;
+  width: 898px;
+  min-width: 898px;
+  height: 1061px;
+  margin-top: -1558px;
+  margin-bottom: 497px;
+  min-height: 1061px;
+}
+
+.iPhone-12-Pro-Mockup-outer {
+  pointer-events: none;
+  z-index: 6;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 /*# sourceMappingURL=indexStyles.css.map */
