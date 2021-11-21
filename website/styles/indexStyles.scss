@@ -457,3 +457,32 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   position: relative;
   display: flex;
 }
+.CONTACT-SUPPORT{
+  position:relative;
+  z-index:34;
+  pointer-events:none;
+  margin-left:993px;
+  width:907px;
+  min-width:907px;
+  margin-top:-1333px;
+  margin-bottom:1259px;
+  min-height:74px;
+  text-align:left;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  color:rgba(28, 28, 28, 1);
+  font-style:normal;
+  font-family:Comfortaa;
+  font-weight:300;
+  font-size:55px;
+  letter-spacing:11px;
+  line-height:24px;
+  text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.CONTACT-SUPPORT-outer{
+  pointer-events:none;
+  z-index:34;
+  position:relative;
+  display:flex;
+}
