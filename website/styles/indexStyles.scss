@@ -33,7 +33,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
 .waves-1 {
   position: relative;
   z-index: 4;
-  pointer-events: none;
   margin-left: 0px;
   width: 1920px;
   min-width: 1920px;
@@ -43,7 +42,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   min-height: 821px;
 }
 .wave-1-outer {
-  pointer-events: none;
   z-index: 4;
   position: relative;
   display: flex;
@@ -51,7 +49,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
 .Rectangle-1 {
   position: relative;
   z-index: 3;
-  pointer-events: none;
   margin-left: 0px;
   width: 1920px;
   min-width: 1920px;
@@ -62,7 +59,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   background-color: $backgroundColor;
 }
 .Rectangle-1-outer {
-  pointer-events: none;
   z-index: 3;
   position: relative;
   display: flex;
@@ -70,7 +66,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
 .ChessIt {
   position: relative;
   z-index: 7;
-  pointer-events: none;
   margin-left: 129px;
   width: 363px;
   min-width: 363px;
@@ -89,7 +84,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   line-height: 153px;
 }
 .ChessIt-outer {
-  pointer-events: none;
   z-index: 7;
   position: relative;
   display: flex;
@@ -98,7 +92,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
 .main {
   position: relative;
   z-index: 16;
-  pointer-events: none;
   margin-left: 1029px;
   width: 739px;
   min-width: 739px;
@@ -108,7 +101,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   min-height: 576px;
 }
 .main-outer {
-  pointer-events: none;
   z-index: 16;
   position: relative;
   display: flex;
@@ -116,7 +108,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
 .iMac-Pro-Front-View- {
   position: relative;
   z-index: 14;
-  pointer-events: none;
   margin-left: 1110px;
   width: 573px;
   min-width: 573px;
@@ -126,7 +117,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   min-height: 476px;
 }
 .iMac-Pro-Front-View--outer {
-  pointer-events: none;
   z-index: 14;
   position: relative;
   display: flex;
@@ -134,7 +124,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
 .BENEFITS {
   position: relative;
   z-index: 33;
-  pointer-events: none;
   margin-left: 806px;
   width: 308px;
   min-width: 308px;
@@ -154,7 +143,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   line-height: 24px;
 }
 .BENEFITS-outer {
-  pointer-events: none;
   z-index: 33;
   position: relative;
   display: flex;
@@ -162,7 +150,7 @@ $CardsBgColor: rgba(255, 255, 255, 1);
 .Group-1 {
   position: relative;
   z-index: 17;
-  pointer-events: none;
+
   margin-left: 365px;
   width: 1189px;
   min-width: 1189px;
@@ -172,7 +160,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   min-height: 716px;
 }
 .Group-1-outer {
-  pointer-events: none;
   z-index: 17;
   position: relative;
   display: flex;
@@ -180,7 +167,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
 .Rectangle-7 {
   position: relative;
   z-index: 22;
-  pointer-events: none;
   margin-left: 873px;
   width: 316px;
   min-width: 316px;
@@ -206,7 +192,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   margin-top: 70px;
 }
 .Rectangle-7-outer {
-  pointer-events: none;
   z-index: 22;
   position: relative;
   display: flex;
@@ -214,7 +199,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
 .Rectangle-5 {
   position: relative;
   z-index: 20;
-  pointer-events: none;
   margin-left: 445px;
   width: 316px;
   min-width: 316px;
@@ -229,7 +213,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   justify-content: center;
 }
 .Rectangle-5-outer {
-  pointer-events: none;
   z-index: 20;
   position: relative;
   display: flex;
@@ -237,7 +220,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
 .Rectangle-3 {
   position: relative;
   z-index: 18;
-  pointer-events: none;
   margin-left: 0px;
   width: 316px;
   min-width: 316px;
@@ -252,7 +234,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   justify-content: center;
 }
 .Rectangle-3-outer {
-  pointer-events: none;
   z-index: 18;
   position: relative;
   display: flex;
@@ -260,7 +241,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
 .Ellipse-3 {
   position: relative;
   z-index: 26;
-  pointer-events: none;
   margin-left: 890px;
   width: 73px;
   min-width: 73px;
@@ -270,7 +250,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   min-height: 73px;
 }
 .Ellipse-3-outer {
-  pointer-events: none;
   z-index: 26;
   position: relative;
   display: flex;
@@ -278,7 +257,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
 .Ellipse-2 {
   position: relative;
   z-index: 25;
-  pointer-events: none;
   margin-left: 482px;
   width: 73px;
   min-width: 73px;
@@ -288,7 +266,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   min-height: 73px;
 }
 .Ellipse-2-outer {
-  pointer-events: none;
   z-index: 25;
   position: relative;
   display: flex;
@@ -296,7 +273,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
 .Ellipse-1 {
   position: relative;
   z-index: 24;
-  pointer-events: none;
   margin-left: 35px;
   width: 73px;
   min-width: 73px;
@@ -306,7 +282,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   min-height: 73px;
 }
 .Ellipse-1-outer {
-  pointer-events: none;
   z-index: 24;
   position: relative;
   display: flex;
@@ -314,7 +289,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
 .Rectangle-4 {
   position: relative;
   z-index: 23;
-  pointer-events: none;
   margin-left: 0px;
   width: 316px;
   min-width: 316px;
@@ -329,7 +303,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   align-items: center;
 }
 .Rectangle-4-outer {
-  pointer-events: none;
   z-index: 23;
   position: relative;
   display: flex;
@@ -337,7 +310,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
 .Rectangle-8 {
   position: relative;
   z-index: 21;
-  pointer-events: none;
   margin-left: 873px;
   width: 316px;
   min-width: 316px;
@@ -352,7 +324,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   align-items: center;
 }
 .Rectangle-8-outer {
-  pointer-events: none;
   z-index: 21;
   position: relative;
   display: flex;
@@ -360,7 +331,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
 .Rectangle-6 {
   position: relative;
   z-index: 19;
-  pointer-events: none;
   margin-left: 445px;
   width: 316px;
   min-width: 316px;
@@ -375,7 +345,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   align-items: center;
 }
 .Rectangle-6-outer {
-  pointer-events: none;
   z-index: 19;
   position: relative;
   display: flex;
@@ -383,7 +352,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
 .Ellipse-6 {
   position: relative;
   z-index: 29;
-  pointer-events: none;
   margin-left: 35px;
   width: 73px;
   min-width: 73px;
@@ -393,7 +361,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   min-height: 73px;
 }
 .Ellipse-6-outer {
-  pointer-events: none;
   z-index: 29;
   position: relative;
   display: flex;
@@ -401,7 +368,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
 .Ellipse-5 {
   position: relative;
   z-index: 28;
-  pointer-events: none;
   margin-left: 482px;
   width: 73px;
   min-width: 73px;
@@ -411,7 +377,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   min-height: 73px;
 }
 .Ellipse-5-outer {
-  pointer-events: none;
   z-index: 28;
   position: relative;
   display: flex;
@@ -419,7 +384,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
 .Ellipse-4 {
   position: relative;
   z-index: 27;
-  pointer-events: none;
   margin-left: 890px;
   width: 73px;
   min-width: 73px;
@@ -429,7 +393,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   min-height: 73px;
 }
 .Ellipse-4-outer {
-  pointer-events: none;
   z-index: 27;
   position: relative;
   display: flex;
@@ -442,7 +405,6 @@ $CardsBgColor: rgba(255, 255, 255, 1);
 .iPhone-12-Pro-Mockup {
   position: relative;
   z-index: 6;
-  pointer-events: none;
   margin-left: 171px;
   width: 898px;
   min-width: 898px;
@@ -452,37 +414,36 @@ $CardsBgColor: rgba(255, 255, 255, 1);
   min-height: 1061px;
 }
 .iPhone-12-Pro-Mockup-outer {
-  pointer-events: none;
   z-index: 6;
   position: relative;
   display: flex;
 }
-.CONTACT-SUPPORT{
-  position:relative;
-  z-index:34;
-  pointer-events:none;
-  margin-left:993px;
-  width:907px;
-  min-width:907px;
-  margin-top:-1333px;
-  margin-bottom:1259px;
-  min-height:74px;
-  text-align:left;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-start;
-  color:rgba(28, 28, 28, 1);
-  font-style:normal;
-  font-family:Comfortaa;
-  font-weight:300;
-  font-size:55px;
-  letter-spacing:11px;
-  line-height:24px;
-  text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+.CONTACT-SUPPORT {
+  position: relative;
+  z-index: 34;
+  pointer-events: none;
+  margin-left: 993px;
+  width: 907px;
+  min-width: 907px;
+  margin-top: -1333px;
+  margin-bottom: 1259px;
+  min-height: 74px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: rgba(28, 28, 28, 1);
+  font-style: normal;
+  font-family: Comfortaa;
+  font-weight: 300;
+  font-size: 55px;
+  letter-spacing: 11px;
+  line-height: 24px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.CONTACT-SUPPORT-outer{
-  pointer-events:none;
-  z-index:34;
-  position:relative;
-  display:flex;
+.CONTACT-SUPPORT-outer {
+  pointer-events: none;
+  z-index: 34;
+  position: relative;
+  display: flex;
 }

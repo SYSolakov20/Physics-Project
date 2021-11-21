@@ -34,7 +34,6 @@
 .waves-1 {
   position: relative;
   z-index: 4;
-  pointer-events: none;
   margin-left: 0px;
   width: 1920px;
   min-width: 1920px;
@@ -45,7 +44,6 @@
 }
 
 .wave-1-outer {
-  pointer-events: none;
   z-index: 4;
   position: relative;
   display: -webkit-box;
@@ -56,7 +54,6 @@
 .Rectangle-1 {
   position: relative;
   z-index: 3;
-  pointer-events: none;
   margin-left: 0px;
   width: 1920px;
   min-width: 1920px;
@@ -68,7 +65,6 @@
 }
 
 .Rectangle-1-outer {
-  pointer-events: none;
   z-index: 3;
   position: relative;
   display: -webkit-box;
@@ -79,7 +75,6 @@
 .ChessIt {
   position: relative;
   z-index: 7;
-  pointer-events: none;
   margin-left: 129px;
   width: 363px;
   min-width: 363px;
@@ -106,7 +101,6 @@
 }
 
 .ChessIt-outer {
-  pointer-events: none;
   z-index: 7;
   position: relative;
   display: -webkit-box;
@@ -117,7 +111,6 @@
 .main {
   position: relative;
   z-index: 16;
-  pointer-events: none;
   margin-left: 1029px;
   width: 739px;
   min-width: 739px;
@@ -128,7 +121,6 @@
 }
 
 .main-outer {
-  pointer-events: none;
   z-index: 16;
   position: relative;
   display: -webkit-box;
@@ -139,7 +131,6 @@
 .iMac-Pro-Front-View- {
   position: relative;
   z-index: 14;
-  pointer-events: none;
   margin-left: 1110px;
   width: 573px;
   min-width: 573px;
@@ -150,7 +141,6 @@
 }
 
 .iMac-Pro-Front-View--outer {
-  pointer-events: none;
   z-index: 14;
   position: relative;
   display: -webkit-box;
@@ -161,7 +151,6 @@
 .BENEFITS {
   position: relative;
   z-index: 33;
-  pointer-events: none;
   margin-left: 806px;
   width: 308px;
   min-width: 308px;
@@ -189,7 +178,6 @@
 }
 
 .BENEFITS-outer {
-  pointer-events: none;
   z-index: 33;
   position: relative;
   display: -webkit-box;
@@ -200,7 +188,6 @@
 .Group-1 {
   position: relative;
   z-index: 17;
-  pointer-events: none;
   margin-left: 365px;
   width: 1189px;
   min-width: 1189px;
@@ -211,7 +198,6 @@
 }
 
 .Group-1-outer {
-  pointer-events: none;
   z-index: 17;
   position: relative;
   display: -webkit-box;
@@ -222,7 +208,6 @@
 .Rectangle-7 {
   position: relative;
   z-index: 22;
-  pointer-events: none;
   margin-left: 873px;
   width: 316px;
   min-width: 316px;
@@ -256,7 +241,6 @@
 }
 
 .Rectangle-7-outer {
-  pointer-events: none;
   z-index: 22;
   position: relative;
   display: -webkit-box;
@@ -267,7 +251,6 @@
 .Rectangle-5 {
   position: relative;
   z-index: 20;
-  pointer-events: none;
   margin-left: 445px;
   width: 316px;
   min-width: 316px;
@@ -289,7 +272,6 @@
 }
 
 .Rectangle-5-outer {
-  pointer-events: none;
   z-index: 20;
   position: relative;
   display: -webkit-box;
@@ -300,7 +282,6 @@
 .Rectangle-3 {
   position: relative;
   z-index: 18;
-  pointer-events: none;
   margin-left: 0px;
   width: 316px;
   min-width: 316px;
@@ -322,7 +303,6 @@
 }
 
 .Rectangle-3-outer {
-  pointer-events: none;
   z-index: 18;
   position: relative;
   display: -webkit-box;
@@ -333,7 +313,6 @@
 .Ellipse-3 {
   position: relative;
   z-index: 26;
-  pointer-events: none;
   margin-left: 890px;
   width: 73px;
   min-width: 73px;
@@ -344,7 +323,6 @@
 }
 
 .Ellipse-3-outer {
-  pointer-events: none;
   z-index: 26;
   position: relative;
   display: -webkit-box;
@@ -355,7 +333,6 @@
 .Ellipse-2 {
   position: relative;
   z-index: 25;
-  pointer-events: none;
   margin-left: 482px;
   width: 73px;
   min-width: 73px;
@@ -366,7 +343,6 @@
 }
 
 .Ellipse-2-outer {
-  pointer-events: none;
   z-index: 25;
   position: relative;
   display: -webkit-box;
@@ -377,7 +353,6 @@
 .Ellipse-1 {
   position: relative;
   z-index: 24;
-  pointer-events: none;
   margin-left: 35px;
   width: 73px;
   min-width: 73px;
@@ -388,7 +363,6 @@
 }
 
 .Ellipse-1-outer {
-  pointer-events: none;
   z-index: 24;
   position: relative;
   display: -webkit-box;
@@ -399,7 +373,6 @@
 .Rectangle-4 {
   position: relative;
   z-index: 23;
-  pointer-events: none;
   margin-left: 0px;
   width: 316px;
   min-width: 316px;
@@ -421,7 +394,6 @@
 }
 
 .Rectangle-4-outer {
-  pointer-events: none;
   z-index: 23;
   position: relative;
   display: -webkit-box;
@@ -432,7 +404,6 @@
 .Rectangle-8 {
   position: relative;
   z-index: 21;
-  pointer-events: none;
   margin-left: 873px;
   width: 316px;
   min-width: 316px;
@@ -454,7 +425,6 @@
 }
 
 .Rectangle-8-outer {
-  pointer-events: none;
   z-index: 21;
   position: relative;
   display: -webkit-box;
@@ -465,7 +435,6 @@
 .Rectangle-6 {
   position: relative;
   z-index: 19;
-  pointer-events: none;
   margin-left: 445px;
   width: 316px;
   min-width: 316px;
@@ -487,7 +456,6 @@
 }
 
 .Rectangle-6-outer {
-  pointer-events: none;
   z-index: 19;
   position: relative;
   display: -webkit-box;
@@ -498,7 +466,6 @@
 .Ellipse-6 {
   position: relative;
   z-index: 29;
-  pointer-events: none;
   margin-left: 35px;
   width: 73px;
   min-width: 73px;
@@ -509,7 +476,6 @@
 }
 
 .Ellipse-6-outer {
-  pointer-events: none;
   z-index: 29;
   position: relative;
   display: -webkit-box;
@@ -520,7 +486,6 @@
 .Ellipse-5 {
   position: relative;
   z-index: 28;
-  pointer-events: none;
   margin-left: 482px;
   width: 73px;
   min-width: 73px;
@@ -531,7 +496,6 @@
 }
 
 .Ellipse-5-outer {
-  pointer-events: none;
   z-index: 28;
   position: relative;
   display: -webkit-box;
@@ -542,7 +506,6 @@
 .Ellipse-4 {
   position: relative;
   z-index: 27;
-  pointer-events: none;
   margin-left: 890px;
   width: 73px;
   min-width: 73px;
@@ -553,7 +516,6 @@
 }
 
 .Ellipse-4-outer {
-  pointer-events: none;
   z-index: 27;
   position: relative;
   display: -webkit-box;
@@ -576,7 +538,6 @@
 .iPhone-12-Pro-Mockup {
   position: relative;
   z-index: 6;
-  pointer-events: none;
   margin-left: 171px;
   width: 898px;
   min-width: 898px;
@@ -587,7 +548,6 @@
 }
 
 .iPhone-12-Pro-Mockup-outer {
-  pointer-events: none;
   z-index: 6;
   position: relative;
   display: -webkit-box;
