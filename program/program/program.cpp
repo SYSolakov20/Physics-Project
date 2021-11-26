@@ -28,6 +28,7 @@ void startProgram()
 
 start:
 	{
+		system("cls");
 		Menu();
 		cin >> activity;
 	}
@@ -36,7 +37,6 @@ start:
 	{
 		startSimulations();
 		goto start;
-
 	}
 	else if (activity == 2)
 	{

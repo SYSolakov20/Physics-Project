@@ -58,7 +58,7 @@ simulations:
 	}
 }
 
-void doNext()
+void doNextSimulation()
 {
 	cout << " What do you want to do now?" << endl;
 	cout << " ________________________________________" << endl << endl;
@@ -110,7 +110,7 @@ void simpleSimulation()
 			}
 			cout << char(188) << endl << endl;
 
-			doNext();
+			doNextSimulation();
 
 			cin >> nextChoise;
 
@@ -193,7 +193,7 @@ void simpleSimulation()
 			}
 			cout << char(188) << endl << endl;
 
-			doNext();
+			doNextSimulation();
 
 			cin >> nextChoise;
 
@@ -287,7 +287,7 @@ void ammeterSimulation()
 			}
 			cout << char(188) << endl << endl;
 
-			doNext();
+			doNextSimulation();
 
 			cin >> nextChoise;
 
@@ -371,7 +371,7 @@ void ammeterSimulation()
 			}
 			cout << char(188) << endl << endl;
 
-			doNext();
+			doNextSimulation();
 
 			cin >> nextChoise;
 
@@ -461,7 +461,7 @@ void voltmeterSimulation()
 			}
 			cout << char(188) << endl << endl;
 
-			doNext();
+			doNextSimulation();
 
 			cin >> nextChoise;
 
@@ -538,7 +538,7 @@ void voltmeterSimulation()
 			}
 			cout << char(188) << endl << endl;
 
-			doNext();
+			doNextSimulation();
 
 			cin >> nextChoise;
 
@@ -633,7 +633,7 @@ void ammmeterAndVoltmeterSimulation()
 			}
 			cout << char(188) << endl << endl;
 
-			doNext();
+			doNextSimulation();
 
 			cin >> nextChoise;
 
@@ -715,7 +715,7 @@ void ammmeterAndVoltmeterSimulation()
 			}
 			cout << char(188) << endl << endl;
 
-			doNext();
+			doNextSimulation();
 
 			cin >> nextChoise;
 
