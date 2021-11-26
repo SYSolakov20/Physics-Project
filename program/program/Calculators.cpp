@@ -55,6 +55,47 @@ void electricCurrent()
 	}
 }
 
+void chargePassed()
+{
+	system("cls");
+
+	float electricCurrent, time;
+	int next;
+
+	while (true)
+	{
+		system("cls");
+
+		cout << "Charge passed calculator" << endl << endl;
+
+		cout << "Electric current - I (in ampere - A)" << endl;
+		cout << "Charge passed - q (in coulomb - C)" << endl;
+		cout << "Time - t (in seconds - s)" << endl << endl;
+
+		cout << "Write your electric current >> ";
+		cin >> electricCurrent;
+		cout << "Write your time >> ";
+		cin >> time;
+
+		cout << endl << "q = I * t" << endl << endl;
+
+		cout << "Your charge passed is " << electricCurrent * time << "C" << endl << endl;
+
+		doNextCalculator();
+
+		cin >> next;
+
+		if (next == 1)
+		{
+			break;
+		}
+		else if (next == 2)
+		{
+			continue;
+		}
+	}
+}
+
 void startCalculators()
 {
 	while (true)
@@ -80,7 +121,7 @@ void startCalculators()
 		}
 		else if (calculatorChoise == 2)
 		{
-			
+			chargePassed();
 		}
 		else if (calculatorChoise == 3)
 		{

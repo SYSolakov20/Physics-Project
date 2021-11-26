@@ -4,3 +4,4 @@
 void startCalculators();
 void doNextCalculator();
 void electricCurrent();
+void chargePassed();
