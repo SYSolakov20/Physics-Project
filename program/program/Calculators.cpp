@@ -138,6 +138,44 @@ void chargePassed()
 		}
 	}
 }
+void voltage()
+{
+
+	float resistance, current;
+	int next;
+
+	while (true)
+	{
+		system("cls");
+
+		cout << "Voltage calculator" << endl << endl;
+
+		cout << "Electric current - I (in ampere - A)" << endl;
+		cout << "Resistance - R (in ohm - ?)" << endl;
+		cout << "Voltage - U (in volt - V)" << endl << endl;
+
+		cout << "Write your resistance >> ";
+		cin >> resistance;
+		cout << "Write your current >> ";
+		cin >> current;
+
+		cout << endl << "U = R * I" << endl << endl;
+		cout << "Your voltage is " << resistance * current << "V" << endl << endl;
+
+		doNextCalculator();
+		cin >> next;
+		if (next == 1)
+		{
+			break;
+		}
+		else if (next == 2)
+		{
+			continue;
+		}
+	}
+}
+
+
 
 void startCalculators()
 {
@@ -172,7 +210,7 @@ void startCalculators()
 		}
 		else if (calculatorChoise == 4)
 		{
-			
+			voltage();
 		}
 		else if (calculatorChoise == 5)
 		{
