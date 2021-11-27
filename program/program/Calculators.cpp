@@ -12,6 +12,49 @@ void doNextCalculator()
 	cout << " Select >> ";
 }
 
+void resistance()
+{
+	system("cls");
+
+	float voltage, current;
+	int next;
+
+	while (true)
+	{
+		system("cls");
+
+		cout << "Resistance calculator" << endl << endl;
+
+		cout << "Electric current - I (in ampere - A)" << endl;
+		cout << "Resistance - R (in ohm - ?)" << endl;
+		cout << "Voltage - U (in volt - V)" << endl << endl;
+
+		cout << "Write your voltage >> ";
+		cin >> voltage;
+		cout << "Write your current >> ";
+		cin >> current;
+
+		cout << setw(5) << "U" << endl;
+		cout << "R = " << char(196) << endl;
+		cout << setw(5) << "I" << endl << endl;
+
+		cout << "Your resistance is " << voltage / current << "?" << endl << endl;
+
+		doNextCalculator();
+
+		cin >> next;
+
+		if (next == 1)
+		{
+			break;
+		}
+		else if (next == 2)
+		{
+			continue;
+		}
+	}
+}
+
 void electricCurrent()
 {
 	system("cls");
@@ -125,7 +168,7 @@ void startCalculators()
 		}
 		else if (calculatorChoise == 3)
 		{
-			
+			resistance();
 		}
 		else if (calculatorChoise == 4)
 		{
