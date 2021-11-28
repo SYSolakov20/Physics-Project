@@ -42,6 +42,11 @@ start:
 		startCalculators();
 		goto start;
 	}
+	else if (activity == 3)
+	{
+		startTest();
+		goto start;
+	}
 	else if (activity == 4)
 	{
 		system("cls");
