@@ -111,7 +111,6 @@ void questionFive()
 	if (answers[4] == 'a')
 	{
 		counter++;
-		
 	}
 }
 
@@ -126,7 +125,6 @@ void questionSix()
 	if (answers[5] == 'b')
 	{
 		counter++;
-		
 	}
 }
 

@@ -7,6 +7,8 @@
 #define BOLDYELLOW  "\033[1m\033[33m"
 
 void startSimulations();
+void doNextSimulationOn();
+void doNextSimulationOff();
 void simpleSimulation();
 void ammeterSimulation();
 void voltmeterSimulation();
