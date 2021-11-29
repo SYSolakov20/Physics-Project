@@ -23,4 +23,4 @@ void questionNine();
 void questionTen();
 void shuffleQuestions(int arr[10]);
 void startTest();
-void reviewTest();
+void reviewTest(int reviewTestQuestions[10]);
