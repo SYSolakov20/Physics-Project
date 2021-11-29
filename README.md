@@ -3,3 +3,10 @@
 <p align="center">
 <img src="LogoOne.png" width="1000px">
 </p>
+
+
+## 🖥 Team Members:
+* **Soner Solakov** - *Scrum trainer* 
+* **Zhanet Petkova** - *Back-end developer* 
+* **Valeria Yaneva** - *Back-end developer* 
+* **Victoria Bolashikova** - *QA Engineer* 
