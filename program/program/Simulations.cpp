@@ -6,6 +6,8 @@
 
 using namespace std;
 
+
+
 void startSimulations()
 {
 	int simulationChoise;
@@ -91,7 +93,6 @@ void simpleSimulation()
 		{
 			system("cls");
 			system("color 0f");
-
 			cout << endl;
 			cout << " " << char(201);
 			for (int i = 0; i < 14; i++)
@@ -103,6 +104,7 @@ void simpleSimulation()
 			{
 				cout << char(205);
 			}
+
 			cout << char(187) << endl;
 			cout << " " << char(186) << setw(36) << char(186) << endl;
 			cout << " " << char(186) << setw(36) << char(186) << endl;
@@ -145,7 +147,6 @@ void simpleSimulation()
 
 				readFile.close();
 
-
 				cout << endl << "When you are ready press 1." << endl;
 
 			finishReadingOff:
@@ -162,6 +163,7 @@ void simpleSimulation()
 						goto finishReadingOff;
 					}
 				}
+				
 
 			}
 			else if (nextChoise == 3)

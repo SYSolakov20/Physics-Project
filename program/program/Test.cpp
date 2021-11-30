@@ -60,6 +60,7 @@ void questionThree()
 
 void questionFour()
 {
+	
 	cout << " " << char(201);
 	for (int i = 0; i < 14; i++)
 	{
@@ -74,9 +75,9 @@ void questionFour()
 	cout << " " << char(186) << setw(36) << char(186) << endl;
 	cout << " " << char(186) << setw(36) << char(186) << endl;
 	cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(187) << endl;
-	cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << setw(7) << char(186) << endl;
-	cout << " | " << setw(37) << YELLOW << "( 1 )" << RESET << "  ( 2 )" << endl;
-	cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << setw(7) << char(186) << endl;
+	cout << " " << char(186) << setw(36) << char(186) << setw(7) << char(186) << endl;
+	cout << RED << " / " << RESET << setw(44) << "( 1 )  ( 2 )" << endl;
+	cout << " " << char(186) << setw(36) << char(186) << setw(7) << char(186) << endl;
 	cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(188) << endl;
 	cout << " " << char(186) << setw(36) << char(186) << endl;
 	cout << " " << char(186) << setw(36) << char(186) << endl;
@@ -108,7 +109,7 @@ void questionFour()
 void questionFive()
 {
 	cout << setw(5) << "q" << endl;
-	cout << "I = " << char(196) << " is a formula for finding electric current" << endl << endl;
+	cout << "I = " << char(196) << " is a formula for finding electric current" << endl;
 	cout << setw(5) << "t" << endl << endl;
 
 	cout << "a) True" << endl;
@@ -136,10 +137,6 @@ void questionSix()
 	if (answers[5] == "b")
 	{
 		counter++;
-<<<<<<< HEAD
-=======
-
->>>>>>> 28493505194165615c17f2eb199d711b900f7603
 	}
 }
 
@@ -329,6 +326,7 @@ void reviewTest(int reviewTestQuestions[10])
 
 		case 4:
 		{
+			
 			cout << " " << char(201);
 			for (int i = 0; i < 14; i++)
 			{
@@ -343,9 +341,9 @@ void reviewTest(int reviewTestQuestions[10])
 			cout << " " << char(186) << setw(36) << char(186) << endl;
 			cout << " " << char(186) << setw(36) << char(186) << endl;
 			cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(187) << endl;
-			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << setw(7) << char(186) << endl;
-			cout << " | " << setw(37) << YELLOW << "( 1 )" << RESET << "  ( 2 )" << endl;
-			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << setw(7) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(186) << setw(7) << char(186) << endl;
+			cout << RED << " / " << RESET << setw(44) << "( 1 )  ( 2 )" << endl;
+			cout << " " << char(186) << setw(36) << char(186) << setw(7) << char(186) << endl;
 			cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(188) << endl;
 			cout << " " << char(186) << setw(36) << char(186) << endl;
 			cout << " " << char(186) << setw(36) << char(186) << endl;
@@ -548,8 +546,10 @@ void reviewTest(int reviewTestQuestions[10])
 
 void startTest()
 {
+
 start:
 	{
+		counter = 0;
 		int questions[10];
 
 		shuffleQuestions(questions);
@@ -588,15 +588,15 @@ start:
 		}
 
 		system("cls");
-		cout << "Your score is " << counter * 10 << "%" << endl << endl;
+		cout << " Your score is " << counter * 10 << "%" << endl << endl;
 		int nextChoice;
 
-		cout << "What do you want to do now?" << endl;
-		cout << "__________________________________________" << endl;
+		cout << " What do you want to do now?" << endl;
+		cout << " __________________________________________" << endl;
 		cout << " 1) review" << endl;
 		cout << " 2) retake the test" << endl;
-		cout << " 3) go back" << endl;
-		cout << "Select >> ";
+		cout << " 3) go back" << endl << endl;
+		cout << " Select >> ";
 
 		cin >> nextChoice;
 		if (nextChoice == 1)
