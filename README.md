@@ -1,7 +1,7 @@
 <h1 align="center">Physics Project</h1>
 <h6 align="center">Blue Birds</h6>
 <p align="center">
-<img src="LogoOne.png" width="1000px">
+<img src="https://cdn.discordapp.com/attachments/699568463873835059/915265181351813150/LogoOne.png" width="1000px">
 </p>
 
 
