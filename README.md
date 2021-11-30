@@ -22,3 +22,11 @@
     <a href="https://www.w3schools.com/css/" target="_blank"> <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/visual-studio-code-2019.png"/></a></a>
   <a href="https://www.w3schools.com/css/" target="_blank"> <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://img.icons8.com/fluency/48/000000/visual-studio-2019.png"/></a></a>
    <a href="https://www.w3schools.com/css/" target="_blank"> <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/figma--v1.png"/></a></a>
+
+## ⚙ Installation
+```
+You can download our project by using the green "Code" button.
+
+Or by pasting the following code in your CMD:
+https://github.com/SYSolakov20/Physics-Project.git
+```
