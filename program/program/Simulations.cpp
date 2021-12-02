@@ -6,57 +6,51 @@
 
 using namespace std;
 
-
-
 void startSimulations()
 {
 	int simulationChoise;
 
-simulations:
+	system("cls");
+	cout << setw(33) << " These are our simulations" << endl;
+	cout << " ___________________________________________" << endl << endl;
+	cout << " 1) Simulation with lamp" << endl;
+	cout << " 2) Simulation with lamp and ammeter" << endl;
+	cout << " 3) Simulation with lamp and voltmeter" << endl;
+	cout << " 4) Simulation with lamp, ammeter and voltmeter" << endl;
+	cout << " 5) Back" << endl;
+	cout << " ___________________________________________" << endl;
+	cout << endl << " Select >> ";
+
+
+	cin >> simulationChoise;
+
+	if (simulationChoise == 1)
 	{
 		system("cls");
-		cout << setw(33) << " These are our simulations" << endl;
-		cout << " ___________________________________________" << endl << endl;
-		cout << " 1) Simulation with lamp" << endl;
-		cout << " 2) Simulation with lamp and ammeter" << endl;
-		cout << " 3) Simulation with lamp and voltmeter" << endl;
-		cout << " 4) Simulation with lamp, ammeter and voltmeter" << endl;
-		cout << " 5) Back" << endl;
-		cout << " ___________________________________________" << endl;
-		cout << endl << " Select >> ";
-
-
-		cin >> simulationChoise;
-
-		if (simulationChoise == 1)
-		{
-			system("cls");
-			simpleSimulation();
-			goto simulations;
-		}
-		else if (simulationChoise == 2)
-		{
-			system("cls");
-			ammeterSimulation();
-			goto simulations;
-		}
-		else if (simulationChoise == 3)
-		{
-			system("cls");
-			voltmeterSimulation();
-			goto simulations;
-
-		}
-		else if (simulationChoise == 4)
-		{
-			system("cls");
-			ammmeterAndVoltmeterSimulation();
-			goto simulations;
-		}
-		else if (simulationChoise == 5)
-		{
-			system("cls");
-		}
+		simpleSimulation();
+		startSimulations();
+	}
+	else if (simulationChoise == 2)
+	{
+		system("cls");
+		ammeterSimulation();
+		startSimulations();
+	}
+	else if (simulationChoise == 3)
+	{
+		system("cls");
+		voltmeterSimulation();
+		startSimulations();
+	}
+	else if (simulationChoise == 4)
+	{
+		system("cls");
+		ammmeterAndVoltmeterSimulation();
+		startSimulations();
+	}
+	else if (simulationChoise == 5)
+	{
+		system("cls");
 	}
 }
 
@@ -83,9 +77,6 @@ void doNextSimulationOff()
 void simpleSimulation()
 {
 	int nextChoise;
-	int finishReading;
-
-	goto switchOff;
 
 	while (true)
 	{
@@ -147,24 +138,10 @@ void simpleSimulation()
 
 				readFile.close();
 
-				cout << endl << "When you are ready press 1." << endl;
+				cout << endl << endl;
 
-			finishReadingOff:
-				{
-					cin >> finishReading;
-
-					if (finishReading == 1)
-					{
-						goto switchOff;
-					}
-					else if (finishReading != 1)
-					{
-						cout << "You entered wrong number. Try again" << endl;
-						goto finishReadingOff;
-					}
-				}
-				
-
+				system("PAUSE");
+				goto switchOff;
 			}
 			else if (nextChoise == 3)
 			{
@@ -231,22 +208,10 @@ void simpleSimulation()
 
 				readFile.close();
 
-				cout << endl << "When you are ready press 1." << endl;
+				cout << endl << endl;
 
-			finishReadingOn:
-				{
-					cin >> finishReading;
-
-					if (finishReading == 1)
-					{
-						goto switchOn;
-					}
-					else if (finishReading != 1)
-					{
-						cout << "You entered wrong number. Try again" << endl;
-						goto finishReadingOn;
-					}
-				}
+				system("PAUSE");
+				goto switchOn;
 			}
 			else if (nextChoise == 3)
 			{
@@ -261,9 +226,6 @@ void simpleSimulation()
 void ammeterSimulation()
 {
 	int nextChoise;
-	int finishReading;
-
-	goto switchOff;
 
 	while (true)
 	{
@@ -334,20 +296,10 @@ void ammeterSimulation()
 				cout << endl << "When you are ready press 1." << endl;
 
 
-			finishReadingOff:
-				{
-					cin >> finishReading;
+				cout << endl << endl;
 
-					if (finishReading == 1)
-					{
-						goto switchOff;
-					}
-					else if (finishReading != 1)
-					{
-						cout << "You entered wrong number. Try again" << endl;
-						goto finishReadingOff;
-					}
-				}
+				system("PAUSE");
+				goto switchOff;
 
 			}
 			else if (nextChoise == 3)
@@ -423,20 +375,10 @@ void ammeterSimulation()
 
 				cout << endl << "When you are ready press 1." << endl;
 
-			finishReadingOn:
-				{
-					cin >> finishReading;
+				cout << endl << endl;
 
-					if (finishReading == 1)
-					{
-						goto switchOn;
-					}
-					else if (finishReading != 1)
-					{
-						cout << "You entered wrong number. Try again" << endl;
-						goto finishReadingOn;
-					}
-				}
+				system("PAUSE");
+				goto switchOn;
 
 			}
 			else if (nextChoise == 3)
@@ -452,9 +394,6 @@ void ammeterSimulation()
 void voltmeterSimulation()
 {
 	int nextChoise;
-	int finishReading;
-
-	goto switchOff;
 
 	while (true)
 	{
@@ -518,21 +457,10 @@ void voltmeterSimulation()
 
 				cout << endl << "When you are ready press 1." << endl;
 
+				cout << endl << endl;
 
-			finishReadingOff:
-				{
-					cin >> finishReading;
-
-					if (finishReading == 1)
-					{
-						goto switchOff;
-					}
-					else if (finishReading != 1)
-					{
-						cout << "You entered wrong number. Try again" << endl;
-						goto finishReadingOff;
-					}
-				}
+				system("PAUSE");
+				goto switchOff;
 			}
 			else if (nextChoise == 3)
 			{
@@ -602,20 +530,10 @@ void voltmeterSimulation()
 
 				cout << endl << "When you are ready press 1." << endl;
 
-			finishReadingOn:
-				{
-					cin >> finishReading;
+				cout << endl << endl;
 
-					if (finishReading == 1)
-					{
-						goto switchOn;
-					}
-					else if (finishReading != 1)
-					{
-						cout << "You entered wrong number. Try again" << endl;
-						goto finishReadingOn;
-					}
-				}
+				system("PAUSE");
+				goto switchOn;
 			}
 			else if (nextChoise == 3)
 			{
@@ -630,9 +548,6 @@ void voltmeterSimulation()
 void ammmeterAndVoltmeterSimulation()
 {
 	int nextChoise;
-	int finishReading;
-
-	goto switchOff;
 
 	while (true)
 	{
@@ -701,20 +616,10 @@ void ammmeterAndVoltmeterSimulation()
 
 				cout << endl << "When you are ready press 1." << endl;
 
-			finishReadingOff:
-				{
-					cin >> finishReading;
+				cout << endl << endl;
 
-					if (finishReading == 1)
-					{
-						goto switchOff;
-					}
-					else if (finishReading != 1)
-					{
-						cout << "You entered wrong number. Try again" << endl;
-						goto finishReadingOff;
-					}
-				}
+				system("PAUSE");
+				goto switchOff;
 			}
 			else if (nextChoise == 3)
 			{
@@ -789,20 +694,10 @@ void ammmeterAndVoltmeterSimulation()
 
 				cout << endl << "When you are ready press 1." << endl;
 
-			finishReadingOn:
-				{
-					cin >> finishReading;
+				cout << endl << endl;
 
-					if (finishReading == 1)
-					{
-						goto switchOn;
-					}
-					else if (finishReading != 1)
-					{
-						cout << "You entered wrong number. Try again" << endl;
-						goto finishReadingOn;
-					}
-				}
+				system("PAUSE");
+				goto switchOn;
 			}
 			else if (nextChoise == 3)
 			{
@@ -813,4 +708,3 @@ void ammmeterAndVoltmeterSimulation()
 
 	}
 }
-

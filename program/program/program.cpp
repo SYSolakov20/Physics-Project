@@ -16,43 +16,37 @@ void Menu()
 	cout << " 3) Tests" << endl;
 	cout << " 4) Create your own simulation" << endl;
 	cout << " 5) Exit" << endl;
-	cout << " _________________________________________________" << endl;
-	cout << endl;
+	cout << " _________________________________________________" << endl << endl;
 	cout << " Select your choice >> ";
 }
-
-
 
 void startProgram()
 {
 	int activity;
 
-start:
-	{
-		system("cls");
-		Menu();
-		cin >> activity;
-	}
+	system("cls");
+	Menu();
+	cin >> activity;
 
 	if (activity == 1)
 	{
 		startSimulations();
-		goto start;
+		startProgram();
 	}
 	else if (activity == 2)
 	{
 		startCalculators();
-		goto start;
+		startProgram();
 	}
 	else if (activity == 3)
 	{
 		startTest();
-		goto start;
+		startProgram();
 	}
 	else if (activity == 4)
 	{
 		startCreating();
-		goto start;
+		startProgram();
 	}
 	else if (activity == 5)
 	{

@@ -13,6 +13,8 @@ bool firstPosition = 0;
 bool secondPosition = 0;
 bool thirdPosition = 0;
 
+bool flag = 0;
+
 void fillPosition(int position)
 {
 	if (position == 1)
@@ -25,9 +27,10 @@ void fillPosition(int position)
 	}
 	else if (position == 3)
 	{
-			thirdPosition = 1;
+		thirdPosition = 1;
 	}
 }
+
 void emptyPosition(int position)
 {
 	if (position == 1)
@@ -56,9 +59,10 @@ void occupiedPosition(int position)
 			cout << " 2) Replace the instrument" << endl;
 			cout << " Select >> ";
 			cin >> leaveOrReplace;
+
 			if (leaveOrReplace == 1)
 			{
-				position = 0;
+				flag = 1;
 			}
 			else if (leaveOrReplace == 2)
 			{
@@ -87,7 +91,7 @@ void occupiedPosition(int position)
 			
 			if (leaveOrReplace == 1)
 			{
-				position = 0;
+				flag = 1;
 			}
 			else if (leaveOrReplace == 2)
 			{
@@ -116,7 +120,7 @@ void occupiedPosition(int position)
 			
 			if (leaveOrReplace == 1)
 			{
-				position = 0;
+				flag = 1;
 			}
 			else if (leaveOrReplace == 2)
 			{
@@ -266,12 +270,20 @@ void chooseDevice()
 		if (device == 1 && ammeterPosition == 0)
 		{
 			system("cls");
+
 			choosePosition();
+
 			cout << " Where do you want to add ammeter >> ";
 			cin >> sparePosition;
 			occupiedPosition(sparePosition);
 			ammeterPosition = sparePosition;
 			fillPosition(ammeterPosition);
+
+			if (flag == 1)
+			{
+				ammeterPosition = 0;
+				flag = 0;
+			}
 
 			system("cls");
 			choosePosition();
@@ -297,6 +309,12 @@ void chooseDevice()
 				occupiedPosition(sparePosition);
 				ammeterPosition = sparePosition;
 				fillPosition(ammeterPosition);
+
+				if (flag == 1)
+				{
+					ammeterPosition = 0;
+					flag = 0;
+				}
 				
 				system("cls");
 				choosePosition();
@@ -311,6 +329,12 @@ void chooseDevice()
 			occupiedPosition(sparePosition);
 			voltmeterPosition = sparePosition;
 			fillPosition(voltmeterPosition);
+
+			if (flag == 1)
+			{
+				voltmeterPosition = 0;
+				flag = 0;
+			}
 
 			system("cls");
 			choosePosition();
@@ -337,6 +361,12 @@ void chooseDevice()
 				voltmeterPosition = sparePosition;
 				fillPosition(voltmeterPosition);
 
+				if (flag == 1)
+				{
+					voltmeterPosition = 0;
+					flag = 0;
+				}
+
 				system("cls");
 				choosePosition();
 			}
@@ -350,6 +380,12 @@ void chooseDevice()
 			occupiedPosition(sparePosition);
 			batteryPosition = sparePosition;
 			fillPosition(batteryPosition);
+
+			if (flag == 1)
+			{
+				batteryPosition = 0;
+				flag = 0;
+			}
 
 			system("cls");
 			choosePosition();
@@ -375,6 +411,12 @@ void chooseDevice()
 				occupiedPosition(sparePosition);
 				batteryPosition = sparePosition;
 				fillPosition(batteryPosition);
+
+				if (flag == 1)
+				{
+					batteryPosition = 0;
+					flag = 0;
+				}
 
 				system("cls");
 				choosePosition();
