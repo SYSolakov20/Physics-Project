@@ -1,2 +1,0 @@
-C:\Users\Zhanet Petkova\Documents\school\Physics-Project\program\x64\Debug\program.exe.lastcodeanalysissucceeded
-C:\Users\Zhanet Petkova\Documents\school\Physics-Project\program\program\x64\Debug\NativeCodeAnalysis.read.1.tlog

@@ -98,15 +98,15 @@ void choosePosition()
 	}
 		if (ammeterPosition !=1 && voltmeterPosition != 1 && batteryPosition != 1)
 		{
-			cout << " ( 1 ) ";
+			cout << char(205) << "( 1 )" << char(205);
 		}
 		else if (ammeterPosition == 1)
 		{
-			cout << " ( A ) ";
+			cout << char(205) << "( A )" << char(205);
 		}
 		else if (voltmeterPosition == 1)
 		{
-			cout << " ( V ) ";
+			cout << char(205) << "( V )" << char(205);
 		}
 		else if (batteryPosition == 1)
 		{
@@ -207,7 +207,7 @@ void chooseDevice()
 		{
 			cout << " 3) Remove battery or change its position" << endl;
 		}
-		cout << " 4) Turn on" << endl;
+		cout << " 4) Turn on - check if it works" << endl;
 		cout << " 5) Go back" << endl << endl;
 		cout << " Select >> ";
 		cin >> device;
@@ -374,6 +374,10 @@ void chooseDevice()
 				choosePosition();
 			}
 		}
+		else if (device == 4)
+		{
+			turnOn();
+		}
 		else if (device == 5)
 		{
 			break;
@@ -471,7 +475,104 @@ void printSimulation()
 	cout << char(188) << endl << endl;
 }
 
+void turnOn()
+{
+	if (ammeterPosition != 2 && (batteryPosition == 1 || batteryPosition == 3) && (voltmeterPosition == 2 || voltmeterPosition == 0))
+	{
+		system("cls");
+		cout << endl;
+		cout << " " << char(201);
+		for (int i = 0; i < 14; i++)
+		{
+			cout << char(205);
+		}
+		if (ammeterPosition != 1 && voltmeterPosition != 1 && batteryPosition != 1)
+		{
+			cout << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205);
+		}
+		else if (ammeterPosition == 1)
+		{
+			cout << char(205) << "( A )" << char(205);
+		}
+		else if (voltmeterPosition == 1)
+		{
+			cout << char(205) << "( V )" << char(205);
+		}
+		else if (batteryPosition == 1)
+		{
+			cout << " +| |- ";
+		}
+		for (int i = 0; i < 14; i++)
+		{
+			cout << char(205);
+		}
+		cout << char(187) << endl;
+		cout << " " << char(186) << setw(36) << char(186) << endl;
+		cout << " " << char(186) << setw(36) << char(186) << endl;
+		if (occupatedPosition[1] == 1)
+		{
+			cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(187) << endl;
+			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << setw(7) << char(186) << endl;
+			cout << " | " << setw(37) << YELLOW << "( x )" << RESET << endl;
+			if (ammeterPosition == 2)
+			{
+				cout << "( A )" << endl;
+			}
+			else if (voltmeterPosition == 2)
+			{
+				cout << "( V )" << endl;
+			}
+			else if (batteryPosition == 2)
+			{
+				cout << " +| |- " << endl;
+			}
+			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << setw(7) << char(186) << endl;
+			cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(188) << endl;
+		}
+		else if (occupatedPosition[1] != 1)
+		{
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << endl;
+			cout << " | " << setw(37) << YELLOW << "( x )" << RESET << endl;
+			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << endl;
+			cout << " " << char(186) << setw(36) << char(186) << endl;
+		}
+		cout << " " << char(186) << setw(36) << char(186) << endl;
+		cout << " " << char(186) << setw(36) << char(186) << endl;
+		cout << " " << char(200);
+		for (int i = 0; i < 14; i++)
+		{
+			cout << char(205);
+		}
+		if (ammeterPosition != 3 && voltmeterPosition != 3 && batteryPosition != 3)
+		{
+			cout << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205);
+		}
+		else if (ammeterPosition == 3)
+		{
+			cout << char(205) << "( A )" << char(205);
+		}
+		else if (voltmeterPosition == 3)
+		{
+			cout << char(205) << "( V )" << char(205);
+		}
+		else if (batteryPosition == 3)
+		{
+			cout << " +| |- ";
+		}
+		for (int i = 0; i < 14; i++)
+		{
+			cout << char(205);
+		}
+		cout << char(188) << endl << endl;
 
+		system("PAUSE");
+	}
+	else
+	{
+		cout << "Wrong";
+	}
+}
 
 void startCreating()
 {
