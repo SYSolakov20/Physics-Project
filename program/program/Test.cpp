@@ -5,11 +5,71 @@
 using namespace std;
 
 string answers[10];
+int countRightAnswers = 0;
+int countQuestions = 1;
+bool trueFalseQuestion = 0;
+int questions[10];
 
-int counter = 0;
-
-void questionOne()
+bool returnError(string response)
 {
+	if (trueFalseQuestion)
+	{
+		if (response != "a" && response != "b")
+		{
+			return 1;
+		}
+		return 0;
+	}
+	else
+	{
+		if (response != "a" && response != "b" && response != "c")
+		{
+			return 1;
+		}
+		return 0;
+	}
+}
+
+void displayMenuAfterTheTest()
+{
+	system("cls");
+	cout << " Your score is " << countRightAnswers * 10 << "%" << endl << endl;
+	int nextChoice;
+	cout << " What do you want to do now?" << endl;
+	cout << " __________________________________________" << endl;
+	cout << " 1) review" << endl;
+	cout << " 2) retake the test" << endl;
+	cout << " 3) go back" << endl << endl;
+	cout << " Select >> ";
+
+	cin >> nextChoice;
+	if (nextChoice == 1)
+	{
+		reviewTest(questions);
+		displayMenuAfterTheTest();
+	}
+	else if (nextChoice == 2)
+	{
+		countQuestions = 1;
+		startTest();
+	}
+	else if (nextChoice == 3)
+	{
+		system("cls");
+	}
+	else
+	{
+		displayMenuAfterTheTest();
+	}
+
+}
+
+void answerQuestionOne()
+{
+	trueFalseQuestion = 0;
+	cout << "Question "<< countQuestions << endl;
+	cout << "_____________________________" << endl << endl;
+
 	cout << "What do you measure with ammeter?" << endl << endl;
 	cout << "a) electric current" << endl;
 	cout << "b) resistance" << endl;
@@ -18,14 +78,23 @@ void questionOne()
 	cout << "Enter your answer >> ";
 
 	cin >> answers[0];
-	if (answers[0] == "a")
+	if (returnError(answers[0]))
 	{
-		counter++;
+		system("cls");
+		answerQuestionOne();
+	}
+	else if (answers[0] == "a")
+	{
+		countRightAnswers++;
 	}
 }
 
-void questionTwo()
+void answerQuestionTwo()
 {
+	trueFalseQuestion = 0;
+	cout << "Question " << countQuestions << endl;
+	cout << "_____________________________" << endl << endl;
+
 	cout << "What do you measure with voltmeter?" << endl << endl;
 	cout << "a) electric current" << endl;
 	cout << "b) resistance" << endl;
@@ -34,15 +103,23 @@ void questionTwo()
 	cout << "Enter your answer >> ";
 
 	cin >> answers[1];
-	if (answers[1] == "c")
+	if (returnError(answers[1]))
 	{
-		counter++;
-
+		system("cls");
+		answerQuestionTwo();
+	}
+	else if (answers[1] == "c")
+	{
+		countRightAnswers++;
 	}
 }
 
-void questionThree()
+void answerQuestionThree()
 {
+	trueFalseQuestion = 0;
+	cout << "Question " << countQuestions << endl;
+	cout << "_____________________________" << endl << endl;
+
 	cout << "What do you measure with resistor?" << endl << endl;
 	cout << "a) electric current" << endl;
 	cout << "b) resistance" << endl;
@@ -51,16 +128,23 @@ void questionThree()
 	cout << "Enter your answer >> ";
 
 	cin >> answers[2];
-	if (answers[2] == "b")
+	if (returnError(answers[2]))
 	{
-		counter++;
-
+		system("cls");
+		answerQuestionThree();
+	}
+	else if (answers[2] == "b")
+	{
+		countRightAnswers++;
 	}
 }
 
-void questionFour()
+void answerQuestionFour()
 {
-	
+	trueFalseQuestion = 0;
+	cout << "Question " << countQuestions << endl;
+	cout << "_____________________________" << endl << endl;
+
 	cout << " " << char(201);
 	for (int i = 0; i < 14; i++)
 	{
@@ -100,14 +184,23 @@ void questionFour()
 	cout << "Enter your answer >> ";
 
 	cin >> answers[3];
-	if (answers[3] == "c")
+	if (returnError(answers[3]))
 	{
-		counter++;
+		system("cls");
+		answerQuestionFour();
+	}
+	else if (answers[3] == "c")
+	{
+		countRightAnswers++;
 	}
 }
 
-void questionFive()
+void answerQuestionFive()
 {
+	trueFalseQuestion = 1;
+	cout << "Question " << countQuestions << endl;
+	cout << "_____________________________" << endl << endl;
+
 	cout << setw(5) << "q" << endl;
 	cout << "I = " << char(196) << " is a formula for finding electric current" << endl;
 	cout << setw(5) << "t" << endl << endl;
@@ -118,14 +211,23 @@ void questionFive()
 	cout << "Enter your answer >> ";
 
 	cin >> answers[4];
-	if (answers[4] == "a")
+	if (returnError(answers[4]))
 	{
-		counter++;
+		system("cls");
+		answerQuestionFive();
+	}
+	else if (answers[4] == "a")
+	{
+		countRightAnswers++;
 	}
 }
 
-void questionSix()
+void answerQuestionSix()
 {
+	trueFalseQuestion = 1;
+	cout << "Question " << countQuestions << endl;
+	cout << "_____________________________" << endl << endl;
+
 	cout << "q = I * R" << endl << endl;
 
 	cout << "a) True" << endl;
@@ -134,14 +236,23 @@ void questionSix()
 	cout << "Enter your answer >> ";
 
 	cin >> answers[5];
-	if (answers[5] == "b")
+	if (returnError(answers[5]))
 	{
-		counter++;
+		system("cls");
+		answerQuestionSix();
+	}
+	else if (answers[5] == "b")
+	{
+		countRightAnswers++;
 	}
 }
 
-void questionSeven()
+void answerQuestionSeven()
 {
+	trueFalseQuestion = 1;
+	cout << "Question " << countQuestions << endl;
+	cout << "_____________________________" << endl << endl;
+
 	cout << "U = R * I" << endl << endl;
 
 	cout << "a) True" << endl;
@@ -150,15 +261,23 @@ void questionSeven()
 	cout << "Enter your answer >> ";
 
 	cin >> answers[6];
-	if (answers[6] == "a")
+	if (returnError(answers[6]))
 	{
-		counter++;
-
+		system("cls");
+		answerQuestionSeven();
+	}
+	else if (answers[6] == "a")
+	{
+		countRightAnswers++;
 	}
 }
 
-void questionEight()
+void answerQuestionEight()
 {
+	trueFalseQuestion = 0;
+	cout << "Question " << countQuestions << endl;
+	cout << "_____________________________" << endl << endl;
+
 	cout << "In what unit of measurement is the electric current measured?" << endl << endl;
 
 	cout << "a) A - ampere" << endl;
@@ -168,15 +287,23 @@ void questionEight()
 	cout << "Enter your answer >> ";
 
 	cin >> answers[7];
-	if (answers[7] == "a")
+	if (returnError(answers[7]))
 	{
-		counter++;
-
+		system("cls");
+		answerQuestionEight();
+	}
+	else if (answers[7] == "a")
+	{
+		countRightAnswers++;
 	}
 }
 
-void questionNine()
+void answerQuestionNine()
 {
+	trueFalseQuestion = 0;
+	cout << "Question " << countQuestions << endl;
+	cout << "_____________________________" << endl << endl;
+
 	cout << "In what unit of measurement is the voltage measured?" << endl << endl;
 
 	cout << "a) A - ampere" << endl;
@@ -186,15 +313,23 @@ void questionNine()
 	cout << "Enter your answer >> ";
 
 	cin >> answers[8];
-	if (answers[8] == "b")
+	if (returnError(answers[8]))
 	{
-		counter++;
-
+		system("cls");
+		answerQuestionNine();
+	}
+	else if (answers[8] == "b")
+	{
+		countRightAnswers++;
 	}
 }
 
-void questionTen()
+void answerQuestionTen()
 {
+	trueFalseQuestion = 0;
+	cout << "Question " << countQuestions << endl;
+	cout << "_____________________________" << endl << endl;
+
 	cout << "In what unit of measurement is the charge passed measured?" << endl << endl;;
 
 	cout << "a) A - ampere" << endl;
@@ -204,9 +339,14 @@ void questionTen()
 	cout << "Enter your answer >> ";
 
 	cin >> answers[9];
-	if (answers[9] == "c")
+	if (returnError(answers[9]))
 	{
-		counter++;
+		system("cls");
+		answerQuestionTen();
+	}
+	else if (answers[9] == "c")
+	{
+		countRightAnswers++;
 	}
 }
 
@@ -242,28 +382,26 @@ void reviewTest(int reviewTestQuestions[10])
 		case 1:
 		{
 			cout << "What do you measure with ammeter?" << endl;
-			if (answers[0] == "a" or (answers[0] != "a" and answers[0] != "b" and answers[0] != "c"))
+			if (answers[0] == "a")
 			{
-
 				cout << "a) electric current " << GREEN << char(251) << RESET << endl;
 				cout << "b) resistance " << endl;
 				cout << "c) voltage " << endl;
-				if (answers[0] == "a")
-				{
-					cout << GREEN << "Your answer is correct!" << RESET;
-				}
+				cout << GREEN << "Your answer is correct!" << RESET << endl << endl;
 			}
 			else if (answers[0] == "b")
 			{
 				cout << "a) electric current " << YELLOW << char(251) << RESET << endl;
 				cout << "b) resistance " << RED << "X" << RESET << endl;
 				cout << "c) voltage " << endl;
+				cout << RED << "Your answer is wrong!" << RESET << endl << endl;
 			}
 			else if (answers[0] == "c")
 			{
 				cout << "a) electric current " << YELLOW << char(251) << RESET << endl;
 				cout << "b) resistance" << endl;
 				cout << "c) voltage " << RED << "X" << RESET << endl;
+				cout << RED << "Your answer is wrong!" << RESET << endl << endl;
 			}
 			break;
 		}
@@ -276,22 +414,21 @@ void reviewTest(int reviewTestQuestions[10])
 				cout << "a) electric current " << RED << "X" << RESET << endl;
 				cout << "b) resistance" << endl;
 				cout << "c) voltage " << YELLOW << char(251) << RESET << endl;
+				cout << RED << "Your answer is wrong!" << RESET << endl << endl;
 			}
 			else if (answers[1] == "b")
 			{
 				cout << "a) electric current " << endl;
 				cout << "b) resistance" << RED << "X" << RESET << endl;
 				cout << "c) voltage " << YELLOW << char(251) << RESET << endl;
+				cout << RED << "Your answer is wrong!" << RESET << endl << endl;
 			}
-			else if (answers[1] == "c" or (answers[1] != "a" and answers[1] != "b" and answers[1] != "c"))
+			else if (answers[1] == "c")
 			{
 				cout << "a) electric current " << endl;
 				cout << "b) resistance " << endl;
 				cout << "c) voltage " << GREEN << char(251) << RESET << endl;
-				if (answers[1] == "c")
-				{
-					cout << GREEN << "Your answer is correct!" << RESET;
-				}
+				cout << GREEN << "Your answer is correct!" << RESET << endl << endl;
 			}
 			break;
 		}
@@ -304,22 +441,22 @@ void reviewTest(int reviewTestQuestions[10])
 				cout << "a) electric current " << RED << "X" << RESET << endl;
 				cout << "b) resistance " << YELLOW << char(251) << RESET << endl;
 				cout << "c) voltage " << endl;
+				cout << RED << "Your answer is wrong!" << RESET << endl << endl;
 			}
-			else if (answers[2] == "b" or (answers[2] != "a" and answers[2] != "b" and answers[2] != "c"))
+			else if (answers[2] == "b")
 			{
 				cout << "a) electric current " << endl;
 				cout << "b) resistance " << GREEN << char(251) << RESET << endl;
 				cout << "c) voltage " << endl;
-				if (answers[2] == "b")
-				{
-					cout << GREEN << "Your answer is correct!" << RESET;
-				}
+				cout << GREEN << "Your answer is correct!" << RESET << endl << endl;
+
 			}
 			else if (answers[2] == "c")
 			{
 				cout << "a) electric current" << endl;
 				cout << "b) resistance " << YELLOW << char(251) << RESET << endl;
 				cout << "c) voltage " << RED << "X" << RESET << endl;
+				cout << RED << "Your answer is wrong!" << RESET << endl << endl;
 			}
 			break;
 		}
@@ -364,22 +501,21 @@ void reviewTest(int reviewTestQuestions[10])
 				cout << "a) 1-ammeter, 2-voltmeter, 3-lamp " << RED << "X" << RESET << endl;
 				cout << "b) 1-voltmeter, 2-ammeter, 3-lamp " << endl;
 				cout << "c) 1-lamp, 2-voltmeter, 3-ammeter " << YELLOW << char(251) << RESET << endl;
+				cout << RED << "Your answer is wrong!" << RESET << endl << endl;
 			}
 			else if (answers[3] == "b")
 			{
 				cout << "a) 1-ammeter, 2-voltmeter, 3-lamp " << endl;
 				cout << "b) 1-voltmeter, 2-ammeter, 3-lamp " << RED << "X" << RESET << endl;
 				cout << "c) 1-lamp, 2-voltmeter, 3-ammeter " << YELLOW << char(251) << RESET << endl;
+				cout << RED << "Your answer is wrong!" << RESET << endl << endl;
 			}
-			else if (answers[3] == "c" or (answers[3] != "a" and answers[3] != "b" and answers[3] != "c"))
+			else if (answers[3] == "c")
 			{
 				cout << "a) 1-ammeter, 2-voltmeter, 3-lamp " << endl;
 				cout << "b) 1-voltmeter, 2-ammeter, 3-lamp " << endl;
 				cout << "c) 1-lamp, 2-voltmeter, 3-ammeter " << GREEN << char(251) << RESET << endl;
-				if (answers[1] == "c")
-				{
-					cout << GREEN << "Your answer is correct!" << RESET;
-				}
+				cout << GREEN << "Your answer is correct!" << RESET << endl << endl;
 			}
 			break;
 		}
@@ -390,19 +526,18 @@ void reviewTest(int reviewTestQuestions[10])
 			cout << "I = " << char(196) << " is a formula for finding electric current" << endl;
 			cout << setw(5) << "t" << endl << endl;
 
-			if (answers[4] == "a" or (answers[4] != "a" and answers[4] != "b"))
+			if (answers[4] == "a")
 			{
 				cout << "a) True " << GREEN << char(251) << RESET << endl;
 				cout << "b) False" << endl;
-				if (answers[4] == "a")
-				{
-					cout << GREEN << "Your answer is correct!" << RESET;
-				}
+				cout << GREEN << "Your answer is correct!" << RESET << endl << endl;
+
 			}
 			else if (answers[4] == "b")
 			{
 				cout << "a) True " << YELLOW << char(251) << RESET << endl;
 				cout << "b) False " << RED << "X" << RESET << endl;
+				cout << RED << "Your answer is wrong!" << RESET << endl << endl;
 			}
 			break;
 		}
@@ -414,15 +549,13 @@ void reviewTest(int reviewTestQuestions[10])
 			{
 				cout << "a) True" << RED << "X" << RESET << endl;
 				cout << "b) False " << YELLOW << char(251) << RESET << endl;
+				cout << RED << "Your answer is wrong!" << RESET << endl << endl;
 			}
-			else if (answers[5] == "b" or (answers[5] != "a" and answers[5] != "b"))
+			else if (answers[5] == "b")
 			{
 				cout << "a) True" << endl;
 				cout << "b) False " << GREEN << char(251) << RESET << endl;
-				if (answers[5] == "b")
-				{
-					cout << GREEN << "Your answer is correct!" << RESET;
-				}
+				cout << GREEN << "Your answer is correct!" << RESET << endl << endl;
 			}
 			break;
 		}
@@ -430,19 +563,17 @@ void reviewTest(int reviewTestQuestions[10])
 		case 7:
 		{
 			cout << "U = R * I" << endl << endl;
-			if (answers[6] == "a" or (answers[6] != "a" and answers[6] != "b"))
+			if (answers[6] == "a")
 			{
 				cout << "a) True " << GREEN << char(251) << RESET << endl;
 				cout << "b) False" << endl;
-				if (answers[6] == "a")
-				{
-					cout << GREEN << "Your answer is correct!" << RESET;
-				}
+				cout << GREEN << "Your answer is correct!" << RESET << endl << endl;
 			}
 			else if (answers[6] == "b")
 			{
 				cout << "a) True " << YELLOW << char(251) << RESET << endl;
 				cout << "b) False " << RED << "X" << RESET << endl;
+				cout << RED << "Your answer is wrong!" << RESET << endl << endl;
 			}
 			break;
 		}
@@ -450,27 +581,26 @@ void reviewTest(int reviewTestQuestions[10])
 		case 8:
 		{
 			cout << "In what unit of measurement is the electric current measured?" << endl;
-			if (answers[7] == "a" or (answers[7] != "a" and answers[7] != "b" and answers[7] != "c"))
+			if (answers[7] == "a")
 			{
 				cout << "a) A - ampere " << GREEN << char(251) << RESET << endl;
 				cout << "b) V - volt " << endl;
 				cout << "c) C - coulomb " << endl;
-				if (answers[7] == "a")
-				{
-					cout << GREEN << "Your answer is correct!" << RESET;
-				}
+				cout << GREEN << "Your answer is correct!" << RESET << endl << endl;
 			}
 			else if (answers[7] == "b")
 			{
 				cout << "a) A - ampere " << YELLOW << char(251) << RESET << endl;
 				cout << "b) V - volt " << RED << "X" << RESET << endl;
 				cout << "c) C - coulomb" << endl;
+				cout << RED << "Your answer is wrong!" << RESET << endl << endl;
 			}
 			else if (answers[7] == "c")
 			{
 				cout << "a) A - ampere " << YELLOW << char(251) << RESET << endl;
 				cout << "b) V - volt " << endl;
 				cout << "c) C - coulomb " << RED << "X" << RESET << endl;
+				cout << RED << "Your answer is wrong!" << RESET << endl << endl;
 			}
 			break;
 		}
@@ -483,28 +613,29 @@ void reviewTest(int reviewTestQuestions[10])
 				cout << "a) A - ampere " << RED << "X" << RESET << endl;
 				cout << "b) V - volt " << YELLOW << char(251) << RESET << endl;
 				cout << "c) C - coulomb" << endl;
+				cout << RED << "Your answer is wrong!" << RESET << endl << endl;
 			}
-			else if (answers[8] == "b" or (answers[8] != "a" and answers[8] != "b" and answers[8] != "c"))
+			else if (answers[8] == "b")
 			{
 				cout << "a) A - ampere " << endl;
 				cout << "b) V - volt " << GREEN << char(251) << RESET << endl;
 				cout << "c) C - coulomb" << endl;
-				if (answers[8] == "b")
-				{
-					cout << GREEN << "Your answer is correct!" << RESET;
-				}
+				cout << GREEN << "Your answer is correct!" << RESET << endl << endl;
+				
 			}
 			else if (answers[8] == "c")
 			{
 				cout << "a) A - ampere " << endl;
 				cout << "b) V - volt " << YELLOW << char(251) << RESET << endl;
 				cout << "c) C - coulomb" RED << "X" << RESET << endl;
+				cout << RED << "Your answer is wrong!" << RESET << endl << endl;
 			}
 			break;
 		}
 
 		case 10:
 		{
+
 			cout << "In what unit of measurement is the charge passed measured?" << endl;
 
 			if (answers[9] == "a")
@@ -512,104 +643,68 @@ void reviewTest(int reviewTestQuestions[10])
 				cout << "a) A - ampere " << RED << "X" << RESET << endl;
 				cout << "b) V - volt" << endl;
 				cout << "c) C - coulomb " << YELLOW << char(251) << RESET << endl;
+				cout << RED << "Your answer is wrong!" << RESET << endl << endl;
 			}
 			else if (answers[9] == "b")
 			{
 				cout << "a) A - ampere" << endl;
 				cout << "b) V - volt" << RED << "X" << RESET << endl;
 				cout << "c) C - coulomb " << YELLOW << char(251) << RESET << endl;
+				cout << RED << "Your answer is wrong!" << RESET << endl << endl;
 			}
-			else if (answers[9] == "c" or (answers[9] != "a" and answers[9] != "b" and answers[9] != "c"))
+			else if (answers[9] == "c")
 			{
 				cout << "a) A - ampere" << endl;
 				cout << "b) V - volt" << endl;
 				cout << "c) C - coulomb " << GREEN << char(251) << RESET << endl;
-				if (answers[9] == "c")
-				{
-					cout << GREEN << "Your answer is correct!" << RESET;
-				}
+				cout << GREEN << "Your answer is correct!" << RESET << endl << endl;
 			}
 			break;
 		}
 		}
-		cout << endl << endl << endl;
 	}
+	cout << endl << endl;
+	system("PAUSE");
 
-	int goBack;
-	cout << endl << "Enter 1 to go back >> ";
-	cin >> goBack;
-	if (goBack == 1)
-	{
-		system("cls");
-	}
 }
 
 void startTest()
 {
+	countRightAnswers = 0;
+	countQuestions = 0;
+	
+	shuffleQuestions(questions);
 
-start:
+	for (int i = 0; i < 10; ++i)
 	{
-		counter = 0;
-		int questions[10];
-
-		shuffleQuestions(questions);
-
-		for (int i = 0; i < 10; ++i)
-		{
-			system("cls");
-
-			cout << "Question " << i + 1 << endl;
-			cout << "____________________________________________________" << endl;
-
-			switch (questions[i])
-			{
-			case 1: questionOne();
-				break;
-			case 2: questionTwo();
-				break;
-			case 3: questionThree();
-				break;
-			case 4: questionFour();
-				break;
-			case 5: questionFive();
-				break;
-			case 6: questionSix();
-				break;
-			case 7: questionSeven();
-				break;
-			case 8: questionEight();
-				break;
-			case 9: questionNine();
-				break;
-			case 10: questionTen();
-				break;
-			}
-
-		}
-
 		system("cls");
-		cout << " Your score is " << counter * 10 << "%" << endl << endl;
-		int nextChoice;
 
-		cout << " What do you want to do now?" << endl;
-		cout << " __________________________________________" << endl;
-		cout << " 1) review" << endl;
-		cout << " 2) retake the test" << endl;
-		cout << " 3) go back" << endl << endl;
-		cout << " Select >> ";
-
-		cin >> nextChoice;
-		if (nextChoice == 1)
+		switch (questions[i])
 		{
-			reviewTest(questions);
+		case 1: answerQuestionOne();
+			break;
+		case 2: answerQuestionTwo();
+		break;
+		case 3: answerQuestionThree();
+			break;
+		case 4: answerQuestionFour();
+			break;
+		case 5: answerQuestionFive();
+			break;
+		case 6: answerQuestionSix();
+			break;
+		case 7: answerQuestionSeven();
+			break;
+		case 8: answerQuestionEight();
+			break;
+		case 9: answerQuestionNine();
+			break;
+		case 10: answerQuestionTen();
+			break;
 		}
-		else if (nextChoice == 2)
-		{
-			goto start;
-		}
-		else if (nextChoice == 3)
-		{
-			system("cls");
-		}
+		countQuestions++;
 	}
+	displayMenuAfterTheTest();
+
+
 }

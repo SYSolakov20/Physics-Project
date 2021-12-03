@@ -10,8 +10,9 @@ void startCreating();
 void chooseDevice();
 void choosePosition();
 void fillPosition(int position);
-void emptyPosition(int position);
 void occupiedPosition(int position);
 void printSimulation();
 void turnOn();
 void turnOnCheck();
+void emptyPosition(int position);
+

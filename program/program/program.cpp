@@ -7,13 +7,13 @@
 
 using namespace std;
 
-void Menu()
+void printMenu()
 {
 	cout << setw(30) << " Wellcome!" << endl;
 	cout << " _________________________________________________" << endl << endl;
 	cout << " 1) Simulations" << endl;
 	cout << " 2) Calculators" << endl;
-	cout << " 3) Tests" << endl;
+	cout << " 3) Test" << endl;
 	cout << " 4) Create your own simulation" << endl;
 	cout << " 5) Exit" << endl;
 	cout << " _________________________________________________" << endl << endl;
@@ -25,7 +25,7 @@ void startProgram()
 	int activity;
 
 	system("cls");
-	Menu();
+	printMenu();
 	cin >> activity;
 
 	if (activity == 1)
@@ -52,6 +52,10 @@ void startProgram()
 	{
 		system("cls");
 		cout << "Bye!";
+	}
+	else
+	{
+		startProgram();
 	}
 }
 
