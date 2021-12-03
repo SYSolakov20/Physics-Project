@@ -1,21 +1,2 @@
-﻿  program.cpp
-C:\Users\Zhanet Petkova\Documents\school\Physics-Project\program\program\Test.h(27,18): error C2065: 'string': undeclared identifier
-C:\Users\Zhanet Petkova\Documents\school\Physics-Project\program\program\Test.h(27,25): error C2146: syntax error: missing ')' before identifier 'response'
-  Simulations.cpp
-  Test.cpp
-C:\Users\Zhanet Petkova\Documents\school\Physics-Project\program\program\Test.h(27,18): error C2065: 'string': undeclared identifier
-C:\Users\Zhanet Petkova\Documents\school\Physics-Project\program\program\Test.h(27,25): error C2146: syntax error: missing ')' before identifier 'response'
-C:\Users\Zhanet Petkova\Documents\school\Physics-Project\program\program\Test.cpp(13,6): error C2365: 'returnError': redefinition; previous definition was 'data variable'
-C:\Users\Zhanet Petkova\Documents\school\Physics-Project\program\program\Test.h(27): message : see declaration of 'returnError'
-C:\Users\Zhanet Petkova\Documents\school\Physics-Project\program\program\Test.cpp(81,6): error C2064: term does not evaluate to a function taking 1 arguments
-C:\Users\Zhanet Petkova\Documents\school\Physics-Project\program\program\Test.cpp(106,6): error C2064: term does not evaluate to a function taking 1 arguments
-C:\Users\Zhanet Petkova\Documents\school\Physics-Project\program\program\Test.cpp(131,6): error C2064: term does not evaluate to a function taking 1 arguments
-C:\Users\Zhanet Petkova\Documents\school\Physics-Project\program\program\Test.cpp(187,6): error C2064: term does not evaluate to a function taking 1 arguments
-C:\Users\Zhanet Petkova\Documents\school\Physics-Project\program\program\Test.cpp(214,6): error C2064: term does not evaluate to a function taking 1 arguments
-C:\Users\Zhanet Petkova\Documents\school\Physics-Project\program\program\Test.cpp(239,6): error C2064: term does not evaluate to a function taking 1 arguments
-C:\Users\Zhanet Petkova\Documents\school\Physics-Project\program\program\Test.cpp(264,6): error C2064: term does not evaluate to a function taking 1 arguments
-C:\Users\Zhanet Petkova\Documents\school\Physics-Project\program\program\Test.cpp(290,6): error C2064: term does not evaluate to a function taking 1 arguments
-C:\Users\Zhanet Petkova\Documents\school\Physics-Project\program\program\Test.cpp(316,6): error C2064: term does not evaluate to a function taking 1 arguments
-C:\Users\Zhanet Petkova\Documents\school\Physics-Project\program\program\Test.cpp(342,6): error C2064: term does not evaluate to a function taking 1 arguments
-C:\Users\Zhanet Petkova\Documents\school\Physics-Project\program\program\Test.cpp(357,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Generating Code...
+﻿  CreateSimulation.cpp
+  program.vcxproj -> C:\Users\PC\OneDrive - ПГКПИ - Бургас\Работен плот\Project\Physics-Project\program\x64\Debug\program.exe

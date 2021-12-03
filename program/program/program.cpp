@@ -45,7 +45,7 @@ void startProgram()
 	}
 	else if (activity == 4)
 	{
-		startCreating();
+		startCreatingSimulation();
 		startProgram();
 	}
 	else if (activity == 5)

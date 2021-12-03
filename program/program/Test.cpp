@@ -7,28 +7,7 @@ using namespace std;
 string answers[10];
 int countRightAnswers = 0;
 int countQuestions = 1;
-bool trueFalseQuestion = 0;
 int questions[10];
-
-bool returnError(string response)
-{
-	if (trueFalseQuestion)
-	{
-		if (response != "a" && response != "b")
-		{
-			return 1;
-		}
-		return 0;
-	}
-	else
-	{
-		if (response != "a" && response != "b" && response != "c")
-		{
-			return 1;
-		}
-		return 0;
-	}
-}
 
 void displayMenuAfterTheTest()
 {
@@ -66,7 +45,6 @@ void displayMenuAfterTheTest()
 
 void answerQuestionOne()
 {
-	trueFalseQuestion = 0;
 	cout << "Question "<< countQuestions << endl;
 	cout << "_____________________________" << endl << endl;
 
@@ -78,7 +56,7 @@ void answerQuestionOne()
 	cout << "Enter your answer >> ";
 
 	cin >> answers[0];
-	if (returnError(answers[0]))
+	if (answers[0] != "a" && answers[0] != "b" && answers[0] != "c")
 	{
 		system("cls");
 		answerQuestionOne();
@@ -91,7 +69,6 @@ void answerQuestionOne()
 
 void answerQuestionTwo()
 {
-	trueFalseQuestion = 0;
 	cout << "Question " << countQuestions << endl;
 	cout << "_____________________________" << endl << endl;
 
@@ -103,7 +80,7 @@ void answerQuestionTwo()
 	cout << "Enter your answer >> ";
 
 	cin >> answers[1];
-	if (returnError(answers[1]))
+	if (answers[1] != "a" && answers[1] != "b" && answers[1] != "c")
 	{
 		system("cls");
 		answerQuestionTwo();
@@ -116,7 +93,6 @@ void answerQuestionTwo()
 
 void answerQuestionThree()
 {
-	trueFalseQuestion = 0;
 	cout << "Question " << countQuestions << endl;
 	cout << "_____________________________" << endl << endl;
 
@@ -128,7 +104,7 @@ void answerQuestionThree()
 	cout << "Enter your answer >> ";
 
 	cin >> answers[2];
-	if (returnError(answers[2]))
+	if (answers[2] != "a" && answers[2] != "b" && answers[2] != "c")
 	{
 		system("cls");
 		answerQuestionThree();
@@ -141,7 +117,6 @@ void answerQuestionThree()
 
 void answerQuestionFour()
 {
-	trueFalseQuestion = 0;
 	cout << "Question " << countQuestions << endl;
 	cout << "_____________________________" << endl << endl;
 
@@ -184,7 +159,7 @@ void answerQuestionFour()
 	cout << "Enter your answer >> ";
 
 	cin >> answers[3];
-	if (returnError(answers[3]))
+	if (answers[3] != "a" && answers[3] != "b" && answers[3] != "c")
 	{
 		system("cls");
 		answerQuestionFour();
@@ -197,7 +172,6 @@ void answerQuestionFour()
 
 void answerQuestionFive()
 {
-	trueFalseQuestion = 1;
 	cout << "Question " << countQuestions << endl;
 	cout << "_____________________________" << endl << endl;
 
@@ -211,7 +185,7 @@ void answerQuestionFive()
 	cout << "Enter your answer >> ";
 
 	cin >> answers[4];
-	if (returnError(answers[4]))
+	if (answers[4] != "a" && answers[4] != "b")
 	{
 		system("cls");
 		answerQuestionFive();
@@ -224,7 +198,6 @@ void answerQuestionFive()
 
 void answerQuestionSix()
 {
-	trueFalseQuestion = 1;
 	cout << "Question " << countQuestions << endl;
 	cout << "_____________________________" << endl << endl;
 
@@ -236,7 +209,7 @@ void answerQuestionSix()
 	cout << "Enter your answer >> ";
 
 	cin >> answers[5];
-	if (returnError(answers[5]))
+	if (answers[5] != "a" && answers[5] != "b")
 	{
 		system("cls");
 		answerQuestionSix();
@@ -249,7 +222,6 @@ void answerQuestionSix()
 
 void answerQuestionSeven()
 {
-	trueFalseQuestion = 1;
 	cout << "Question " << countQuestions << endl;
 	cout << "_____________________________" << endl << endl;
 
@@ -261,7 +233,7 @@ void answerQuestionSeven()
 	cout << "Enter your answer >> ";
 
 	cin >> answers[6];
-	if (returnError(answers[6]))
+	if (answers[6] != "a" && answers[6] != "b")
 	{
 		system("cls");
 		answerQuestionSeven();
@@ -274,7 +246,6 @@ void answerQuestionSeven()
 
 void answerQuestionEight()
 {
-	trueFalseQuestion = 0;
 	cout << "Question " << countQuestions << endl;
 	cout << "_____________________________" << endl << endl;
 
@@ -287,7 +258,7 @@ void answerQuestionEight()
 	cout << "Enter your answer >> ";
 
 	cin >> answers[7];
-	if (returnError(answers[7]))
+	if (answers[7] != "a" && answers[7] != "b" && answers[7] != "c")
 	{
 		system("cls");
 		answerQuestionEight();
@@ -300,7 +271,6 @@ void answerQuestionEight()
 
 void answerQuestionNine()
 {
-	trueFalseQuestion = 0;
 	cout << "Question " << countQuestions << endl;
 	cout << "_____________________________" << endl << endl;
 
@@ -313,7 +283,7 @@ void answerQuestionNine()
 	cout << "Enter your answer >> ";
 
 	cin >> answers[8];
-	if (returnError(answers[8]))
+	if (answers[8] != "a" && answers[8] != "b" && answers[8] != "c")
 	{
 		system("cls");
 		answerQuestionNine();
@@ -326,7 +296,6 @@ void answerQuestionNine()
 
 void answerQuestionTen()
 {
-	trueFalseQuestion = 0;
 	cout << "Question " << countQuestions << endl;
 	cout << "_____________________________" << endl << endl;
 
@@ -339,7 +308,7 @@ void answerQuestionTen()
 	cout << "Enter your answer >> ";
 
 	cin >> answers[9];
-	if (returnError(answers[9]))
+	if (answers[9] != "a" && answers[9] != "b" && answers[9] != "c")
 	{
 		system("cls");
 		answerQuestionTen();
@@ -354,7 +323,9 @@ void shuffleQuestions(int shuffledQuestions[10])
 {
 	int questionsInOrder[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 	int temp;
+
 	srand(time(NULL));
+
 	for (int i = 9; i > 0; --i)
 	{
 		int j = rand() % i;
@@ -671,7 +642,7 @@ void reviewTest(int reviewTestQuestions[10])
 void startTest()
 {
 	countRightAnswers = 0;
-	countQuestions = 0;
+	countQuestions = 1;
 	
 	shuffleQuestions(questions);
 
