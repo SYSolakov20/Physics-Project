@@ -3,7 +3,7 @@
 
 void startCalculators();
 void doNextCalculator();
-void electricCurrent();
-void chargePassed();
-void resistance();
-void voltage();
+void calculateElectricCurrent();
+void calculateChargePassed();
+void calculateResistance();
+void calculateVoltage();

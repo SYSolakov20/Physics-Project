@@ -11,16 +11,18 @@
 
 
 
-void questionOne();
-void questionTwo();
-void questionThree();
-void questionFour();
-void questionFive();
-void questionSix();
-void questionSeven();
-void questionEight();
-void questionNine();
-void questionTen();
+void answerQuestionOne();
+void answerQuestionTwo();
+void answerQuestionThree();
+void answerQuestionFour();
+void answerQuestionFive();
+void answerQuestionSix();
+void answerQuestionSeven();
+void answerQuestionEight();
+void answerQuestionNine();
+void answerQuestionTen();
 void shuffleQuestions(int arr[10]);
 void startTest();
 void reviewTest(int reviewTestQuestions[10]);
+bool returnError(string response);
+void displayMenuAfterTheTest();

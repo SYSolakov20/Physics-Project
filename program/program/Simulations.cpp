@@ -26,31 +26,31 @@ void startSimulations()
 
 	if (simulationChoise == 1)
 	{
-		system("cls");
-		simpleSimulation();
+		displaySimpleSimulation();
 		startSimulations();
 	}
 	else if (simulationChoise == 2)
 	{
-		system("cls");
-		ammeterSimulation();
+		displayAmmeterSimulation();
 		startSimulations();
 	}
 	else if (simulationChoise == 3)
 	{
-		system("cls");
-		voltmeterSimulation();
+		displayVoltmeterSimulation();
 		startSimulations();
 	}
 	else if (simulationChoise == 4)
 	{
-		system("cls");
-		ammmeterAndVoltmeterSimulation();
+		displayAmmmeterAndVoltmeterSimulation();
 		startSimulations();
 	}
 	else if (simulationChoise == 5)
 	{
 		system("cls");
+	}
+	else
+	{
+		startSimulations();
 	}
 }
 
@@ -74,7 +74,7 @@ void doNextSimulationOff()
 	cout << " Select >> ";
 }
 
-void simpleSimulation()
+void displaySimpleSimulation()
 {
 	int nextChoise;
 
@@ -84,6 +84,7 @@ void simpleSimulation()
 		{
 			system("cls");
 			system("color 0f");
+
 			cout << endl;
 			cout << " " << char(201);
 			for (int i = 0; i < 14; i++)
@@ -95,7 +96,6 @@ void simpleSimulation()
 			{
 				cout << char(205);
 			}
-
 			cout << char(187) << endl;
 			cout << " " << char(186) << setw(36) << char(186) << endl;
 			cout << " " << char(186) << setw(36) << char(186) << endl;
@@ -114,7 +114,6 @@ void simpleSimulation()
 			cout << char(188) << endl << endl;
 
 			doNextSimulationOn();
-
 			cin >> nextChoise;
 
 			if (nextChoise == 1)
@@ -124,8 +123,6 @@ void simpleSimulation()
 			else if (nextChoise == 2)
 			{
 				system("cls");
-
-				cout << "This is information about our simple simulation" << endl;
 
 				string Information;
 				ifstream readFile("Information/simpleInformation.txt");
@@ -139,14 +136,16 @@ void simpleSimulation()
 				readFile.close();
 
 				cout << endl << endl;
-
 				system("PAUSE");
 				goto switchOff;
 			}
 			else if (nextChoise == 3)
 			{
 				break;
-
+			}
+			else
+			{
+				goto switchOff;
 			}
 		}
 
@@ -184,7 +183,6 @@ void simpleSimulation()
 			cout << char(188) << endl << endl;
 
 			doNextSimulationOff();
-
 			cin >> nextChoise;
 
 			if (nextChoise == 1)
@@ -194,8 +192,6 @@ void simpleSimulation()
 			else if (nextChoise == 2)
 			{
 				system("cls");
-
-				cout << "This is information about our simple simulation" << endl;
 
 				string Information;
 				ifstream readFile("Information/simpleInformation.txt");
@@ -209,21 +205,22 @@ void simpleSimulation()
 				readFile.close();
 
 				cout << endl << endl;
-
 				system("PAUSE");
 				goto switchOn;
 			}
 			else if (nextChoise == 3)
 			{
 				break;
-
+			}
+			else
+			{
+				goto switchOn;
 			}
 		}
-
 	}
 }
 
-void ammeterSimulation()
+void displayAmmeterSimulation()
 {
 	int nextChoise;
 
@@ -268,7 +265,6 @@ void ammeterSimulation()
 			cout << char(188) << endl << endl;
 
 			doNextSimulationOn();
-
 			cin >> nextChoise;
 
 			if (nextChoise == 1)
@@ -278,9 +274,6 @@ void ammeterSimulation()
 			else if (nextChoise == 2)
 			{
 				system("cls");
-
-				cout << "This is information about our ammeter simulation" << endl;
-
 
 				string Information;
 				ifstream readFile("Information/ammeterInformation.txt");
@@ -293,11 +286,7 @@ void ammeterSimulation()
 
 				readFile.close();
 
-				cout << endl << "When you are ready press 1." << endl;
-
-
 				cout << endl << endl;
-
 				system("PAUSE");
 				goto switchOff;
 
@@ -305,7 +294,10 @@ void ammeterSimulation()
 			else if (nextChoise == 3)
 			{
 				break;
-
+			}
+			else
+			{
+				goto switchOff;
 			}
 		}
 
@@ -348,7 +340,6 @@ void ammeterSimulation()
 			cout << char(188) << endl << endl;
 
 			doNextSimulationOff();
-
 			cin >> nextChoise;
 
 			if (nextChoise == 1)
@@ -358,9 +349,6 @@ void ammeterSimulation()
 			else if (nextChoise == 2)
 			{
 				system("cls");
-
-				cout << "This is information about our ammeter simulation" << endl;
-
 				
 				string Information;
 				ifstream readFile("Information/ammeterInformation.txt");
@@ -373,10 +361,7 @@ void ammeterSimulation()
 
 				readFile.close();
 
-				cout << endl << "When you are ready press 1." << endl;
-
 				cout << endl << endl;
-
 				system("PAUSE");
 				goto switchOn;
 
@@ -384,14 +369,17 @@ void ammeterSimulation()
 			else if (nextChoise == 3)
 			{
 				break;
-
+			}
+			else
+			{
+				goto switchOn;
 			}
 		}
 
 	}
 }
 
-void voltmeterSimulation()
+void displayVoltmeterSimulation()
 {
 	int nextChoise;
 
@@ -431,7 +419,6 @@ void voltmeterSimulation()
 			cout << char(188) << endl << endl;
 
 			doNextSimulationOn();
-
 			cin >> nextChoise;
 
 			if (nextChoise == 1)
@@ -441,8 +428,6 @@ void voltmeterSimulation()
 			else if (nextChoise == 2)
 			{
 				system("cls");
-
-				cout << "This is information about our voltmeter simulation" << endl;
 
 				string Information;
 				ifstream readFile("Information/voltmeterInformation.txt");
@@ -455,17 +440,17 @@ void voltmeterSimulation()
 
 				readFile.close();
 
-				cout << endl << "When you are ready press 1." << endl;
-
 				cout << endl << endl;
-
 				system("PAUSE");
 				goto switchOff;
 			}
 			else if (nextChoise == 3)
 			{
 				break;
-
+			}
+			else
+			{
+				goto switchOff;
 			}
 		}
 
@@ -503,7 +488,6 @@ void voltmeterSimulation()
 			cout << char(188) << endl << endl;
 
 			doNextSimulationOff();
-
 			cin >> nextChoise;
 
 			if (nextChoise == 1)
@@ -514,9 +498,6 @@ void voltmeterSimulation()
 			{
 				system("cls");
 
-				cout << "This is information about our voltmeter simulation" << endl;
-
-				
 				string Information;
 				ifstream readFile("Information/voltmeterInformation.txt");
 
@@ -528,24 +509,24 @@ void voltmeterSimulation()
 
 				readFile.close();
 
-				cout << endl << "When you are ready press 1." << endl;
-
 				cout << endl << endl;
-
 				system("PAUSE");
 				goto switchOn;
 			}
 			else if (nextChoise == 3)
 			{
 				break;
-
+			}
+			else
+			{
+				goto switchOn;
 			}
 		}
 
 	}
 }
 
-void ammmeterAndVoltmeterSimulation()
+void displayAmmmeterAndVoltmeterSimulation()
 {
 	int nextChoise;
 
@@ -590,7 +571,6 @@ void ammmeterAndVoltmeterSimulation()
 			cout << char(188) << endl << endl;
 
 			doNextSimulationOn();
-
 			cin >> nextChoise;
 
 			if (nextChoise == 1)
@@ -600,8 +580,6 @@ void ammmeterAndVoltmeterSimulation()
 			else if (nextChoise == 2)
 			{
 				system("cls");
-
-				cout << "This is information about our ammeter and voltmeter simulation" << endl;
 
 				string Information;
 				ifstream readFile("Information/ammeterAndVoltmeterSimulation.txt");
@@ -614,17 +592,17 @@ void ammmeterAndVoltmeterSimulation()
 
 				readFile.close();
 
-				cout << endl << "When you are ready press 1." << endl;
-
 				cout << endl << endl;
-
 				system("PAUSE");
 				goto switchOff;
 			}
 			else if (nextChoise == 3)
 			{
 				break;
-
+			}
+			else
+			{
+				goto switchOff;
 			}
 		}
 
@@ -667,7 +645,6 @@ void ammmeterAndVoltmeterSimulation()
 			cout << char(188) << endl << endl;
 
 			doNextSimulationOff();
-
 			cin >> nextChoise;
 
 			if (nextChoise == 1)
@@ -678,9 +655,6 @@ void ammmeterAndVoltmeterSimulation()
 			{
 				system("cls");
 
-				cout << "This is information about our ammeter and voltmeter simulation" << endl;
-
-				
 				string Information;
 				ifstream readFile("Information/ammeterAndVoltmeterSimulation.txt");
 
@@ -692,17 +666,17 @@ void ammmeterAndVoltmeterSimulation()
 
 				readFile.close();
 
-				cout << endl << "When you are ready press 1." << endl;
-
 				cout << endl << endl;
-
 				system("PAUSE");
 				goto switchOn;
 			}
 			else if (nextChoise == 3)
 			{
 				break;
-
+			}
+			else
+			{
+				goto switchOn;
 			}
 		}
 

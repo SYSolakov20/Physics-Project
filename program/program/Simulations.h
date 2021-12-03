@@ -9,7 +9,7 @@
 void startSimulations();
 void doNextSimulationOn();
 void doNextSimulationOff();
-void simpleSimulation();
-void ammeterSimulation();
-void voltmeterSimulation();
-void ammmeterAndVoltmeterSimulation();
+void displaySimpleSimulation();
+void displayAmmeterSimulation();
+void displayVoltmeterSimulation();
+void displayAmmmeterAndVoltmeterSimulation();
