@@ -22,7 +22,15 @@
     <a href="https://www.w3schools.com/css/" target="_blank"> <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/visual-studio-code-2019.png"/></a></a>
   <a href="https://www.w3schools.com/css/" target="_blank"> <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://img.icons8.com/fluency/48/000000/visual-studio-2019.png"/></a></a>
    <a href="https://www.w3schools.com/css/" target="_blank"> <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/figma--v1.png"/></a></a>
+    
 
+ ## 🎬 Demo of the project
+
+<p align="center">
+<img src="https://cdn.discordapp.com/attachments/699568463873835059/916417862346866728/Apple_Pro_Display_XDR_-_Horizontal.png" width = "2500px" >
+</p>
+ 
+   
 ## ⚙ Installation
 ```
 You can download our project by using the green "Code" button.
