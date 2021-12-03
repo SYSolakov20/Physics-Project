@@ -14,3 +14,4 @@ void emptyPosition(int position);
 void occupiedPosition(int position);
 void printSimulation();
 void turnOn();
+void turnOnCheck();

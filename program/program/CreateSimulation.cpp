@@ -4,7 +4,6 @@
 
 using namespace std;
 
-
 int ammeterPosition = 0;
 int voltmeterPosition = 0;
 int batteryPosition = 0;
@@ -88,8 +87,6 @@ void occupiedPosition(int position)
 
 void choosePosition()
 {
-	system("color 0f");
-
 	cout << endl;
 	cout << " " << char(201);
 	for (int i = 0; i < 14; i++)
@@ -121,22 +118,22 @@ void choosePosition()
 	cout << " " << char(186) << setw(36) << char(186) << endl;
 	cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(187) << endl;
 	cout << " " << char(186) << setw(36) << char(186) << setw(7) << char(186) << endl;
-	cout << RED << " / " << RESET << setw(39) << "( x )  ";
+	cout << RED << " / " << RESET << setw(38) << "( x ) ";
 	if (ammeterPosition != 2 && voltmeterPosition != 2 && batteryPosition != 2)
 	{
-		cout << "( 2 )" << endl;
+		cout << " ( 2 )" << endl;
 	}
 	else if (ammeterPosition == 2)
 	{
-		cout << "( A )" << endl;
+		cout << " ( A )" << endl;
 	}
 	else if (voltmeterPosition == 2)
 	{
-		cout << "( V )" << endl;
+		cout << " ( V )" << endl;
 	}
 	else if (batteryPosition == 2)
 	{
-		cout << "+| |-" << endl;
+		cout << " +| |-" << endl;
 	}
 	cout << " " << char(186) << setw(36) << char(186) << setw(7) << char(186) << endl;
 	cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(188) << endl;
@@ -208,7 +205,8 @@ void chooseDevice()
 			cout << " 3) Remove battery or change its position" << endl;
 		}
 		cout << " 4) Turn on - check if it works" << endl;
-		cout << " 5) Go back" << endl << endl;
+		cout << " 5) Clear the circuit " << endl;
+		cout << " 6) Go back" << endl << endl;
 		cout << " Select >> ";
 		cin >> device;
 		system("cls");
@@ -376,9 +374,19 @@ void chooseDevice()
 		}
 		else if (device == 4)
 		{
-			turnOn();
+			turnOnCheck();
 		}
 		else if (device == 5)
+		{
+			ammeterPosition = 0;
+			voltmeterPosition = 0;
+			batteryPosition = 0;
+			occupatedPosition[0] = 0;
+			occupatedPosition[1] = 0;
+			occupatedPosition[2] = 0;
+			sparePosition = 0;
+		}
+		else if (device == 6)
 		{
 			break;
 		}
@@ -432,7 +440,7 @@ void printSimulation()
 		}
 		else if (batteryPosition == 2)
 		{
-			cout << " +| |- " << endl;
+			cout << "+| |- " << endl;
 		}
 		cout << " " << char(186) << setw(36) << char(186) << setw(7) << char(186) << endl;
 		cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(188) << endl;
@@ -477,101 +485,115 @@ void printSimulation()
 
 void turnOn()
 {
-	if (ammeterPosition != 2 && (batteryPosition == 1 || batteryPosition == 3) && (voltmeterPosition == 2 || voltmeterPosition == 0))
+	system("cls");
+	cout << endl;
+	cout << " " << char(201);
+	for (int i = 0; i < 14; i++)
 	{
-		system("cls");
-		cout << endl;
-		cout << " " << char(201);
-		for (int i = 0; i < 14; i++)
-		{
-			cout << char(205);
-		}
-		if (ammeterPosition != 1 && voltmeterPosition != 1 && batteryPosition != 1)
-		{
-			cout << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205);
-		}
-		else if (ammeterPosition == 1)
-		{
-			cout << char(205) << "( A )" << char(205);
-		}
-		else if (voltmeterPosition == 1)
-		{
-			cout << char(205) << "( V )" << char(205);
-		}
-		else if (batteryPosition == 1)
-		{
-			cout << " +| |- ";
-		}
-		for (int i = 0; i < 14; i++)
-		{
-			cout << char(205);
-		}
-		cout << char(187) << endl;
+		cout << char(205);
+	}
+	if (ammeterPosition != 1 && voltmeterPosition != 1 && batteryPosition != 1)
+	{
+		cout << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205);
+	}
+	else if (ammeterPosition == 1)
+	{
+		cout << char(205) << "( A )" << char(205);
+	}
+	else if (batteryPosition == 1)
+	{
+		cout << " +| |- ";
+	}
+	for (int i = 0; i < 14; i++)
+	{
+		cout << char(205);
+	}
+	cout << char(187) << endl;
+	cout << " " << char(186) << setw(36) << char(186) << endl;
+	cout << " " << char(186) << setw(36) << char(186) << endl;
+	if (occupatedPosition[1] == 1)
+	{
+		cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(187) << endl;
+		cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << setw(7) << char(186) << endl;
+		cout << " | " << setw(37) << YELLOW << "( x )  " << RESET << "( V )" << endl;
+		cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << setw(7) << char(186) << endl;
+		cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(188) << endl;
+	}
+	else if (occupatedPosition[1] != 1)
+	{
 		cout << " " << char(186) << setw(36) << char(186) << endl;
+		cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << endl;
+		cout << " | " << setw(37) << YELLOW << "( x )" << RESET << endl;
+		cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << endl;
 		cout << " " << char(186) << setw(36) << char(186) << endl;
-		if (occupatedPosition[1] == 1)
+	}
+	cout << " " << char(186) << setw(36) << char(186) << endl;
+	cout << " " << char(186) << setw(36) << char(186) << endl;
+	cout << " " << char(200);
+	for (int i = 0; i < 14; i++)
+	{
+		cout << char(205);
+	}
+	if (ammeterPosition != 3 && voltmeterPosition != 3 && batteryPosition != 3)
+	{
+		cout << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205);
+	}
+	else if (ammeterPosition == 3)
+	{
+		cout << char(205) << "( A )" << char(205);
+	}
+	else if (batteryPosition == 3)
+	{
+		cout << " +| |- ";
+	}
+	for (int i = 0; i < 14; i++)
+	{
+		cout << char(205);
+	}
+	cout << char(188) << endl << endl;
+ 
+}
+
+void turnOnCheck()
+{
+	if (((batteryPosition == 1 || batteryPosition == 3)))
+	{
+		if ((voltmeterPosition == 2 || voltmeterPosition == 0) && ammeterPosition != 2)
 		{
-			cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(187) << endl;
-			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << setw(7) << char(186) << endl;
-			cout << " | " << setw(37) << YELLOW << "( x )" << RESET << endl;
+			turnOn();
+		}
+		else
+		{
 			if (ammeterPosition == 2)
 			{
-				cout << "( A )" << endl;
+				cout << "An ammeter is always connected in series with the circuit component you are measuring." << endl;
 			}
-			else if (voltmeterPosition == 2)
+			if (voltmeterPosition == 1 || voltmeterPosition == 3)
 			{
-				cout << "( V )" << endl;
+				cout << "A voltmeter is always connected in parallel with the circuit component you are measuring." << endl;
 			}
-			else if (batteryPosition == 2)
-			{
-				cout << " +| |- " << endl;
-			}
-			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << setw(7) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(188) << endl;
 		}
-		else if (occupatedPosition[1] != 1)
-		{
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << endl;
-			cout << " | " << setw(37) << YELLOW << "( x )" << RESET << endl;
-			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-		}
-		cout << " " << char(186) << setw(36) << char(186) << endl;
-		cout << " " << char(186) << setw(36) << char(186) << endl;
-		cout << " " << char(200);
-		for (int i = 0; i < 14; i++)
-		{
-			cout << char(205);
-		}
-		if (ammeterPosition != 3 && voltmeterPosition != 3 && batteryPosition != 3)
-		{
-			cout << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205);
-		}
-		else if (ammeterPosition == 3)
-		{
-			cout << char(205) << "( A )" << char(205);
-		}
-		else if (voltmeterPosition == 3)
-		{
-			cout << char(205) << "( V )" << char(205);
-		}
-		else if (batteryPosition == 3)
-		{
-			cout << " +| |- ";
-		}
-		for (int i = 0; i < 14; i++)
-		{
-			cout << char(205);
-		}
-		cout << char(188) << endl << endl;
-
-		system("PAUSE");
 	}
 	else
 	{
-		cout << "Wrong";
+		if (batteryPosition == 0)
+		{
+			cout << "You haven't added a battery." << endl;
+		}
+		else
+		{
+			cout << "A battery is always connected in series with the circuit." << endl;
+		}
+		if (ammeterPosition == 2)
+		{
+			cout << "An ammeter is always connected in series with the circuit component you are measuring." << endl;
+		}
+		if (voltmeterPosition == 1 || voltmeterPosition == 3)
+		{
+			cout << "A voltmeter is always connected in parallel with the circuit component you are measuring." << endl;
+		}
 	}
+	system("PAUSE");
 }
 
 void startCreating()
