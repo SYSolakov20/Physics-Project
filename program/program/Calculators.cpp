@@ -29,14 +29,24 @@ void calculateResistance()
 	cout << "Write your current >> ";
 	cin >> current;
 
-	cout << setw(5) << "U" << endl;
-	cout << "R = " << char(196) << endl;
-	cout << setw(5) << "I" << endl << endl;
-
-	cout << "Your resistance is " << voltage / current << "?" << endl << endl;
-
 	wrongInput:
 	{
+		system("cls");
+
+		cout << "Resistance calculator" << endl << endl;
+		cout << "Electric current - I (in ampere - A)" << endl;
+		cout << "Resistance - R (in ohm - ?)" << endl;
+		cout << "Voltage - U (in volt - V)" << endl << endl;
+
+		cout << "Write your voltage >> " << voltage << endl;
+		cout << "Write your current >> " << current << endl << endl;
+
+		cout << setw(5) << "U" << endl;
+		cout << "R = " << char(196) << endl;
+		cout << setw(5) << "I" << endl << endl;
+
+		cout << "Your resistance is " << voltage / current << "?" << endl << endl;
+
 		doNextCalculator();
 		cin >> next;
 
@@ -72,14 +82,24 @@ void calculateElectricCurrent()
 	cout << "Write your time >> ";
 	cin >> time;
 
-	cout << setw(5) << "q" << endl;
-	cout << "I = " << char(196) << endl;
-	cout << setw(5) << "t" << endl << endl;
-
-	cout << "Your electric current is " << chargePassed / time << "A" << endl << endl;
-
 	wrongInput:
 	{
+		system("cls");
+
+		cout << "Electric current calculator" << endl << endl;
+		cout << "Electric current - I (in ampere - A)" << endl;
+		cout << "Charge passed - q (in coulomb - C)" << endl;
+		cout << "Time - t (in seconds - s)" << endl << endl;
+
+		cout << "Write your charge passed >> " << chargePassed << endl;
+		cout << "Write your time >> " << time << endl << endl;
+
+		cout << setw(5) << "q" << endl;
+		cout << "I = " << char(196) << endl;
+		cout << setw(5) << "t" << endl << endl;
+
+		cout << "Your electric current is " << chargePassed / time << "A" << endl << endl;
+
 		doNextCalculator();
 		cin >> next;
 
@@ -116,12 +136,21 @@ void calculateChargePassed()
 	cout << "Write your time >> ";
 	cin >> time;
 
-	cout << endl << "q = I * t" << endl << endl;
-
-	cout << "Your charge passed is " << electricCurrent * time << "C" << endl << endl;
-
 	wrongInput:
 	{
+		system("cls");
+
+		cout << "Charge passed calculator" << endl << endl;
+		cout << "Electric current - I (in ampere - A)" << endl;
+		cout << "Charge passed - q (in coulomb - C)" << endl;
+		cout << "Time - t (in seconds - s)" << endl << endl;
+
+		cout << "Write your electric current >> " << electricCurrent << endl;
+		cout << "Write your time >> " << time << endl;
+
+		cout << endl << "q = I * t" << endl << endl;
+		cout << "Your charge passed is " << electricCurrent * time << "C" << endl << endl;
+
 		doNextCalculator();
 		cin >> next;
 
@@ -157,11 +186,21 @@ void calculateVoltage()
 	cout << "Write your current >> ";
 	cin >> current;
 
-	cout << endl << "U = R * I" << endl << endl;
-	cout << "Your voltage is " << resistance * current << "V" << endl << endl;
-
 	wrongInput:
 	{
+		system("cls");
+
+		cout << "Voltage calculator" << endl << endl;
+		cout << "Electric current - I (in ampere - A)" << endl;
+		cout << "Resistance - R (in ohm - ?)" << endl;
+		cout << "Voltage - U (in volt - V)" << endl << endl;
+
+		cout << "Write your resistance >> " << resistance;
+		cout << "Write your current >> " << current;
+
+		cout << endl << "U = R * I" << endl << endl;
+		cout << "Your voltage is " << resistance * current << "V" << endl << endl;
+
 		doNextCalculator();
 		cin >> next;
 		if (next == 1)
