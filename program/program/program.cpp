@@ -9,15 +9,19 @@ using namespace std;
 
 void printMenu()
 {
-	cout << setw(30) << " Wellcome!" << endl;
+	cout << "   _    _  ____  __    ___  _____  __  __  ____ " << endl;
+	cout << "  ( \\/\\/ )( ___)(  )  / __)(  _  )(  \\/  )( ___)" << endl;
+	cout << "   )    (  )__)  )(__( (__  )(_)(  )    (  )__)" << endl;
+	cout << "  (__/\\__)(____)(____)\\___)(_____)(_/\\/\\_)(____)" << endl;
 	cout << " _________________________________________________" << endl << endl;
-	cout << " 1) Simulations" << endl;
-	cout << " 2) Calculators" << endl;
-	cout << " 3) Test" << endl;
-	cout << " 4) Create your own simulation" << endl;
-	cout << " 5) Exit" << endl;
+	cout << "  1) Simulations" << endl;
+	cout << "  2) Calculators" << endl;
+	cout << "  3) Test" << endl;
+	cout << "  4) Create your own simulation" << endl;
+	cout << "  5) Exit" << endl;
 	cout << " _________________________________________________" << endl << endl;
-	cout << " Select your choice >> ";
+	cout << "  Select your choice >> ";
+
 }
 
 void startProgram()

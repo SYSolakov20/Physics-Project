@@ -7,3 +7,4 @@ void calculateElectricCurrent();
 void calculateChargePassed();
 void calculateResistance();
 void calculateVoltage();
+int findNumLength(double number);
