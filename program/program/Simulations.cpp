@@ -11,8 +11,14 @@ void startSimulations()
 	int simulationChoise;
 
 	system("cls");
-	cout << endl << setw(42) << BOLDBLUE << " e " << char(26) << " e " << char(26) << RESET << endl;
-	cout << " " << char(201);
+
+	cout << "    ___  ____  __  __  __  __  __      __   ____  ____  _____  _  _  ___ " << endl;
+	cout << "   / __)(_  _)(  \\/  )(  )(  )(  )    /__\\ (_  _)(_  _)(  _  )( \\( )/ __)" << endl;
+	cout << "   \\__ \\ _)(_  )    (  )(__)(  )(__  /(__)\\  )(   _)(_  )(_)(  )  ( \\__ \\" << endl;
+	cout << "   (___/(____)(_/\\/\\_)(______)(____)(__)(__)(__) (____)(_____)(_)\\_)(___/" << endl;
+
+	cout << endl << setw(49) << BOLDBLUE << " e " << char(26) << " e " << char(26) << RESET << endl;
+	cout << "        " << char(201);
 	for (int i = 0; i < 24; i++)
 	{
 		cout << char(205);
@@ -23,18 +29,18 @@ void startSimulations()
 		cout << char(205);
 	}
 	cout << char(187) << endl;
-	cout << " " << char(186) << setw(56) << char(186) << endl;
-	cout << " " << char(186) << setw(56) << char(186) << endl;
-	cout << " " << char(186) << setw(56) << char(186) << endl;
-	cout << " " << char(186) << "   1) Simulation with lamp" << setw(30) << char(186) << endl;
-	cout << " " << char(186) << "   2) Simulation with lamp and ammeter" << setw(18) << char(186) << endl;
-	cout << " " << char(186) << "   3) Simulation with lamp and voltmeter" << setw(18) << "( x )" << endl;
-	cout << " " << char(186) << "   4) Simulation with lamp, ammeter and voltmeter" << setw(7) << char(186) << endl;
-	cout << " " << char(186) << "   5) Back" << setw(46) << char(186) << endl;
-	cout << " " << char(186) << setw(56) << char(186) << endl;
-	cout << " " << char(186) << setw(56) << char(186) << endl;
-	cout << " " << char(186) << setw(56) << char(186) << endl;
-	cout << " " << char(200);
+	cout << "        " << char(186) << setw(56) << char(186) << endl;
+	cout << "        " << char(186) << setw(56) << char(186) << endl;
+	cout << "        " << char(186) << setw(56) << char(186) << endl;
+	cout << "        " << char(186) << "   1) Simulation with lamp" << setw(30) << char(186) << endl;
+	cout << "        " << char(186) << "   2) Simulation with lamp and ammeter" << setw(18) << char(186) << endl;
+	cout << "        " << char(186) << "   3) Simulation with lamp and voltmeter" << setw(18) << "( x )" << endl;
+	cout << "        " << char(186) << "   4) Simulation with lamp, ammeter and voltmeter" << setw(7) << char(186) << endl;
+	cout << "        " << char(186) << "   5) Back" << setw(46) << char(186) << endl;
+	cout << "        " << char(186) << setw(56) << char(186) << endl;
+	cout << "        " << char(186) << setw(56) << char(186) << endl;
+	cout << "        " << char(186) << setw(56) << char(186) << endl;
+	cout << "        " << char(200);
 	for (int i = 0; i < 55; i++)
 	{
 		cout << char(205);
@@ -42,7 +48,7 @@ void startSimulations()
 	cout << char(188) << endl << endl;
 
 
-	cout << "   Select >> ";
+	cout << "            Select >> ";
 
 
 	cin >> simulationChoise;
