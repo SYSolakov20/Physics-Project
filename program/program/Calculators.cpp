@@ -4,6 +4,7 @@
 
 using namespace std;
 
+// checks for division by zero
 bool divideByZero(double divisor)
 {
 	if (divisor == 0)
@@ -19,6 +20,7 @@ bool divideByZero(double divisor)
 	
 }
 
+// prints horizontal line
 void outputHorizontalLine(int counter, int length)
 {
 	for (int i = counter; i < length; i++)
@@ -27,6 +29,7 @@ void outputHorizontalLine(int counter, int length)
 	}
 }
 
+// prints calculator menu
 void doNextCalculator()
 {
 	cout << " What do you want to do now?" << endl;
@@ -36,6 +39,7 @@ void doNextCalculator()
 	cout << " Select >> ";
 }
 
+// counts number of digits 
 int findNumLength(double number)
 {
 	int counter = 0;
@@ -54,6 +58,7 @@ int findNumLength(double number)
 	return counter;
 }
 
+// starts resistance calculator
 void calculateResistance()
 {
 	double voltage;
@@ -97,6 +102,7 @@ void calculateResistance()
 	displayCalculator("Resistance", 'U', voltage, 'I', current, 'R', resistance, '?', longerSize, sizeVoltage, sizeCurrent, sizeResistance);
 }
 
+// starts electric current calculator 
 void calculateElectricCurrent()
 {
 	double chargePassed;
@@ -140,6 +146,7 @@ void calculateElectricCurrent()
 	displayCalculator("Electric current", 'q', chargePassed, 't', time, 'I', current, 'A', longerSize, sizeChargePassed, sizeTime, sizeCurrent);
 }
 
+// starts charge passed calculator 
 void calculateChargePassed()
 {
 	double current;
@@ -180,6 +187,7 @@ void calculateChargePassed()
 	displayCalculator("Charge passed", 'I', current, 't', time, 'q', chargePassed, 'C', longerSize, sizeCurrent, sizeTime, sizeChargePassed);
 }
 
+// starts voltage calculator 
 void calculateVoltage()
 {
 	double resistance;
@@ -219,6 +227,7 @@ void calculateVoltage()
 	displayCalculator("Voltage", 'R', resistance, 'I', current, 'U', voltage, 'V', longerSize, sizeResistance, sizeCurrent, sizeVoltage);
 }
 
+// prints calculator 
 void displayCalculator(string resultName, char firstInputSymbol, double firstInput, char secondInputSymbol, double secondInput, char resultSymbol, double result, char resultUnit, int size, int firstInputSize, int secondInputSize, int resultSize)
 {
 	string next;
@@ -312,6 +321,7 @@ void displayCalculator(string resultName, char firstInputSymbol, double firstInp
 	}
 }
 
+// begins calculators
 void startCalculators()
 {
 	string calculatorChoice;

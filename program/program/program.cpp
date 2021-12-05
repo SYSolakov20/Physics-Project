@@ -7,6 +7,7 @@
 
 using namespace std;
 
+// displays main menu
 void printMenu()
 {
 	cout << "   _    _  ____  __    ___  _____  __  __  ____ " << endl;
@@ -24,6 +25,7 @@ void printMenu()
 
 }
 
+// begins the program
 void startProgram()
 {
 	string activity;
@@ -66,6 +68,7 @@ void startProgram()
 	}
 }
 
+// main function
 int main()
 {
 	startProgram();

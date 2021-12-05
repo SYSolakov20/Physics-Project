@@ -6,6 +6,8 @@
 
 using namespace std;
 
+
+// begins simulations
 void startSimulations()
 {
 	string simulationChoise;
@@ -83,6 +85,7 @@ void startSimulations()
 	}
 }
 
+//prints menu when simulation is on
 void doNextSimulationOn()
 {
 	cout << " What do you want to do now?" << endl;
@@ -93,6 +96,7 @@ void doNextSimulationOn()
 	cout << " Select >> ";
 }
 
+// prints menu when the simulation is off
 void doNextSimulationOff()
 {
 	cout << " What do you want to do now?" << endl;
@@ -103,6 +107,7 @@ void doNextSimulationOff()
 	cout << " Select >> ";
 }
 
+// prints simple simulation 
 void displaySimpleSimulation()
 {
 	string nextChoise;
@@ -249,6 +254,7 @@ void displaySimpleSimulation()
 	}
 }
 
+// prints ammeter simulation
 void displayAmmeterSimulation()
 {
 	string nextChoise;
@@ -408,6 +414,7 @@ void displayAmmeterSimulation()
 	}
 }
 
+// prints voltmeter simulation
 void displayVoltmeterSimulation()
 {
 	string nextChoise;
@@ -555,6 +562,7 @@ void displayVoltmeterSimulation()
 	}
 }
 
+// prints ammeter and voltmeter simulation
 void displayAmmmeterAndVoltmeterSimulation()
 {
 	string nextChoise;

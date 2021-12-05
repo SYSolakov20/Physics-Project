@@ -13,6 +13,7 @@ bool positions[3] = { 0, 0, 0 };
 
 bool removeInstrument = 0;
 
+// changes position value to 1
 void fillPosition(int filledPosition)
 {
 	switch (filledPosition)
@@ -31,6 +32,7 @@ void fillPosition(int filledPosition)
 	}
 }
 
+// changes position value to 0
 void emptyPosition(int emptyPosition)
 {
 	switch (emptyPosition)
@@ -49,6 +51,7 @@ void emptyPosition(int emptyPosition)
 	}
 }
 
+// checks if position is occupied 
 void checkPosition(int occcupiedPosition)
 {
 	string leaveOrReplace;
@@ -96,6 +99,7 @@ void checkPosition(int occcupiedPosition)
 	}
 }
 
+// prints free positions
 void displayPositions()
 {
 	system("cls");
@@ -181,6 +185,7 @@ void displayPositions()
 
 }
 
+// displays simulation 
 void printSimulation()
 {
 	system("cls");
@@ -272,6 +277,7 @@ void printSimulation()
 	cout << char(188) << endl << endl;
 }
 
+// begins creating simulation
 void startCreatingSimulation()
 {
 	string device;
@@ -555,6 +561,7 @@ void startCreatingSimulation()
 	}
 }
 
+// turns the simulation on and checks if it works
 void turnOn()
 {
 	system("cls");

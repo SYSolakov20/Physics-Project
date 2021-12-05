@@ -9,6 +9,7 @@ int countRightAnswers = 0;
 int countQuestions = 1;
 int questions[10];
 
+// prints menu after the test 
 void displayMenuAfterTheTest()
 {
 	system("cls");
@@ -43,6 +44,7 @@ void displayMenuAfterTheTest()
 
 }
 
+// displays the first question 
 void answerQuestionOne()
 {
 	cout << "Question "<< countQuestions << endl;
@@ -67,6 +69,7 @@ void answerQuestionOne()
 	}
 }
 
+// displays the second question 
 void answerQuestionTwo()
 {
 	cout << "Question " << countQuestions << endl;
@@ -91,6 +94,7 @@ void answerQuestionTwo()
 	}
 }
 
+// displays the third question 
 void answerQuestionThree()
 {
 	cout << "Question " << countQuestions << endl;
@@ -115,6 +119,7 @@ void answerQuestionThree()
 	}
 }
 
+// displays the fourth question 
 void answerQuestionFour()
 {
 	cout << "Question " << countQuestions << endl;
@@ -170,6 +175,7 @@ void answerQuestionFour()
 	}
 }
 
+// displays the fifth question 
 void answerQuestionFive()
 {
 	cout << "Question " << countQuestions << endl;
@@ -196,6 +202,7 @@ void answerQuestionFive()
 	}
 }
 
+// displays the sixth question 
 void answerQuestionSix()
 {
 	cout << "Question " << countQuestions << endl;
@@ -220,6 +227,7 @@ void answerQuestionSix()
 	}
 }
 
+// displays the seventh question 
 void answerQuestionSeven()
 {
 	cout << "Question " << countQuestions << endl;
@@ -244,6 +252,7 @@ void answerQuestionSeven()
 	}
 }
 
+// displays the eighth question 
 void answerQuestionEight()
 {
 	cout << "Question " << countQuestions << endl;
@@ -269,6 +278,7 @@ void answerQuestionEight()
 	}
 }
 
+// displays the ninth question 
 void answerQuestionNine()
 {
 	cout << "Question " << countQuestions << endl;
@@ -294,6 +304,7 @@ void answerQuestionNine()
 	}
 }
 
+// displays the tenth question 
 void answerQuestionTen()
 {
 	cout << "Question " << countQuestions << endl;
@@ -319,6 +330,7 @@ void answerQuestionTen()
 	}
 }
 
+// reorganizes the questions
 void shuffleQuestions(int shuffledQuestions[10])
 {
 	int questionsInOrder[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
@@ -340,6 +352,7 @@ void shuffleQuestions(int shuffledQuestions[10])
 	}
 }
 
+// displays review of the test
 void reviewTest(int reviewTestQuestions[10])
 {
 	system("cls");
@@ -639,6 +652,7 @@ void reviewTest(int reviewTestQuestions[10])
 
 }
 
+// begins the test
 void startTest()
 {
 	countRightAnswers = 0;
