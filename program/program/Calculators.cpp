@@ -4,9 +4,24 @@
 
 using namespace std;
 
-void outputHorizontalLine(int counter, int number)
+bool divideByZero(double divisor)
 {
-	for (int i = counter; i < number; i++)
+	if (divisor == 0)
+	{
+		system("cls");
+		cout << "Division by 0" << endl << endl;
+		system("PAUSE");
+	}
+	else
+	{
+		return 1;
+	}
+	
+}
+
+void outputHorizontalLine(int counter, int length)
+{
+	for (int i = counter; i < length; i++)
 	{
 		cout << char(196);
 	}
@@ -57,6 +72,10 @@ void calculateResistance()
 	cout << " Write your electric current >> ";
 	cin >> current;
 
+	if (divideByZero(current) != 1)
+	{
+		calculateResistance();
+	}
 
 	double resistance = voltage / current;
 
@@ -76,9 +95,6 @@ void calculateResistance()
 		longerSize = sizeCurrent;
 	}
 	displayCalculator("Resistance", 'U', voltage, 'I', current, 'R', resistance, '?', longerSize, sizeVoltage, sizeCurrent, sizeResistance);
-
-			//quotientName, dividendSymbol, dividend, divisorSymbol, divisor, quotientSymbol, quotient, quotientUnit, size, dividendSize, divisorSize, quotientSize
-
 }
 
 void calculateElectricCurrent()
@@ -98,6 +114,11 @@ void calculateElectricCurrent()
 	cin >> chargePassed;
 	cout << " Write your time >> ";
 	cin >> time;
+
+	if (divideByZero(time) != 1)
+	{
+		calculateElectricCurrent();
+	}
 
 	double current = chargePassed / time;
 

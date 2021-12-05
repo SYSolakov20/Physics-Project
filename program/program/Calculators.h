@@ -12,3 +12,4 @@ void calculateVoltage();
 int findNumLength(double number);
 void displayCalculator(string resultName, char firstInputSymbol, double firstInput, char secondInputSymbol, double secondInput, char resultSymbol, double result, char resultUnit, int size, int firstInputSize, int secondInputSize, int resultSize);
 void outputHorizontalLine(int counter, int number);
+bool divideByZero(double divisor);
