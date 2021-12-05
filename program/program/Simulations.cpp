@@ -125,16 +125,16 @@ void displaySimpleSimulation()
 			{
 				cout << char(205);
 			}
-			cout << char(187) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << RED << " / " << RESET << setw(37) << "( x )" << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << char(187) << "           _____  " << endl;
+			cout << " " << char(186) << setw(36) << char(186)  << "         .'     '." << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "        /         \\ " << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "       |           |" << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "       '.  +^^^+  .'" << endl;
+			cout << RED << " / " << RESET << setw(37) << "( x )" << "       `. \\./ .'" << endl;
+			cout << " " << char(186) << setw(36) << char(186)  << "           |_|_|" << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "           (___) " << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "           (___)" << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "           '---'" << endl;
 			cout << " " << char(200);
 			for (int i = 0; i < 35; i++)
 			{
@@ -194,16 +194,16 @@ void displaySimpleSimulation()
 			{
 				cout << char(205);
 			}
-			cout << char(187) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << endl;
-			cout << " | " << setw(37) << YELLOW << "( x )" << RESET << endl;
-			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << char(187) << BOLDYELLOW<< "           _____  " << RESET<< endl;
+			cout << " " << char(186) << setw(36) << char(186) << BOLDYELLOW<< "         .'     '." << RESET << endl;
+			cout << " " << char(186) << setw(36) << char(186) << BOLDYELLOW <<"        /         \\ " << RESET << endl;
+			cout << " " << char(186) << setw(36) << char(186) << BOLDYELLOW << "       |           |" << RESET <<endl;
+			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << "       '.  " << RESET << YELLOW <<"+^^^+ "<< RESET << BOLDYELLOW << " .'" <<RESET << endl;
+			cout << " | " << setw(37) << YELLOW << "( x )" << RESET <<BOLDYELLOW <<"       '. " << RESET << YELLOW << "\\./ " << RESET << BOLDYELLOW << ".'" << endl;;
+			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << "           |_|_|" << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "           (___) " << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "           (___)" << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "           '---'" << endl;
 			cout << " " << char(200);
 			for (int i = 0; i < 35; i++)
 			{
@@ -271,16 +271,16 @@ void displayAmmeterSimulation()
 			{
 				cout << char(205);
 			}
-			cout << char(187) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << RED << " / " << RESET << setw(37) << "( x )" << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << char(187) << "           _____  " << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "         .'     '." << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "        /         \\ " << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "       |           |" << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "       '.  +^^^+  .'" << endl;
+			cout << RED << " / " << RESET << setw(37) << "( x )" << "       `. \\./ .'" << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "           |_|_|" << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "           (___) " << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "           (___)" << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "           '---'" << endl;
 			cout << " " << char(200);
 			for (int i = 0; i < 15; i++)
 			{
@@ -346,16 +346,16 @@ void displayAmmeterSimulation()
 			{
 				cout << char(205);
 			}
-			cout << char(187) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << endl;
-			cout << " | " << setw(37) << YELLOW << "( x )" << RESET << endl;
-			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << char(187) << BOLDYELLOW << "           _____  " << RESET << endl;
+			cout << " " << char(186) << setw(36) << char(186) << BOLDYELLOW << "         .'     '." << RESET << endl;
+			cout << " " << char(186) << setw(36) << char(186) << BOLDYELLOW << "        /         \\ " << RESET << endl;
+			cout << " " << char(186) << setw(36) << char(186) << BOLDYELLOW << "       |           |" << RESET << endl;
+			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << "       '.  " << RESET << YELLOW << "+^^^+ " << RESET << BOLDYELLOW << " .'" << RESET << endl;
+			cout << " | " << setw(37) << YELLOW << "( x )" << RESET << BOLDYELLOW << "       '. " << RESET << YELLOW << "\\./ " << RESET << BOLDYELLOW << ".'" << endl;;
+			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << "           |_|_|" << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "           (___) " << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "           (___)" << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "           '---'" << endl;
 			cout << " " << char(200);
 			for (int i = 0; i < 15; i++)
 			{
@@ -430,16 +430,16 @@ void displayVoltmeterSimulation()
 			{
 				cout << char(205);
 			}
-			cout << char(187) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(187) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << setw(7) << char(186) << endl;
-			cout << RED << " / " << RESET << setw(44) << "( x )  ( V )" << endl;
-			cout << " " << char(186) << setw(36) << char(186) << setw(7) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(188) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << char(187) << "              _____  " << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "            .'     '." << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "           /         \\ " << endl;
+			cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(187) << "   |           |" << endl;
+			cout << " " << char(186) << setw(36) << char(186) << setw(7) << char(186) << "   '.  +^^^+  .'" << endl;
+			cout << RED << " / " << RESET << setw(44) << "( x )  ( V )" << "   `. \\./ .'" << endl;
+			cout << " " << char(186) << setw(36) << char(186) << setw(7) << char(186) << "       |_|_|" << endl;
+			cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(188) << "       (___) " << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "              (___)" << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "              '---'" << endl;
 			cout << " " << char(200);
 			for (int i = 0; i < 35; i++)
 			{
@@ -499,16 +499,16 @@ void displayVoltmeterSimulation()
 			{
 				cout << char(205);
 			}
-			cout << char(187) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(187) << endl;
-			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << setw(7) << char(186) << endl;
-			cout << " | " << setw(37) << YELLOW << "( x )" << RESET << "  ( V )" << endl;
-			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << setw(7) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(188) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << char(187) << BOLDYELLOW << "              _____  " << RESET << endl;
+			cout << " " << char(186) << setw(36) << char(186) << BOLDYELLOW << "            .'     '." << RESET << endl;
+			cout << " " << char(186) << setw(36) << char(186) << BOLDYELLOW << "           /         \\ "  <<RESET << endl;
+			cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(187) <<BOLDYELLOW <<"   |           |" << RESET<< endl;
+			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << setw(7) << char(186) << "   '.  " << RESET << YELLOW << "+^^^+ " << RESET << BOLDYELLOW << " .'" << RESET << endl;
+			cout << " | " << setw(37) << YELLOW << "( x )" << RESET << "  ( V )" << "   '. " << RESET << YELLOW << "\\./ " << RESET << BOLDYELLOW << ".'" << endl;
+			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << setw(7) << char(186) << "       |_|_|" << endl;
+			cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(188) << "       (___) " << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "              (___)" << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "              '---'" << endl;
 			cout << " " << char(200);
 			for (int i = 0; i < 35; i++)
 			{
@@ -577,16 +577,16 @@ void displayAmmmeterAndVoltmeterSimulation()
 			{
 				cout << char(205);
 			}
-			cout << char(187) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(187) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << setw(7) << char(186) << endl;
-			cout << RED << " / " << RESET << setw(44) << "( x )  ( V )" << endl;
-			cout << " " << char(186) << setw(36) << char(186) << setw(7) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(188) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << char(187) << "              _____  " << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "            .'     '." << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "           /         \\ " << endl;
+			cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(187) << "   |           |" << endl;
+			cout << " " << char(186) << setw(36) << char(186) << setw(7) << char(186) << "   '.  +^^^+  .'" << endl;
+			cout << RED << " / " << RESET << setw(44) << "( x )  ( V )" << "   `. \\./ .'" << endl;
+			cout << " " << char(186) << setw(36) << char(186) << setw(7) << char(186) << "       |_|_|" << endl;
+			cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(188) << "       (___) " << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "              (___)" << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "              '---'" << endl;
 			cout << " " << char(200);
 			for (int i = 0; i < 15; i++)
 			{
@@ -651,16 +651,16 @@ void displayAmmmeterAndVoltmeterSimulation()
 			{
 				cout << char(205);
 			}
-			cout << char(187) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(187) << endl;
-			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << setw(7) << char(186) << endl;
-			cout << " | " << setw(37) << YELLOW << "( x )" << RESET << "  ( V )" << endl;
-			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << setw(7) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(188) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
-			cout << " " << char(186) << setw(36) << char(186) << endl;
+			cout << char(187) << BOLDYELLOW << "              _____  " << RESET << endl;
+			cout << " " << char(186) << setw(36) << char(186) << BOLDYELLOW << "            .'     '." << RESET << endl;
+			cout << " " << char(186) << setw(36) << char(186) << BOLDYELLOW << "           /         \\ " << RESET << endl;
+			cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(187) << BOLDYELLOW << "   |           |" << RESET << endl;
+			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << setw(7) << char(186) << "   '.  " << RESET << YELLOW << "+^^^+ " << RESET << BOLDYELLOW << " .'" << RESET << endl;
+			cout << " | " << setw(37) << YELLOW << "( x )" << RESET << "  ( V )" << "   '. " << RESET << YELLOW << "\\./ " << RESET << BOLDYELLOW << ".'" << endl;
+			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << setw(7) << char(186) << "       |_|_|" << endl;
+			cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(188) << "       (___) " << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "              (___)" << endl;
+			cout << " " << char(186) << setw(36) << char(186) << "              '---'" << endl;
 			cout << " " << char(200);
 			for (int i = 0; i < 15; i++)
 			{
