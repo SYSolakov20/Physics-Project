@@ -35,7 +35,7 @@ We have also created one page website where you can download the program.*
  ## 🎬 Demo of the project
 
 <p align="center">
-<img src="https://cdn.discordapp.com/attachments/699568463873835059/917184087884705852/Apple_Pro_Display_XDR_-_Horizontal.png" width = "2500px" >
+<img src="https://cdn.discordapp.com/attachments/699568463873835059/917185190718234704/Apple_Pro_Display_XDR_-_Horizontal_2.png" width = "2500px" >
 </p>
  
    
