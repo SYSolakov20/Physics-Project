@@ -18,10 +18,18 @@
     <a href="https://www.w3.org/html/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/html-5.png"/> </a> 
     <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/css3.png"/> </a> 
     <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"/></a> 
-    <a href="https://www.w3.org/html/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/c-programming.png"/> </a> 
     <a href="https://www.w3schools.com/css/" target="_blank"> <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/visual-studio-code-2019.png"/></a></a>
   <a href="https://www.w3schools.com/css/" target="_blank"> <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://img.icons8.com/fluency/48/000000/visual-studio-2019.png"/></a></a>
    <a href="https://www.w3schools.com/css/" target="_blank"> <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/figma--v1.png"/></a></a>
+    
+## 📋 Description:
+    
+```
+This repo is all about our Physics Project. Our task was to create an application or a game in C++ . 
+We have decided to make a self-studying proggram which is closely related to electric chains. 
+In the app you can create your own simulations, watch pre-made ones and take tests to sharpen your knowlidge.
+We have also created one page website where you can download the program.   
+```
     
 
  ## 🎬 Demo of the project
