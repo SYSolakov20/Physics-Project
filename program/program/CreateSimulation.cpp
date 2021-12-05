@@ -15,44 +15,48 @@ bool removeInstrument = 0;
 
 void fillPosition(int filledPosition)
 {
-	if (filledPosition == 1)
+	switch (filledPosition)
 	{
+	case 1:
 		positions[0] = 1;
-	}
-	else if (filledPosition == 2)
-	{
+		break;
+
+	case 2:
 		positions[1] = 1;
-	}
-	else if (filledPosition == 3)
-	{
+		break;
+
+	case 3:
 		positions[2] = 1;
+		break;
 	}
 }
 
 void emptyPosition(int emptyPosition)
 {
-	if (emptyPosition == 1)
+	switch (emptyPosition)
 	{
+	case 1:
 		positions[0] = 0;
-	}
-	else if (emptyPosition == 2)
-	{
+		break;
+
+	case 2:
 		positions[1] = 0;
-	}
-	else if (emptyPosition == 3)
-	{
+		break;
+
+	case 3:
 		positions[2] = 0;
+		break;
 	}
 }
 
 void checkPosition(int occcupiedPosition)
 {
-	int leaveOrReplace;
+	string leaveOrReplace;
 
 	for (int i = 1; i <= 3; i++)
 	{
 
-		if (occcupiedPosition == i && positions[i-1] == 1)
+		if (occcupiedPosition == i && positions[i - 1] == 1)
 		{
 			system("cls");
 			displayPositions();
@@ -63,11 +67,11 @@ void checkPosition(int occcupiedPosition)
 			cout << " Select >> ";
 			cin >> leaveOrReplace;
 
-			if (leaveOrReplace == 1)
+			if (leaveOrReplace == "1")
 			{
 				removeInstrument = 1;
 			}
-			else if (leaveOrReplace == 2)
+			else if (leaveOrReplace == "2")
 			{
 				if (ammeterPosition == i)
 				{
@@ -102,7 +106,7 @@ void displayPositions()
 	{
 		cout << char(205);
 	}
-	if (ammeterPosition !=1 && voltmeterPosition != 1 && batteryPosition != 1)
+	if (ammeterPosition != 1 && voltmeterPosition != 1 && batteryPosition != 1)
 	{
 		cout << char(205) << "( 1 )" << char(205);
 	}
@@ -163,7 +167,7 @@ void displayPositions()
 	}
 	else if (voltmeterPosition == 3)
 	{
-		cout << "( V )" ;
+		cout << "( V )";
 	}
 	else if (batteryPosition == 3)
 	{
@@ -270,8 +274,8 @@ void printSimulation()
 
 void startCreatingSimulation()
 {
-	int device;
-	int changeOrRemove;
+	string device;
+	string changeOrRemove;
 
 	while (true)
 	{
@@ -310,9 +314,9 @@ void startCreatingSimulation()
 		cout << " Select >> ";
 		cin >> device;
 
-		if (device == 1 && ammeterPosition == 0)
+		if (device == "1" && ammeterPosition == 0)
 		{
-			addAmmeter:
+		addAmmeter:
 			{
 				displayPositions();
 
@@ -324,7 +328,7 @@ void startCreatingSimulation()
 			{
 				goto addAmmeter;
 			}
-			
+
 			checkPosition(sparePosition);
 			ammeterPosition = sparePosition;
 			fillPosition(ammeterPosition);
@@ -335,9 +339,9 @@ void startCreatingSimulation()
 				removeInstrument = 0;
 			}
 		}
-		else if (device == 1 && (ammeterPosition == 1 || ammeterPosition == 2 || ammeterPosition == 3))
+		else if (device == "1" && (ammeterPosition == 1 || ammeterPosition == 2 || ammeterPosition == 3))
 		{
-			removeOrChangeAmmeterPosition:
+		removeOrChangeAmmeterPosition:
 			{
 				displayPositions();
 
@@ -349,13 +353,13 @@ void startCreatingSimulation()
 
 			emptyPosition(ammeterPosition);
 
-			if (changeOrRemove == 1)
+			if (changeOrRemove == "1")
 			{
 				ammeterPosition = 0;
 			}
-			else if (changeOrRemove == 2)
+			else if (changeOrRemove == "2")
 			{
-				changeAmmeterPosition:
+			changeAmmeterPosition:
 				{
 					displayPositions();
 					cout << endl << " Where do you want to add ammeter >> ";
@@ -382,9 +386,9 @@ void startCreatingSimulation()
 				goto removeOrChangeAmmeterPosition;
 			}
 		}
-		else if (device == 2 && voltmeterPosition == 0)
+		else if (device == "2" && voltmeterPosition == 0)
 		{
-			addVoltmeter:
+		addVoltmeter:
 			{
 				displayPositions();
 
@@ -407,9 +411,9 @@ void startCreatingSimulation()
 				removeInstrument = 0;
 			}
 		}
-		else if (device == 2 && (voltmeterPosition == 1 || voltmeterPosition == 2 || voltmeterPosition == 3))
+		else if (device == "2" && (voltmeterPosition == 1 || voltmeterPosition == 2 || voltmeterPosition == 3))
 		{
-			removeOrChangeVoltmeterPosition:
+		removeOrChangeVoltmeterPosition:
 			{
 				displayPositions();
 
@@ -421,19 +425,19 @@ void startCreatingSimulation()
 
 			emptyPosition(voltmeterPosition);
 
-			if (changeOrRemove == 1)
+			if (changeOrRemove == "1")
 			{
 				voltmeterPosition = 0;
 			}
-			else if (changeOrRemove == 2)
+			else if (changeOrRemove == "2")
 			{
-				changeVoltmeterPosition:
+			changeVoltmeterPosition:
 				{
 					displayPositions();
 					cout << endl << " Where do you want to add voltmeter >> ";
 					cin >> sparePosition;
 				}
-				
+
 				if (sparePosition < 0 || sparePosition > 3)
 				{
 					goto changeVoltmeterPosition;
@@ -454,16 +458,16 @@ void startCreatingSimulation()
 				goto removeOrChangeVoltmeterPosition;
 			}
 		}
-		else if (device == 3 && batteryPosition == 0)
+		else if (device == "3" && batteryPosition == 0)
 		{
-			addBattery:
+		addBattery:
 			{
 				displayPositions();
 
 				cout << " Where do you want to add battery >> ";
 				cin >> sparePosition;
 			}
-			
+
 			if (sparePosition < 0 || sparePosition > 3)
 			{
 				goto addBattery;
@@ -479,9 +483,9 @@ void startCreatingSimulation()
 				removeInstrument = 0;
 			}
 		}
-		else if (device == 3 && (batteryPosition == 1 || batteryPosition == 2 || batteryPosition == 3))
+		else if (device == "3" && (batteryPosition == 1 || batteryPosition == 2 || batteryPosition == 3))
 		{
-			removeOrChangeBatteryPosition:
+		removeOrChangeBatteryPosition:
 			{
 				displayPositions();
 
@@ -490,22 +494,22 @@ void startCreatingSimulation()
 				cout << " Select >> ";
 				cin >> changeOrRemove;
 			}
-			
+
 			emptyPosition(batteryPosition);
 
-			if (changeOrRemove == 1)
+			if (changeOrRemove == "1")
 			{
 				batteryPosition = 0;
 			}
-			else if (changeOrRemove == 2)
+			else if (changeOrRemove == "2")
 			{
-				changeBatteryPosition:
+			changeBatteryPosition:
 				{
 					displayPositions();
 					cout << endl << " Where do you want to add battery >> ";
 					cin >> sparePosition;
 				}
-				
+
 				if (sparePosition < 0 || sparePosition > 3)
 				{
 					goto changeBatteryPosition;
@@ -526,11 +530,11 @@ void startCreatingSimulation()
 				goto removeOrChangeBatteryPosition;
 			}
 		}
-		else if (device == 4)
+		else if (device == "4")
 		{
 			turnOn();
 		}
-		else if (device == 5)
+		else if (device == "5")
 		{
 			ammeterPosition = 0;
 			voltmeterPosition = 0;
@@ -540,7 +544,7 @@ void startCreatingSimulation()
 			positions[2] = 0;
 			sparePosition = 0;
 		}
-		else if (device == 6)
+		else if (device == "6")
 		{
 			break;
 		}
@@ -554,6 +558,7 @@ void startCreatingSimulation()
 void turnOn()
 {
 	system("cls");
+
 	if (((batteryPosition == 1 || batteryPosition == 3)))
 	{
 		if ((voltmeterPosition == 2 || voltmeterPosition == 0) && ammeterPosition != 2)

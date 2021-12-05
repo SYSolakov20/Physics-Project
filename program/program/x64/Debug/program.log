@@ -1,5 +1,8 @@
-﻿  Simulations.cpp
+﻿  Calculators.cpp
+  CreateSimulation.cpp
+  Simulations.cpp
   Test.cpp
-C:\Users\Zhanet Petkova\Documents\school\Physics-Project\program\program\Test.cpp(327,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\PC\OneDrive - ПГКПИ - Бургас\Работен плот\proekt\Physics-Project\program\program\Test.cpp(327,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  program.cpp
   Generating Code...
-  program.vcxproj -> C:\Users\Zhanet Petkova\Documents\school\Physics-Project\program\x64\Debug\program.exe
+  program.vcxproj -> C:\Users\PC\OneDrive - ПГКПИ - Бургас\Работен плот\proekt\Physics-Project\program\x64\Debug\program.exe
