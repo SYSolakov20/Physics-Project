@@ -46,3 +46,9 @@ You can download our project by using the green "Code" button.
 Or by pasting the following code in your CMD:
 https://github.com/SYSolakov20/Physics-Project.git
 ```
+## 📎 Program Diagram:
+
+<p align="center">
+<img src="https://cdn.discordapp.com/attachments/699568463873835059/917185773227356160/MicrosoftTeams-image.png" width = "2500px" >
+</p>
+
