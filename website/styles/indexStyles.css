@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+@import url("http://fonts.cdnfonts.com/css/tex-gyre-adventor");
 .websiteBody {
   margin: 0;
   overflow-x: hidden;
@@ -620,8 +621,7 @@
 }
 
 .Group-3-outer {
-  pointer-events: none;
-  z-index: 11;
+  z-index: 13;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
