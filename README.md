@@ -24,12 +24,12 @@
     
 ## 📋 Description:
     
-```
-This repo is all about our Physics Project. Our task was to create an application or a game in C++ . 
+
+*This repo is all about our Physics Project. Our task was to create an application or a game in C++ . 
 We have decided to make a self-studying proggram which is closely related to electric chains. 
 In the app you can create your own simulations, watch pre-made ones and take tests to sharpen your knowlidge.
-We have also created one page website where you can download the program.   
-```
+We have also created one page website where you can download the program.*   
+
     
 
  ## 🎬 Demo of the project
