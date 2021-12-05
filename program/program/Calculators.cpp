@@ -293,7 +293,7 @@ void displayCalculator(string resultName, char firstInputSymbol, double firstInp
 
 void startCalculators()
 {
-	int calculatorChoise;
+	string calculatorChoice;
 
 	system("cls");
 
@@ -309,29 +309,29 @@ void startCalculators()
 	cout << "  5) Back" << endl;
 	cout << " ___________________________________________________________________________" << endl << endl;
 	cout << "  Select >> ";
-	cin >> calculatorChoise;
+	cin >> calculatorChoice;
 
-	if (calculatorChoise == 1)
+	if (calculatorChoice == "1")
 	{
 		calculateElectricCurrent();
 		startCalculators();
 	}
-	else if (calculatorChoise == 2)
+	else if (calculatorChoice == "2")
 	{
 		calculateChargePassed();
 		startCalculators();
 	}
-	else if (calculatorChoise == 3)
+	else if (calculatorChoice == "3")
 	{
 		calculateResistance();
 		startCalculators();
 	}
-	else if (calculatorChoise == 4)
+	else if (calculatorChoice == "4")
 	{
 		calculateVoltage();
 		startCalculators();
 	}
-	else if (calculatorChoise == 5)
+	else if (calculatorChoice == "5")
 	{
 		system("cls");
 	}
@@ -339,5 +339,4 @@ void startCalculators()
 	{
 		startCalculators();
 	}
-	
 }
