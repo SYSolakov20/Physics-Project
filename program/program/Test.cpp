@@ -13,7 +13,7 @@ void displayMenuAfterTheTest()
 {
 	system("cls");
 	cout << " Your score is " << countRightAnswers * 10 << "%" << endl << endl;
-	int nextChoice;
+	string nextChoice;
 	cout << " What do you want to do now?" << endl;
 	cout << " __________________________________________" << endl;
 	cout << " 1) review" << endl;
@@ -22,17 +22,17 @@ void displayMenuAfterTheTest()
 	cout << " Select >> ";
 
 	cin >> nextChoice;
-	if (nextChoice == 1)
+	if (nextChoice == "1")
 	{
 		reviewTest(questions);
 		displayMenuAfterTheTest();
 	}
-	else if (nextChoice == 2)
+	else if (nextChoice == "2")
 	{
 		countQuestions = 1;
 		startTest();
 	}
-	else if (nextChoice == 3)
+	else if (nextChoice == "3")
 	{
 		system("cls");
 	}

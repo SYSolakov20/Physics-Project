@@ -8,7 +8,7 @@ using namespace std;
 
 void startSimulations()
 {
-	int simulationChoise;
+	string simulationChoise;
 
 	system("cls");
 
@@ -53,27 +53,27 @@ void startSimulations()
 
 	cin >> simulationChoise;
 
-	if (simulationChoise == 1)
+	if (simulationChoise == "1")
 	{
 		displaySimpleSimulation();
 		startSimulations();
 	}
-	else if (simulationChoise == 2)
+	else if (simulationChoise == "2")
 	{
 		displayAmmeterSimulation();
 		startSimulations();
 	}
-	else if (simulationChoise == 3)
+	else if (simulationChoise == "3")
 	{
 		displayVoltmeterSimulation();
 		startSimulations();
 	}
-	else if (simulationChoise == 4)
+	else if (simulationChoise == "4")
 	{
 		displayAmmmeterAndVoltmeterSimulation();
 		startSimulations();
 	}
-	else if (simulationChoise == 5)
+	else if (simulationChoise == "5")
 	{
 		system("cls");
 	}
@@ -105,7 +105,7 @@ void doNextSimulationOff()
 
 void displaySimpleSimulation()
 {
-	int nextChoise;
+	string nextChoise;
 
 	while (true)
 	{
@@ -145,11 +145,11 @@ void displaySimpleSimulation()
 			doNextSimulationOn();
 			cin >> nextChoise;
 
-			if (nextChoise == 1)
+			if (nextChoise == "1")
 			{
 				goto switchOn;
 			}
-			else if (nextChoise == 2)
+			else if (nextChoise == "2")
 			{
 				system("cls");
 
@@ -168,7 +168,7 @@ void displaySimpleSimulation()
 				system("PAUSE");
 				goto switchOff;
 			}
-			else if (nextChoise == 3)
+			else if (nextChoise == "3")
 			{
 				break;
 			}
@@ -214,11 +214,11 @@ void displaySimpleSimulation()
 			doNextSimulationOff();
 			cin >> nextChoise;
 
-			if (nextChoise == 1)
+			if (nextChoise == "1")
 			{
 				goto switchOff;
 			}
-			else if (nextChoise == 2)
+			else if (nextChoise == "2")
 			{
 				system("cls");
 
@@ -237,7 +237,7 @@ void displaySimpleSimulation()
 				system("PAUSE");
 				goto switchOn;
 			}
-			else if (nextChoise == 3)
+			else if (nextChoise == "3")
 			{
 				break;
 			}
@@ -251,7 +251,7 @@ void displaySimpleSimulation()
 
 void displayAmmeterSimulation()
 {
-	int nextChoise;
+	string nextChoise;
 
 	while (true)
 	{
@@ -296,11 +296,11 @@ void displayAmmeterSimulation()
 			doNextSimulationOn();
 			cin >> nextChoise;
 
-			if (nextChoise == 1)
+			if (nextChoise == "1")
 			{
 				goto switchOn;
 			}
-			else if (nextChoise == 2)
+			else if (nextChoise == "2")
 			{
 				system("cls");
 
@@ -320,7 +320,7 @@ void displayAmmeterSimulation()
 				goto switchOff;
 
 			}
-			else if (nextChoise == 3)
+			else if (nextChoise == "3")
 			{
 				break;
 			}
@@ -371,11 +371,11 @@ void displayAmmeterSimulation()
 			doNextSimulationOff();
 			cin >> nextChoise;
 
-			if (nextChoise == 1)
+			if (nextChoise == "1")
 			{
 				goto switchOff;
 			}
-			else if (nextChoise == 2)
+			else if (nextChoise == "2")
 			{
 				system("cls");
 				
@@ -395,7 +395,7 @@ void displayAmmeterSimulation()
 				goto switchOn;
 
 			}
-			else if (nextChoise == 3)
+			else if (nextChoise == "3")
 			{
 				break;
 			}
@@ -410,7 +410,7 @@ void displayAmmeterSimulation()
 
 void displayVoltmeterSimulation()
 {
-	int nextChoise;
+	string nextChoise;
 
 	while (true)
 	{
@@ -450,11 +450,11 @@ void displayVoltmeterSimulation()
 			doNextSimulationOn();
 			cin >> nextChoise;
 
-			if (nextChoise == 1)
+			if (nextChoise == "1")
 			{
 				goto switchOn;
 			}
-			else if (nextChoise == 2)
+			else if (nextChoise == "2")
 			{
 				system("cls");
 
@@ -473,7 +473,7 @@ void displayVoltmeterSimulation()
 				system("PAUSE");
 				goto switchOff;
 			}
-			else if (nextChoise == 3)
+			else if (nextChoise == "3")
 			{
 				break;
 			}
@@ -519,11 +519,11 @@ void displayVoltmeterSimulation()
 			doNextSimulationOff();
 			cin >> nextChoise;
 
-			if (nextChoise == 1)
+			if (nextChoise == "1")
 			{
 				goto switchOff;
 			}
-			else if (nextChoise == 2)
+			else if (nextChoise == "2")
 			{
 				system("cls");
 
@@ -542,7 +542,7 @@ void displayVoltmeterSimulation()
 				system("PAUSE");
 				goto switchOn;
 			}
-			else if (nextChoise == 3)
+			else if (nextChoise == "3")
 			{
 				break;
 			}
@@ -557,7 +557,7 @@ void displayVoltmeterSimulation()
 
 void displayAmmmeterAndVoltmeterSimulation()
 {
-	int nextChoise;
+	string nextChoise;
 
 	while (true)
 	{
@@ -602,11 +602,11 @@ void displayAmmmeterAndVoltmeterSimulation()
 			doNextSimulationOn();
 			cin >> nextChoise;
 
-			if (nextChoise == 1)
+			if (nextChoise == "1")
 			{
 				goto switchOn;
 			}
-			else if (nextChoise == 2)
+			else if (nextChoise == "2")
 			{
 				system("cls");
 
@@ -625,7 +625,7 @@ void displayAmmmeterAndVoltmeterSimulation()
 				system("PAUSE");
 				goto switchOff;
 			}
-			else if (nextChoise == 3)
+			else if (nextChoise == "3")
 			{
 				break;
 			}
@@ -676,11 +676,11 @@ void displayAmmmeterAndVoltmeterSimulation()
 			doNextSimulationOff();
 			cin >> nextChoise;
 
-			if (nextChoise == 1)
+			if (nextChoise == "1")
 			{
 				goto switchOff;
 			}
-			else if (nextChoise == 2)
+			else if (nextChoise == "2")
 			{
 				system("cls");
 
@@ -699,7 +699,7 @@ void displayAmmmeterAndVoltmeterSimulation()
 				system("PAUSE");
 				goto switchOn;
 			}
-			else if (nextChoise == 3)
+			else if (nextChoise == "3")
 			{
 				break;
 			}
