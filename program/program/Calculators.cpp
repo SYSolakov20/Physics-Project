@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include "Calculators.h"
 
 using namespace std;
 
@@ -16,9 +17,8 @@ int findNumLength(double number)
 {
 	int counter = 0;
 
-	while (number != int(number))
+	if (number < 1)
 	{
-		number = number * 10;
 		counter = 1;
 	}
 
@@ -33,28 +33,32 @@ int findNumLength(double number)
 
 void calculateResistance()
 {
-	float voltage, current, resistance;
 	int next;
-	int sizeVoltage, sizeCurrent, sizeResistance;
-	int longerSize;
+	double voltage;
+	double current;
 
 	system("cls");
 
-	cout << "Resistance calculator" << endl << endl;
-	cout << "Electric current - I (in ampere - A)" << endl;
-	cout << "Resistance - R (in ohm - ?)" << endl;
-	cout << "Voltage - U (in volt - V)" << endl << endl;
+	cout << " Resistance calculator" << endl;
+	cout << " ________________________________________" << endl << endl;
+	cout << " Electric current - I (in ampere - A)" << endl;
+	cout << " Resistance - R (in ohm - ?)" << endl;
+	cout << " Voltage - U (in volt - V)" << endl << endl;
 
-	cout << "Write your voltage >> ";
+	cout << " Write your voltage >> ";
 	cin >> voltage;
-	cout << "Write your current >> ";
+	cout << " Write your electric current >> ";
 	cin >> current;
 
-	resistance = voltage / current;
 
-	sizeVoltage = findNumLength(voltage);
-	sizeCurrent = findNumLength(current);
-	sizeResistance = findNumLength(resistance);
+	double resistance = voltage / current;
+
+	int sizeVoltage = findNumLength(voltage);
+	int sizeCurrent = findNumLength(current);
+	int sizeResistance = findNumLength(resistance);
+
+
+	int longerSize;
 
 	if (sizeVoltage > sizeCurrent)
 	{
@@ -94,16 +98,16 @@ wrongInput:
 		cout << char(179) << " " << char(179) << " " << char(179) << "R = " << char(196) << setw(45) << char(179) << " " << char(179) << " " << char(179) << endl;
 		cout << char(179) << " " << char(179) << " " << char(179) << setw(5) << "I" << setw(45) << char(179) << " " << char(179) << " " << char(179) << endl;
 		cout << char(179) << " " << char(179) << " " << char(179) << setw(50) << char(179) << " " << char(179) << " " << char(179) << endl;
-		cout << char(179) << " " << char(179) << " " << char(179) << setw(4 + sizeVoltage) << voltage << setw(46 - sizeVoltage) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << char(179) << " " << char(179) << " " << char(179) << setw(7 + sizeVoltage) << setiosflags(ios::fixed) << setprecision(2) << voltage << setw(43 - sizeVoltage) << char(179) << " " << char(179) << " " << char(179) << endl;
 		cout << char(179) << " " << char(179) << " " << char(179) << "R = ";
-		for (int i = 0; i < longerSize; i++)
+		for (int i = -2; i < longerSize; i++)
 		{
 			cout << char(196);
 		}
-		cout << setw(46 - longerSize) << char(179) << " " << char(179) << " " << char(179) << endl;
-		cout << char(179) << " " << char(179) << " " << char(179) << setw(4 + sizeCurrent) << current << setw(46 - sizeCurrent) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << setw(44 - longerSize) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << char(179) << " " << char(179) << " " << char(179) << setw(7 + sizeCurrent) << setiosflags(ios::fixed) << setprecision(2) << current << setw(43 - sizeCurrent) << char(179) << " " << char(179) << " " << char(179) << endl;
 		cout << char(179) << " " << char(179) << " " << char(179) << setw(50) << char(179) << " " << char(179) << " " << char(179) << endl;
-		cout << char(179) << " " << char(179) << " " << char(179) << "R = " << resistance << "?" << setw(45 - sizeResistance) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << char(179) << " " << char(179) << " " << char(179) << "R = " << setiosflags(ios::fixed) << setprecision(2) << resistance << "A" << setw(42 - sizeResistance) << char(179) << " " << char(179) << " " << char(179) << endl;
 		cout << char(179) << " " << char(179) << " " << char(192);
 		for (int i = 0; i < 49; i++)
 		{
@@ -156,28 +160,30 @@ wrongInput:
 
 void calculateElectricCurrent()
 {
-	float chargePassed, time, current;
 	int next;
-	int sizeChargePassed, sizeTime, sizeCurrent;
-	int longerSize;
+	double chargePassed;
+	double time;
 
 	system("cls");
 
-	cout << "Electric current calculator" << endl << endl;
-	cout << "Electric current - I (in ampere - A)" << endl;
-	cout << "Charge passed - q (in coulomb - C)" << endl;
-	cout << "Time - t (in seconds - s)" << endl << endl;
+	cout << " Electric current calculator" << endl;
+	cout << " _________________________________________" << endl << endl;
+	cout << " Electric current - I (in ampere - A)" << endl;
+	cout << " Charge passed - q (in coulomb - C)" << endl;
+	cout << " Time - t (in seconds - s)" << endl << endl;
 
-	cout << "Write your charge passed >> ";
+	cout << " Write your charge passed >> ";
 	cin >> chargePassed;
-	cout << "Write your time >> ";
+	cout << " Write your time >> ";
 	cin >> time;
 
-	current = chargePassed / time;
+	double current = chargePassed / time;
 
-	sizeChargePassed = findNumLength(chargePassed);
-	sizeTime = findNumLength(time);
-	sizeCurrent = findNumLength(current);
+	int sizeChargePassed = findNumLength(chargePassed);
+	int sizeTime = findNumLength(time);
+	int sizeCurrent = findNumLength(current);
+
+	int longerSize;
 
 	if (sizeChargePassed > sizeTime)
 	{
@@ -217,16 +223,16 @@ wrongInput:
 		cout << char(179) << " " << char(179) << " " << char(179) << "I = " << char(196) << setw(45) << char(179) << " " << char(179) << " " << char(179) << endl;
 		cout << char(179) << " " << char(179) << " " << char(179) << setw(5) << "t" << setw(45) << char(179) << " " << char(179) << " " << char(179) << endl;
 		cout << char(179) << " " << char(179) << " " << char(179) << setw(50) << char(179) << " " << char(179) << " " << char(179) << endl;
-		cout << char(179) << " " << char(179) << " " << char(179) << setw(4 + sizeChargePassed) << chargePassed << setw(46 - sizeChargePassed) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << char(179) << " " << char(179) << " " << char(179) << setw(7 + sizeChargePassed) << setiosflags(ios::fixed) << setprecision(2) << chargePassed << setw(43 - sizeChargePassed) << char(179) << " " << char(179) << " " << char(179) << endl;
 		cout << char(179) << " " << char(179) << " " << char(179) << "I = ";
-		for (int i = 0; i < longerSize; i++)
+		for (int i = -2; i < longerSize; i++)
 		{
 			cout << char(196);
 		}
-		cout << setw(46 - longerSize) << char(179) << " " << char(179) << " " << char(179) << endl;
-		cout << char(179) << " " << char(179) << " " << char(179) << setw(4 + sizeTime) << time << setw(46 - sizeTime) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << setw(44 - longerSize) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << char(179) << " " << char(179) << " " << char(179) << setw(7 + sizeTime) << setiosflags(ios::fixed) << setprecision(2) << time << setw(43 - sizeTime) << char(179) << " " << char(179) << " " << char(179) << endl;
 		cout << char(179) << " " << char(179) << " " << char(179) << setw(50) << char(179) << " " << char(179) << " " << char(179) << endl;
-		cout << char(179) << " " << char(179) << " " << char(179) << "I = " << current << "A" << setw(45 - sizeCurrent) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << char(179) << " " << char(179) << " " << char(179) << "I = " << setiosflags(ios::fixed) << setprecision(2) << current << "A" << setw(42 - sizeCurrent) << char(179) << " " << char(179) << " " << char(179) << endl;
 		cout << char(179) << " " << char(179) << " " << char(192);
 		for (int i = 0; i < 49; i++)
 		{
@@ -280,27 +286,41 @@ wrongInput:
 
 void calculateChargePassed()
 {
-	float electricCurrent, time, chargePassed;
 	int next;
-	int sizeCurrent, sizeTime, sizeChargePassed;
+	double current;
+	double time;
 
 	system("cls");
 
-	cout << "Charge passed calculator" << endl << endl;
-	cout << "Electric current - I (in ampere - A)" << endl;
-	cout << "Charge passed - q (in coulomb - C)" << endl;
-	cout << "Time - t (in seconds - s)" << endl << endl;
+	cout << " Charge passed calculator" << endl;
+	cout << " ______________________________________" << endl << endl;
+	cout << " Electric current - I (in ampere - A)" << endl;
+	cout << " Charge passed - q (in coulomb - C)" << endl;
+	cout << " Time - t (in seconds - s)" << endl << endl;
 
-	cout << "Write your electric current >> ";
-	cin >> electricCurrent;
-	cout << "Write your time >> ";
+	cout << " Write your electric current >> ";
+	cin >> current;
+	cout << " Write your time >> ";
 	cin >> time;
 
-	chargePassed = electricCurrent * time;
 
-	sizeCurrent = findNumLength(electricCurrent);
-	sizeTime = findNumLength(time);
-	sizeChargePassed = findNumLength(chargePassed);
+	double chargePassed = current * time;
+	int integer = int(chargePassed);
+
+	int sizeCurrent = findNumLength(current);
+	int sizeTime = findNumLength(time);
+	int sizeChargePassed = findNumLength(integer);
+
+	int longerSize;
+
+	if (sizeCurrent > sizeTime)
+	{
+		longerSize = sizeCurrent;
+	}
+	else
+	{
+		longerSize = sizeTime;
+	}
 
 wrongInput:
 	{
@@ -327,11 +347,12 @@ wrongInput:
 		}
 		cout << char(191) << " " << char(179) << " " << char(179) << endl;
 		cout << char(179) << " " << char(179) << " " << char(179) << setw(50) << char(179) << " " << char(179) << " " << char(179) << endl;
-		cout << char(179) << " " << char(179) << " " << char(179) << "q = I * t" << setw(41) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << char(179) << " " << char(179) << " " << char(179) << "q = I * t " << setw(40) << char(179) << " " << char(179) << " " << char(179) << endl;
 		cout << char(179) << " " << char(179) << " " << char(179) << setw(50) << char(179) << " " << char(179) << " " << char(179) << endl;
-		cout << char(179) << " " << char(179) << " " << char(179) << "q =  " << electricCurrent << " * " << time << setw(42 - (sizeCurrent + sizeTime)) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << char(179) << " " << char(179) << " " << char(179) << "q = " << setiosflags(ios::fixed) << setprecision(2) << current << " * " << setiosflags(ios::fixed) << setprecision(2) << time << setw(37 - (sizeCurrent + sizeTime)) << char(179) << " " << char(179) << " " << char(179) << endl;
 		cout << char(179) << " " << char(179) << " " << char(179) << setw(50) << char(179) << " " << char(179) << " " << char(179) << endl;
-		cout << char(179) << " " << char(179) << " " << char(179) << "q = " << chargePassed << "C" << setw(45 - sizeChargePassed) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << char(179) << " " << char(179) << " " << char(179) << "q = " << setiosflags(ios::fixed) << setprecision(2) << chargePassed << "C" << setw(42 - sizeChargePassed) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << char(179) << " " << char(179) << " " << char(179) << setw(50) << char(179) << " " << char(179) << " " << char(179) << endl;
 		cout << char(179) << " " << char(179) << " " << char(192);
 		for (int i = 0; i < 49; i++)
 		{
@@ -362,7 +383,7 @@ wrongInput:
 		{
 			cout << char(196);
 		}
-		cout << char(217) << endl << endl;
+		cout << char(217) << endl;
 
 		doNextCalculator();
 		cin >> next;
@@ -384,27 +405,40 @@ wrongInput:
 
 void calculateVoltage()
 {
-	float resistance, current, voltage;
 	int next;
-	int sizeResistance, sizeCurrent, sizeVoltage;
+	double resistance;
+	double current;
 
 	system("cls");
 
-	cout << "Voltage calculator" << endl << endl;
-	cout << "Electric current - I (in ampere - A)" << endl;
-	cout << "Resistance - R (in ohm - ?)" << endl;
-	cout << "Voltage - U (in volt - V)" << endl << endl;
+	cout << " Voltage calculator" << endl;
+	cout << " ______________________________________" << endl << endl;
+	cout << " Electric current - I (in ampere - A)" << endl;
+	cout << " Resistance - R (in ohm - ?)" << endl;
+	cout << " Voltage - U (in volt - V)" << endl << endl;
 
-	cout << "Write your resistance >> ";
+	cout << " Write your resistance >> ";
 	cin >> resistance;
-	cout << "Write your current >> ";
+	cout << " Write your current >> ";
 	cin >> current;
 
-	voltage = resistance * current;
+	double voltage = resistance * current;
+	int integer = int(voltage);
 
-	sizeResistance = findNumLength(resistance);
-	sizeCurrent = findNumLength(current);
-	sizeVoltage = findNumLength(voltage);
+	int sizeResistance = findNumLength(resistance);
+	int sizeCurrent = findNumLength(current);
+	int sizeVoltage = findNumLength(integer);
+
+	int longerSize;
+
+	if (sizeResistance > sizeCurrent)
+	{
+		longerSize = sizeResistance;
+	}
+	else
+	{
+		longerSize = sizeCurrent;
+	}
 
 wrongInput:
 	{
@@ -431,11 +465,12 @@ wrongInput:
 		}
 		cout << char(191) << " " << char(179) << " " << char(179) << endl;
 		cout << char(179) << " " << char(179) << " " << char(179) << setw(50) << char(179) << " " << char(179) << " " << char(179) << endl;
-		cout << char(179) << " " << char(179) << " " << char(179) << "U = I * R" << setw(41) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << char(179) << " " << char(179) << " " << char(179) << "U = I * R " << setw(40) << char(179) << " " << char(179) << " " << char(179) << endl;
 		cout << char(179) << " " << char(179) << " " << char(179) << setw(50) << char(179) << " " << char(179) << " " << char(179) << endl;
-		cout << char(179) << " " << char(179) << " " << char(179) << "U =  " << current << " * " << resistance << setw(42 - (sizeCurrent + sizeResistance)) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << char(179) << " " << char(179) << " " << char(179) << "U = " << setiosflags(ios::fixed) << setprecision(2) << resistance << " * " << setiosflags(ios::fixed) << setprecision(2) << current << setw(37 - (sizeResistance + sizeCurrent)) << char(179) << " " << char(179) << " " << char(179) << endl;
 		cout << char(179) << " " << char(179) << " " << char(179) << setw(50) << char(179) << " " << char(179) << " " << char(179) << endl;
-		cout << char(179) << " " << char(179) << " " << char(179) << "U = " << voltage << "C" << setw(45 - sizeVoltage) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << char(179) << " " << char(179) << " " << char(179) << "U = " << setiosflags(ios::fixed) << setprecision(2) << voltage << "V" << setw(42 - sizeVoltage) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << char(179) << " " << char(179) << " " << char(179) << setw(50) << char(179) << " " << char(179) << " " << char(179) << endl;
 		cout << char(179) << " " << char(179) << " " << char(192);
 		for (int i = 0; i < 49; i++)
 		{
@@ -467,6 +502,7 @@ wrongInput:
 			cout << char(196);
 		}
 		cout << char(217) << endl << endl;
+
 
 		doNextCalculator();
 		cin >> next;

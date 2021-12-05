@@ -26,36 +26,39 @@ void printMenu()
 
 void startProgram()
 {
-	int activity;
+	string activity;
 
 	system("cls");
 	printMenu();
 	cin >> activity;
 
-	if (activity == 1)
+	if (activity == "1")
 	{
 		startSimulations();
 		startProgram();
 	}
-	else if (activity == 2)
+	else if (activity == "2")
 	{
 		startCalculators();
 		startProgram();
 	}
-	else if (activity == 3)
+	else if (activity == "3")
 	{
 		startTest();
 		startProgram();
 	}
-	else if (activity == 4)
+	else if (activity == "4")
 	{
 		startCreatingSimulation();
 		startProgram();
 	}
-	else if (activity == 5)
+	else if (activity == "5")
 	{
 		system("cls");
-		cout << "Bye!";
+		cout << " ____  _  _  ____ " << endl;
+		cout << "(  _ \\( \\/ )( ___)" << endl;
+		cout << " ) _ < \\  /  )__) " << endl;
+		cout << "(____/ (__) (____)" << endl;
 	}
 	else
 	{

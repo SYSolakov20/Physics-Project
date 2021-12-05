@@ -1,8 +1,1 @@
-Information about simple simulation 
-
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
-industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap 
-into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
-software like Aldus PageMaker including versions of Lorem Ipsum.
+An electronic circuit is composed of individual electronic components, such as resistors, transistors, capacitors, inductors and diodes, connected by conductive wires or traces through which electric current can flow. To be referred to as electronic, rather than electrical, generally at least one active component must be present. The combination of components and wires allows various simple and complex operations to be performed: signals can be amplified, computations can be performed, and data can be moved from one place to another.

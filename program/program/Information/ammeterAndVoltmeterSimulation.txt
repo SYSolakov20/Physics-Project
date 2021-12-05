@@ -1,9 +1,13 @@
-This is information about our ammeter and voltmeter simulation
-There are many variations of passages of Lorem Ipsum available, but the majority have suffered 
-alteration in some form, by injected humour, or randomised words which don't look even slightly 
-believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't 
-anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet 
-tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. 
-It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, 
-to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free 
-from repetition, injected humour, or non-characteristic words etc.
+An ammeter is an instrument used to measure the current in a circuit. It is connected in series with the circuit in which the current is to be measured. An ammeter usually has low resistance so that it does not cause a significant voltage drop in the circuit being measured.
+
+A voltmeter is an instrument used for measuring the electric tension in a circuit. It is connected in parallel. It usually has a high resistance so that it takes negligible current from the circuit.
+
+electric current - a stream of charged particles, such as electrons or ions, moving through an electrical conductor or space.
+symbol - I
+unit - amperes(A)
+formulas - I = U/R, I = Q/t
+
+voltage/electric tension - the work needed per unit of charge to move a test charge between the two points.
+symbol - U
+unit - volts (V)
+formulas - U = I.R

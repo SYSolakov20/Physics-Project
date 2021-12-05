@@ -1,12 +1,7 @@
-Ammeter information
-An ammeter /ˈamɪtə/ (abbreviation of Ampere meter) is a measuring instrument used to measure the 
-current in a circuit. Electric currents are measured in Amperes (A), hence the name. The ammeter is 
-usually connected in series with the circuit in which the current is to be measured. An ammeter 
-usually has low resistance so that it does not cause a significant voltage drop in the circuit being 
-measured.
+An ammeter is an instrument used to measure the current in a circuit. It is connected in series with the circuit in which the current is to be measured. An ammeter usually has low resistance so that it does not cause a significant voltage drop in the circuit being measured.
 
-Instruments used to measure smaller currents, in the milliampere or microampere range, are designated 
-as milliammeters or microammeters. Early ammeters were laboratory instruments that relied on the 
-Earth's magnetic field for operation. By the late 19th century, improved instruments were designed 
-which could be mounted in any position and allowed accurate measurements in electric power systems. 
-It is generally represented by letter 'A' in a circuit.
+electric current - a stream of charged particles, such as electrons or ions, moving through an electrical conductor or space.
+
+symbol - I
+unit - amperes(A)
+formulas - I = U/R, I = Q/t

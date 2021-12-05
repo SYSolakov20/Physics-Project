@@ -32,10 +32,10 @@ void startSimulations()
 	cout << "        " << char(186) << setw(56) << char(186) << endl;
 	cout << "        " << char(186) << setw(56) << char(186) << endl;
 	cout << "        " << char(186) << setw(56) << char(186) << endl;
-	cout << "        " << char(186) << "   1) Simulation with lamp" << setw(30) << char(186) << endl;
-	cout << "        " << char(186) << "   2) Simulation with lamp and ammeter" << setw(18) << char(186) << endl;
-	cout << "        " << char(186) << "   3) Simulation with lamp and voltmeter" << setw(18) << "( x )" << endl;
-	cout << "        " << char(186) << "   4) Simulation with lamp, ammeter and voltmeter" << setw(7) << char(186) << endl;
+	cout << "        " << char(186) << "   1) Simple simulation" << setw(33) << char(186) << endl;
+	cout << "        " << char(186) << "   2) Simulation with ammeter" << setw(27) << char(186) << endl;
+	cout << "        " << char(186) << "   3) Simulation with voltmeter" << setw(27) << "( x )" << endl;
+	cout << "        " << char(186) << "   4) Simulation with ammeter and voltmeter" << setw(13) << char(186) << endl;
 	cout << "        " << char(186) << "   5) Back" << setw(46) << char(186) << endl;
 	cout << "        " << char(186) << setw(56) << char(186) << endl;
 	cout << "        " << char(186) << setw(56) << char(186) << endl;
@@ -199,7 +199,7 @@ void displaySimpleSimulation()
 			cout << " " << char(186) << setw(36) << char(186) << BOLDYELLOW <<"        /         \\ " << RESET << endl;
 			cout << " " << char(186) << setw(36) << char(186) << BOLDYELLOW << "       |           |" << RESET <<endl;
 			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << "       '.  " << RESET << YELLOW <<"+^^^+ "<< RESET << BOLDYELLOW << " .'" <<RESET << endl;
-			cout << " | " << setw(37) << YELLOW << "( x )" << RESET <<BOLDYELLOW <<"       '. " << RESET << YELLOW << "\\./ " << RESET << BOLDYELLOW << ".'" << endl;;
+			cout << " | " << setw(37) << YELLOW << "( x )" << RESET <<BOLDYELLOW <<"       '. " << RESET << YELLOW << "\\./ " << RESET << BOLDYELLOW << ".'" << RESET << endl;;
 			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << "           |_|_|" << endl;
 			cout << " " << char(186) << setw(36) << char(186) << "           (___) " << endl;
 			cout << " " << char(186) << setw(36) << char(186) << "           (___)" << endl;
@@ -310,7 +310,7 @@ void displayAmmeterSimulation()
 				while (getline(readFile, Information))
 				{
 					system("color f0");
-					cout << Information;
+					cout << Information << endl;
 				}
 
 				readFile.close();
@@ -351,7 +351,7 @@ void displayAmmeterSimulation()
 			cout << " " << char(186) << setw(36) << char(186) << BOLDYELLOW << "        /         \\ " << RESET << endl;
 			cout << " " << char(186) << setw(36) << char(186) << BOLDYELLOW << "       |           |" << RESET << endl;
 			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << "       '.  " << RESET << YELLOW << "+^^^+ " << RESET << BOLDYELLOW << " .'" << RESET << endl;
-			cout << " | " << setw(37) << YELLOW << "( x )" << RESET << BOLDYELLOW << "       '. " << RESET << YELLOW << "\\./ " << RESET << BOLDYELLOW << ".'" << endl;;
+			cout << " | " << setw(37) << YELLOW << "( x )" << RESET << BOLDYELLOW << "       '. " << RESET << YELLOW << "\\./ " << RESET << BOLDYELLOW << ".'" << RESET << endl;;
 			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << "           |_|_|" << endl;
 			cout << " " << char(186) << setw(36) << char(186) << "           (___) " << endl;
 			cout << " " << char(186) << setw(36) << char(186) << "           (___)" << endl;
@@ -385,7 +385,7 @@ void displayAmmeterSimulation()
 				while (getline(readFile, Information))
 				{
 					system("color f0");
-					cout << Information;
+					cout << Information << endl;
 				}
 
 				readFile.close();
@@ -464,7 +464,7 @@ void displayVoltmeterSimulation()
 				while (getline(readFile, Information))
 				{
 					system("color f0");
-					cout << Information;
+					cout << Information << endl;
 				}
 
 				readFile.close();
@@ -504,7 +504,7 @@ void displayVoltmeterSimulation()
 			cout << " " << char(186) << setw(36) << char(186) << BOLDYELLOW << "           /         \\ "  <<RESET << endl;
 			cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(187) <<BOLDYELLOW <<"   |           |" << RESET<< endl;
 			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << setw(7) << char(186) << "   '.  " << RESET << YELLOW << "+^^^+ " << RESET << BOLDYELLOW << " .'" << RESET << endl;
-			cout << " | " << setw(37) << YELLOW << "( x )" << RESET << "  ( V )" << "   '. " << RESET << YELLOW << "\\./ " << RESET << BOLDYELLOW << ".'" << endl;
+			cout << " | " << setw(37) << YELLOW << "( x )" << RESET << "  ( V )" << "   '. " << RESET << YELLOW << "\\./ " << RESET << BOLDYELLOW << ".'" << RESET << endl;
 			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << setw(7) << char(186) << "       |_|_|" << endl;
 			cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(188) << "       (___) " << endl;
 			cout << " " << char(186) << setw(36) << char(186) << "              (___)" << endl;
@@ -533,7 +533,7 @@ void displayVoltmeterSimulation()
 				while (getline(readFile, Information))
 				{
 					system("color f0");
-					cout << Information;
+					cout << Information << endl;
 				}
 
 				readFile.close();
@@ -616,7 +616,7 @@ void displayAmmmeterAndVoltmeterSimulation()
 				while (getline(readFile, Information))
 				{
 					system("color f0");
-					cout << Information;
+					cout << Information << endl;
 				}
 
 				readFile.close();
@@ -656,7 +656,7 @@ void displayAmmmeterAndVoltmeterSimulation()
 			cout << " " << char(186) << setw(36) << char(186) << BOLDYELLOW << "           /         \\ " << RESET << endl;
 			cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(187) << BOLDYELLOW << "   |           |" << RESET << endl;
 			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << setw(7) << char(186) << "   '.  " << RESET << YELLOW << "+^^^+ " << RESET << BOLDYELLOW << " .'" << RESET << endl;
-			cout << " | " << setw(37) << YELLOW << "( x )" << RESET << "  ( V )" << "   '. " << RESET << YELLOW << "\\./ " << RESET << BOLDYELLOW << ".'" << endl;
+			cout << " | " << setw(37) << YELLOW << "( x )" << RESET << "  ( V )" << "   '. " << RESET << YELLOW << "\\./ " << RESET << BOLDYELLOW << ".'"  << RESET << endl;
 			cout << " " << char(186) << setw(44) << BOLDYELLOW << char(186) << RESET << setw(7) << char(186) << "       |_|_|" << endl;
 			cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(188) << "       (___) " << endl;
 			cout << " " << char(186) << setw(36) << char(186) << "              (___)" << endl;
@@ -690,7 +690,7 @@ void displayAmmmeterAndVoltmeterSimulation()
 				while (getline(readFile, Information))
 				{
 					system("color f0");
-					cout << Information;
+					cout << Information << endl;
 				}
 
 				readFile.close();
