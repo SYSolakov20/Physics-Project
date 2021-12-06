@@ -47,7 +47,7 @@ void displayMenuAfterTheTest()
 // displays the first question 
 void answerQuestionOne()
 {
-	cout << "Question "<< countQuestions << endl;
+	cout << "Question " << countQuestions << endl;
 	cout << "_____________________________" << endl << endl;
 
 	cout << "What do you measure with ammeter?" << endl << endl;
@@ -447,7 +447,7 @@ void reviewTest(int reviewTestQuestions[10])
 
 		case 4:
 		{
-			
+
 			cout << " " << char(201);
 			for (int i = 0; i < 14; i++)
 			{
@@ -605,7 +605,7 @@ void reviewTest(int reviewTestQuestions[10])
 				cout << "b) V - volt " << GREEN << char(251) << RESET << endl;
 				cout << "c) C - coulomb" << endl;
 				cout << GREEN << "Your answer is correct!" << RESET << endl << endl;
-				
+
 			}
 			else if (answers[8] == "c")
 			{
@@ -657,7 +657,7 @@ void startTest()
 {
 	countRightAnswers = 0;
 	countQuestions = 1;
-	
+
 	shuffleQuestions(questions);
 
 	for (int i = 0; i < 10; ++i)
@@ -669,7 +669,7 @@ void startTest()
 		case 1: answerQuestionOne();
 			break;
 		case 2: answerQuestionTwo();
-		break;
+			break;
 		case 3: answerQuestionThree();
 			break;
 		case 4: answerQuestionFour();

@@ -17,7 +17,7 @@ bool divideByZero(double divisor)
 	{
 		return 1;
 	}
-	
+
 }
 
 // prints horizontal line
