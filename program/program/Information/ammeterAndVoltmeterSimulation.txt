@@ -1,0 +1,13 @@
+An ammeter is an instrument used to measure the current in a circuit. It is connected in series with the circuit in which the current is to be measured. An ammeter usually has low resistance so that it does not cause a significant voltage drop in the circuit being measured.
+
+A voltmeter is an instrument used for measuring the electric tension in a circuit. It is connected in parallel. It usually has a high resistance so that it takes negligible current from the circuit.
+
+electric current - a stream of charged particles, such as electrons or ions, moving through an electrical conductor or space.
+symbol - I
+unit - amperes(A)
+formulas - I = U/R, I = Q/t
+
+voltage/electric tension - the work needed per unit of charge to move a test charge between the two points.
+symbol - U
+unit - volts (V)
+formulas - U = I.R

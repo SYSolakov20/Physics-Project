@@ -1,9 +1,1 @@
-﻿  Calculators.cpp
-  CreateSimulation.cpp
-  Program.cpp
-  Simulations.cpp
-  Test.cpp
-D:\Училище\Physics-Project\Program\Program\Test.cpp(339,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Generating Code...
-D:\Училище\Physics-Project\Program\Program\Calculators.cpp(21): warning C4715: 'divideByZero': not all control paths return a value
-  Program.vcxproj -> D:\Училище\Physics-Project\Program\Debug\Program.exe
+﻿  Program.vcxproj -> C:\Users\HP\Desktop\Physics-Project\program\Debug\Program.exe

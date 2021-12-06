@@ -1,0 +1,7 @@
+An ammeter is an instrument used to measure the current in a circuit. It is connected in series with the circuit in which the current is to be measured. An ammeter usually has low resistance so that it does not cause a significant voltage drop in the circuit being measured.
+
+electric current - a stream of charged particles, such as electrons or ions, moving through an electrical conductor or space.
+
+symbol - I
+unit - amperes(A)
+formulas - I = U/R, I = Q/t

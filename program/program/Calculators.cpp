@@ -69,7 +69,7 @@ void calculateResistance()
 	cout << " Resistance calculator" << endl;
 	cout << " ________________________________________" << endl << endl;
 	cout << " Electric current - I (in ampere - A)" << endl;
-	cout << " Resistance - R (in ohm - ?)" << endl;
+	cout << " Resistance - R (in ohm)" << endl;
 	cout << " Voltage - U (in volt - V)" << endl << endl;
 
 	cout << " Write your voltage >> ";
@@ -99,7 +99,7 @@ void calculateResistance()
 	{
 		longerSize = sizeCurrent;
 	}
-	displayCalculator("Resistance", 'U', voltage, 'I', current, 'R', resistance, '?', longerSize, sizeVoltage, sizeCurrent, sizeResistance);
+	displayCalculator("Resistance", 'U', voltage, 'I', current, 'R', resistance, "ohm(s)", longerSize, sizeVoltage, sizeCurrent, sizeResistance);
 }
 
 // starts electric current calculator 
@@ -143,7 +143,7 @@ void calculateElectricCurrent()
 		longerSize = sizeTime;
 	}
 
-	displayCalculator("Electric current", 'q', chargePassed, 't', time, 'I', current, 'A', longerSize, sizeChargePassed, sizeTime, sizeCurrent);
+	displayCalculator("Electric current", 'q', chargePassed, 't', time, 'I', current, "A", longerSize, sizeChargePassed, sizeTime, sizeCurrent);
 }
 
 // starts charge passed calculator 
@@ -184,7 +184,7 @@ void calculateChargePassed()
 		longerSize = sizeTime;
 	}
 
-	displayCalculator("Charge passed", 'I', current, 't', time, 'q', chargePassed, 'C', longerSize, sizeCurrent, sizeTime, sizeChargePassed);
+	displayCalculator("Charge passed", 'I', current, 't', time, 'q', chargePassed, "C", longerSize, sizeCurrent, sizeTime, sizeChargePassed);
 }
 
 // starts voltage calculator 
@@ -198,7 +198,7 @@ void calculateVoltage()
 	cout << " Voltage calculator" << endl;
 	cout << " ______________________________________" << endl << endl;
 	cout << " Electric current - I (in ampere - A)" << endl;
-	cout << " Resistance - R (in ohm - ?)" << endl;
+	cout << " Resistance - R (in ohm)" << endl;
 	cout << " Voltage - U (in volt - V)" << endl << endl;
 
 	cout << " Write your resistance >> ";
@@ -224,11 +224,11 @@ void calculateVoltage()
 		longerSize = sizeCurrent;
 	}
 
-	displayCalculator("Voltage", 'R', resistance, 'I', current, 'U', voltage, 'V', longerSize, sizeResistance, sizeCurrent, sizeVoltage);
+	displayCalculator("Voltage", 'R', resistance, 'I', current, 'U', voltage, "V", longerSize, sizeResistance, sizeCurrent, sizeVoltage);
 }
 
 // prints calculator 
-void displayCalculator(string resultName, char firstInputSymbol, double firstInput, char secondInputSymbol, double secondInput, char resultSymbol, double result, char resultUnit, int size, int firstInputSize, int secondInputSize, int resultSize)
+void displayCalculator(string resultName, char firstInputSymbol, double firstInput, char secondInputSymbol, double secondInput, char resultSymbol, double result, string resultUnit, int size, int firstInputSize, int secondInputSize, int resultSize)
 {
 	string next;
 	system("cls");
@@ -258,7 +258,14 @@ void displayCalculator(string resultName, char firstInputSymbol, double firstInp
 		cout << setw(43 - size) << char(179) << " " << char(179) << " " << char(179) << endl;
 		cout << char(179) << " " << char(179) << " " << char(179) << setw(7 + secondInputSize) << setiosflags(ios::fixed) << setprecision(2) << secondInput << setw(43 - secondInputSize) << char(179) << " " << char(179) << " " << char(179) << endl;
 		cout << char(179) << " " << char(179) << " " << char(179) << setw(50) << char(179) << " " << char(179) << " " << char(179) << endl;
-		cout << char(179) << " " << char(179) << " " << char(179) << resultSymbol << " = " << setiosflags(ios::fixed) << setprecision(2) << result << " " << resultUnit << setw(41 - resultSize) << char(179) << " " << char(179) << " " << char(179) << endl;
+		if (resultSymbol == 'R')
+		{
+			cout << char(179) << " " << char(179) << " " << char(179) << resultSymbol << " = " << setiosflags(ios::fixed) << setprecision(2) << result << " " << resultUnit << setw(36 - resultSize) << char(179) << " " << char(179) << " " << char(179) << endl;
+		}
+		else
+		{
+			cout << char(179) << " " << char(179) << " " << char(179) << resultSymbol << " = " << setiosflags(ios::fixed) << setprecision(2) << result << " " << resultUnit << setw(41 - resultSize) << char(179) << " " << char(179) << " " << char(179) << endl;
+		}
 		cout << char(179) << " " << char(179) << " " << char(192);
 	}
 
