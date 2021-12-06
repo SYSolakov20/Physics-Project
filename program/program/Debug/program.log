@@ -1,1 +1,6 @@
-﻿  Program.vcxproj -> C:\Users\HP\Desktop\Physics-Project\program\Debug\Program.exe
+﻿  Calculators.cpp
+  Program.cpp
+  Generating Code...
+D:\Училище\Physics-Project\program\program\Calculators.cpp(38): warning C4715: 'divideByZero': not all control paths return a value
+D:\Училище\Physics-Project\program\program\Calculators.cpp(23): warning C4715: 'checkInput': not all control paths return a value
+  Program.vcxproj -> D:\Училище\Physics-Project\program\Debug\Program.exe

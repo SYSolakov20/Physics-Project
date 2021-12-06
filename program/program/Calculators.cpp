@@ -1,8 +1,26 @@
 #include <iostream>
 #include <iomanip>
+#include <string>
 #include "Calculators.h"
 
 using namespace std;
+
+
+
+// check if a number is an integer
+bool checkInput(double number)
+{
+	if (!number)
+	{
+		system("cls");
+		cout << "Invalid input! Please, try again." << endl << endl;
+		system("PAUSE");
+	}
+	else
+	{
+		return 1;
+	}
+}
 
 // checks for division by zero
 bool divideByZero(double divisor)
@@ -17,7 +35,6 @@ bool divideByZero(double divisor)
 	{
 		return 1;
 	}
-
 }
 
 // prints horizontal line
@@ -32,11 +49,11 @@ void outputHorizontalLine(int counter, int length)
 // prints calculator menu
 void doNextCalculator()
 {
-	cout << " What do you want to do now?" << endl;
-	cout << " _____________________________" << endl;
-	cout << " 1) Go back" << endl;
-	cout << " 2) Use our calculator again" << endl;
-	cout << " Select >> ";
+	cout << "   What do you want to do now?" << endl;
+	cout << "   _____________________________" << endl;
+	cout << "   1) Go back" << endl;
+	cout << "   2) Use our calculator again" << endl;
+	cout << "   Select >> ";
 }
 
 // counts number of digits 
@@ -69,37 +86,35 @@ void calculateResistance()
 	cout << " Resistance calculator" << endl;
 	cout << " ________________________________________" << endl << endl;
 	cout << " Electric current - I (in ampere - A)" << endl;
-	cout << " Resistance - R (in ohm)" << endl;
+	cout << " Resistance - R (in ohm - ?)" << endl;
 	cout << " Voltage - U (in volt - V)" << endl << endl;
 
 	cout << " Write your voltage >> ";
-	cin >> voltage;
+
+	while (true)
+	{
+		cin >> voltage;
+		if (checkInput(voltage) != 1)
+		{
+			cin.clear();
+			calculateResistance();
+		}
+		else
+		{
+			break;
+		}
+	}
+
 	cout << " Write your electric current >> ";
 	cin >> current;
-
-	if (divideByZero(current) != 1)
+	if (checkInput(current) != 1 or divideByZero(current) != 1)
 	{
 		calculateResistance();
 	}
 
 	double resistance = voltage / current;
 
-	int sizeVoltage = findNumLength(voltage);
-	int sizeCurrent = findNumLength(current);
-	int sizeResistance = findNumLength(resistance);
-
-
-	int longerSize;
-
-	if (sizeVoltage > sizeCurrent)
-	{
-		longerSize = sizeVoltage;
-	}
-	else
-	{
-		longerSize = sizeCurrent;
-	}
-	displayCalculator("Resistance", 'U', voltage, 'I', current, 'R', resistance, "ohm(s)", longerSize, sizeVoltage, sizeCurrent, sizeResistance);
+	displayCalculator("Resistance", 'U', voltage, 'I', current, 'R', resistance, "ohm(s)");
 }
 
 // starts electric current calculator 
@@ -128,22 +143,7 @@ void calculateElectricCurrent()
 
 	double current = chargePassed / time;
 
-	int sizeChargePassed = findNumLength(chargePassed);
-	int sizeTime = findNumLength(time);
-	int sizeCurrent = findNumLength(current);
-
-	int longerSize;
-
-	if (sizeChargePassed > sizeTime)
-	{
-		longerSize = sizeChargePassed;
-	}
-	else
-	{
-		longerSize = sizeTime;
-	}
-
-	displayCalculator("Electric current", 'q', chargePassed, 't', time, 'I', current, "A", longerSize, sizeChargePassed, sizeTime, sizeCurrent);
+	displayCalculator("Electric current", 'q', chargePassed, 't', time, 'I', current, "A");
 }
 
 // starts charge passed calculator 
@@ -167,24 +167,8 @@ void calculateChargePassed()
 
 
 	double chargePassed = current * time;
-	int integer = int(chargePassed);
 
-	int sizeCurrent = findNumLength(current);
-	int sizeTime = findNumLength(time);
-	int sizeChargePassed = findNumLength(integer);
-
-	int longerSize;
-
-	if (sizeCurrent > sizeTime)
-	{
-		longerSize = sizeCurrent;
-	}
-	else
-	{
-		longerSize = sizeTime;
-	}
-
-	displayCalculator("Charge passed", 'I', current, 't', time, 'q', chargePassed, "C", longerSize, sizeCurrent, sizeTime, sizeChargePassed);
+	displayCalculator("Charge passed", 'I', current, 't', time, 'q', chargePassed, "C");
 }
 
 // starts voltage calculator 
@@ -198,7 +182,7 @@ void calculateVoltage()
 	cout << " Voltage calculator" << endl;
 	cout << " ______________________________________" << endl << endl;
 	cout << " Electric current - I (in ampere - A)" << endl;
-	cout << " Resistance - R (in ohm)" << endl;
+	cout << " Resistance - R (in ohm - ?)" << endl;
 	cout << " Voltage - U (in volt - V)" << endl << endl;
 
 	cout << " Write your resistance >> ";
@@ -207,98 +191,99 @@ void calculateVoltage()
 	cin >> current;
 
 	double voltage = resistance * current;
-	int integer = int(voltage);
 
-	int sizeResistance = findNumLength(resistance);
-	int sizeCurrent = findNumLength(current);
-	int sizeVoltage = findNumLength(integer);
-
-	int longerSize;
-
-	if (sizeResistance > sizeCurrent)
-	{
-		longerSize = sizeResistance;
-	}
-	else
-	{
-		longerSize = sizeCurrent;
-	}
-
-	displayCalculator("Voltage", 'R', resistance, 'I', current, 'U', voltage, "V", longerSize, sizeResistance, sizeCurrent, sizeVoltage);
+	displayCalculator("Voltage", 'R', resistance, 'I', current, 'U', voltage, "V");
 }
 
 // prints calculator 
-void displayCalculator(string resultName, char firstInputSymbol, double firstInput, char secondInputSymbol, double secondInput, char resultSymbol, double result, string resultUnit, int size, int firstInputSize, int secondInputSize, int resultSize)
+void displayCalculator(string resultName, char firstInputSymbol, double firstInput, char secondInputSymbol, double secondInput, char resultSymbol, double result, string resultUnit)
 {
+
+	int size;
+	int integer = int(result);
+
+	int firstInputSize = findNumLength(firstInput);
+	int secondInputSize = findNumLength(secondInput);
+	int resultSize = findNumLength(integer);
+
+	if (firstInputSize > secondInputSize)
+	{
+		size = firstInputSize;
+	}
+	else
+	{
+		size = secondInputSize;
+	}
+
 	string next;
 	system("cls");
-
-	cout << char(218);
-	outputHorizontalLine(0, 57);
+	cout << endl;
+	cout << "   " << char(218); outputHorizontalLine(0, 44);
 	cout << char(191) << endl;
-	cout << char(179) << " " << char(218);
-	outputHorizontalLine(0, 53);
+	cout << "   " << char(179) << " " << char(218);
+	outputHorizontalLine(0, 40);
 	cout << char(191) << " " << char(179) << endl;
-	cout << char(179) << " " << char(179) << setw(54) << char(179) << " " << char(179) << endl;
-	cout << char(179) << " " << char(179) << "  " << resultName << " calculator" << setw(43 - resultName.length() - 2) << char(179) << " " << char(179) << endl;
-	cout << char(179) << " " << char(179) << " " << char(218);
-	outputHorizontalLine(0, 49);
+	cout << "   " << char(179) << " " << char(179) << setw(41) << char(179) << " " << char(179) << endl;
+	cout << "   " << char(179) << " " << char(179) << "  " << resultName << " calculator" << setw(30 - resultName.length() - 2) << char(179) << " " << char(179) << endl;
+	cout << "   " << char(179) << " " << char(179) << " " << char(218);
+	outputHorizontalLine(0, 36);
 	cout << char(191) << " " << char(179) << " " << char(179) << endl;
-	cout << char(179) << " " << char(179) << " " << char(179) << setw(50) << char(179) << " " << char(179) << " " << char(179) << endl;
+	cout << "   " << char(179) << " " << char(179) << " " << char(179) << setw(37) << char(179) << " " << char(179) << " " << char(179) << endl;
 
 	if (resultSymbol == 'R' or resultSymbol == 'I')
 	{
-		cout << char(179) << " " << char(179) << " " << char(179) << setw(5) << firstInputSymbol << setw(45) << char(179) << " " << char(179) << " " << char(179) << endl;
-		cout << char(179) << " " << char(179) << " " << char(179) << resultSymbol << " = " << char(196) << setw(45) << char(179) << " " << char(179) << " " << char(179) << endl;
-		cout << char(179) << " " << char(179) << " " << char(179) << setw(5) << secondInputSymbol << setw(45) << char(179) << " " << char(179) << " " << char(179) << endl;
-		cout << char(179) << " " << char(179) << " " << char(179) << setw(50) << char(179) << " " << char(179) << " " << char(179) << endl;
-		cout << char(179) << " " << char(179) << " " << char(179) << setw(7 + firstInputSize) << setiosflags(ios::fixed) << setprecision(2) << firstInput << setw(43 - firstInputSize) << char(179) << " " << char(179) << " " << char(179) << endl;
-		cout << char(179) << " " << char(179) << " " << char(179) << resultSymbol << " = ";
+		cout << "   " << char(179) << " " << char(179) << " " << char(179) << setw(5) << firstInputSymbol << setw(32) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << "   " << char(179) << " " << char(179) << " " << char(179) << resultSymbol << " = " << char(196) << setw(32) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << "   " << char(179) << " " << char(179) << " " << char(179) << setw(5) << secondInputSymbol << setw(32) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << "   " << char(179) << " " << char(179) << " " << char(179) << setw(37) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << "   " << char(179) << " " << char(179) << " " << char(179) << setw(7 + firstInputSize) << setiosflags(ios::fixed) << setprecision(2) << firstInput << setw(30 - firstInputSize) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << "   " << char(179) << " " << char(179) << " " << char(179) << resultSymbol << " = ";
 		outputHorizontalLine(-3, size);
-		cout << setw(43 - size) << char(179) << " " << char(179) << " " << char(179) << endl;
-		cout << char(179) << " " << char(179) << " " << char(179) << setw(7 + secondInputSize) << setiosflags(ios::fixed) << setprecision(2) << secondInput << setw(43 - secondInputSize) << char(179) << " " << char(179) << " " << char(179) << endl;
-		cout << char(179) << " " << char(179) << " " << char(179) << setw(50) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << setw(30 - size) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << "   " << char(179) << " " << char(179) << " " << char(179) << setw(7 + secondInputSize) << setiosflags(ios::fixed) << setprecision(2) << secondInput << setw(30 - secondInputSize) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << "   " << char(179) << " " << char(179) << " " << char(179) << setw(37) << char(179) << " " << char(179) << " " << char(179) << endl;
 		if (resultSymbol == 'R')
 		{
-			cout << char(179) << " " << char(179) << " " << char(179) << resultSymbol << " = " << setiosflags(ios::fixed) << setprecision(2) << result << " " << resultUnit << setw(36 - resultSize) << char(179) << " " << char(179) << " " << char(179) << endl;
+			cout << "   " << char(179) << " " << char(179) << " " << char(179) << resultSymbol << " = " << setiosflags(ios::fixed) << setprecision(2) << result << " " << resultUnit << setw(23 - resultSize) << char(179) << " " << char(179) << " " << char(179) << endl;
 		}
 		else
 		{
-			cout << char(179) << " " << char(179) << " " << char(179) << resultSymbol << " = " << setiosflags(ios::fixed) << setprecision(2) << result << " " << resultUnit << setw(41 - resultSize) << char(179) << " " << char(179) << " " << char(179) << endl;
+			cout << "   " << char(179) << " " << char(179) << " " << char(179) << resultSymbol << " = " << setiosflags(ios::fixed) << setprecision(2) << result << " " << resultUnit << setw(28 - resultSize) << char(179) << " " << char(179) << " " << char(179) << endl;
 		}
-		cout << char(179) << " " << char(179) << " " << char(192);
+
 	}
 
 	else
 	{
-		cout << char(179) << " " << char(179) << " " << char(179) << resultSymbol << " = " << firstInputSymbol << " * " << secondInputSymbol << setw(41) << char(179) << " " << char(179) << " " << char(179) << endl;
-		cout << char(179) << " " << char(179) << " " << char(179) << setw(50) << char(179) << " " << char(179) << " " << char(179) << endl;
-		cout << char(179) << " " << char(179) << " " << char(179) << resultSymbol << " = " << setiosflags(ios::fixed) << setprecision(2) << firstInput << " * " << setiosflags(ios::fixed) << setprecision(2) << secondInput << setw(37 - (firstInputSize + secondInputSize)) << char(179) << " " << char(179) << " " << char(179) << endl;
-		cout << char(179) << " " << char(179) << " " << char(179) << setw(50) << char(179) << " " << char(179) << " " << char(179) << endl;
-		cout << char(179) << " " << char(179) << " " << char(179) << resultSymbol << " = " << setiosflags(ios::fixed) << setprecision(2) << result << " " << resultUnit << setw(41 - resultSize) << char(179) << " " << char(179) << " " << char(179) << endl;
-		cout << char(179) << " " << char(179) << " " << char(179) << setw(50) << char(179) << " " << char(179) << " " << char(179) << endl;
-		cout << char(179) << " " << char(179) << " " << char(192);
+		cout << "   " << char(179) << " " << char(179) << " " << char(179) << resultSymbol << " = " << firstInputSymbol << " * " << secondInputSymbol << setw(28) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << "   " << char(179) << " " << char(179) << " " << char(179) << setw(37) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << "   " << char(179) << " " << char(179) << " " << char(179) << resultSymbol << " = " << setiosflags(ios::fixed) << setprecision(2) << firstInput << " * " << setiosflags(ios::fixed) << setprecision(2) << secondInput << setw(24 - (firstInputSize + secondInputSize)) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << "   " << char(179) << " " << char(179) << " " << char(179) << setw(37) << char(179) << " " << char(179) << " " << char(179) << endl;
+		cout << "   " << char(179) << " " << char(179) << " " << char(179) << resultSymbol << " = " << setiosflags(ios::fixed) << setprecision(2) << result << " " << resultUnit << setw(28 - resultSize) << char(179) << " " << char(179) << " " << char(179) << endl;
 	}
-	outputHorizontalLine(0, 49);
+
+	cout << "   " << char(179) << " " << char(179) << " " << char(179) << setw(37) << char(179) << " " << char(179) << " " << char(179) << endl;
+	cout << "   " << char(179) << " " << char(179) << " " << char(192);
+	outputHorizontalLine(0, 36);
 	cout << char(217) << " " << char(179) << " " << char(179) << endl;
-	cout << char(179) << " " << char(192);
-	outputHorizontalLine(0, 53);
+	cout << "   " << char(179) << " " << char(192);
+	outputHorizontalLine(0, 40);
 	cout << char(217) << " " << char(179) << endl;
-	cout << char(179) << setw(45) << " ____ ____ ____ ____ ____ ____ ____ " << setw(13) << char(179) << endl;
-	cout << char(179) << setw(45) << "||1 |||2 |||3 |||4 |||5 |||+ |||- ||" << setw(13) << char(179) << endl;
-	cout << char(179) << setw(45) << "||__|||__|||__|||__|||__|||__|||__||" << setw(13) << char(179) << endl;
-	cout << char(179) << setw(45) << "|/__\\|/__\\|/__\\|/__\\|/__\\|/__\\|/__\\|" << setw(13) << char(179) << endl;
-	cout << char(179) << setw(45) << " ____ ____ ____ ____ ____ ____ ____ " << setw(13) << char(179) << endl;
-	cout << char(179) << setw(45) << "||6 |||7 |||8 |||9 |||0 |||* |||% ||" << setw(13) << char(179) << endl;
-	cout << char(179) << setw(45) << "||__|||__|||__|||__|||__|||__|||__||" << setw(13) << char(179) << endl;
-	cout << char(179) << setw(45) << "|/__\\|/__\\|/__\\|/__\\|/__\\|/__\\|/__\\|" << setw(13) << char(179) << endl;
-	cout << char(179) << setw(45) << " ____ __________ __________________ " << setw(13) << char(179) << endl;
-	cout << char(179) << setw(45) << "||. |||Enter   |||   Backspace    ||" << setw(13) << char(179) << endl;
-	cout << char(179) << setw(46) << "||__|||________|||________________|| " << setw(12) << char(179) << endl;
-	cout << char(179) << setw(45) << "|/__\\|/________\\|/________________\\|" << setw(13) << char(179) << endl;
-	cout << char(179) << setw(58) << char(179) << endl;
-	cout << char(192);
-	outputHorizontalLine(0, 57);
+	cout << "   " << char(179) << setw(40) << " ____ ____ ____ ____ ____ ____ ____ " << setw(5) << char(179) << endl;
+	cout << "   " << char(179) << setw(40) << "||1 |||2 |||3 |||4 |||5 |||+ |||- ||" << setw(5) << char(179) << endl;
+	cout << "   " << char(179) << setw(40) << "||__|||__|||__|||__|||__|||__|||__||" << setw(5) << char(179) << endl;
+	cout << "   " << char(179) << setw(40) << "|/__\\|/__\\|/__\\|/__\\|/__\\|/__\\|/__\\|" << setw(5) << char(179) << endl;
+	cout << "   " << char(179) << setw(40) << " ____ ____ ____ ____ ____ ____ ____ " << setw(5) << char(179) << endl;
+	cout << "   " << char(179) << setw(40) << "||6 |||7 |||8 |||9 |||0 |||* |||% ||" << setw(5) << char(179) << endl;
+	cout << "   " << char(179) << setw(40) << "||__|||__|||__|||__|||__|||__|||__||" << setw(5) << char(179) << endl;
+	cout << "   " << char(179) << setw(40) << "|/__\\|/__\\|/__\\|/__\\|/__\\|/__\\|/__\\|" << setw(5) << char(179) << endl;
+	cout << "   " << char(179) << setw(40) << " ____ __________ __________________ " << setw(5) << char(179) << endl;
+	cout << "   " << char(179) << setw(40) << "||. |||Enter   |||   Backspace    ||" << setw(5) << char(179) << endl;
+	cout << "   " << char(179) << setw(41) << "||__|||________|||________________|| " << setw(4) << char(179) << endl;
+	cout << "   " << char(179) << setw(40) << "|/__\\|/________\\|/________________\\|" << setw(5) << char(179) << endl;
+	cout << "   " << char(179) << setw(45) << char(179) << endl;
+	cout << "   " << char(192);
+	outputHorizontalLine(0, 44);
 	cout << char(217) << endl << endl;
 
 	doNextCalculator();
@@ -324,7 +309,7 @@ void displayCalculator(string resultName, char firstInputSymbol, double firstInp
 	}
 	else
 	{
-		displayCalculator(resultName, firstInputSymbol, firstInput, secondInputSymbol, secondInputSymbol, resultSymbol, result, resultUnit, size, firstInputSize, secondInputSize, resultSize);
+		displayCalculator(resultName, firstInputSymbol, firstInput, secondInputSymbol, secondInputSymbol, resultSymbol, result, resultUnit);
 	}
 }
 

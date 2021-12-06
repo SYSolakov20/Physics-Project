@@ -13,14 +13,116 @@ int questions[10];
 void displayMenuAfterTheTest()
 {
 	system("cls");
-	cout << " Your score is " << countRightAnswers * 10 << "%" << endl << endl;
+	cout << endl << endl;
+	switch (countRightAnswers)
+	{
+	case 0:
+	{
+		cout << "     _  _  _____  __  __  ____      ___   ___  _____  ____  ____   _        ___   _  _  " << endl;
+		cout << "    ( \\/ )(  _  )(  )(  )(  _ \\    / __) / __)(  _  )(  _ \\( ___) (_)      / _ \\ (_)/ ) " << endl;
+		cout << "     \\  /  )(_)(  )(__)(  )   /    \\__ \\( (__  )(_)(  )   / )__)   _      ( (_) )  / /_ " << endl;
+		cout << "     (__) (_____)(______)(_)\\_)    (___/ \\___)(_____)(_)\\_)(____) (_)      \\___/  (_/(_)" << endl;
+		break;
+	}
+
+	case 1:
+	{
+		cout << "     _  _  _____  __  __  ____      ___   ___  _____  ____  ____   _       __   ___   _  _  " << endl;
+		cout << "    ( \\/ )(  _  )(  )(  )(  _ \\    / __) / __)(  _  )(  _ \\( ___) (_)     /  ) / _ \\ (_)/ ) " << endl;
+		cout << "     \\  /  )(_)(  )(__)(  )   /    \\__ \\( (__  )(_)(  )   / )__)   _       )( ( (_) )  / /_ " << endl;
+		cout << "     (__) (_____)(______)(_)\\_)    (___/ \\___)(_____)(_)\\_)(____) (_)     (__) \\___/  (_/(_)" << endl;
+		break;
+	}
+
+	case 2:
+	{
+		cout << "     _  _  _____  __  __  ____      ___   ___  _____  ____  ____   _       ___    ___   _  _  " << endl;
+		cout << "    ( \\/ )(  _  )(  )(  )(  _ \\    / __) / __)(  _  )(  _ \\( ___) (_)     (__ \\  / _ \\ (_)/ ) " << endl;
+		cout << "     \\  /  )(_)(  )(__)(  )   /    \\__ \\( (__  )(_)(  )   / )__)   _       / _/ ( (_) )  / /_ " << endl;
+		cout << "     (__) (_____)(______)(_)\\_)    (___/ \\___)(_____)(_)\\_)(____) (_)     (____) \\___/  (_/(_)" << endl;
+		break;
+	}
+
+	case 3:
+	{
+		cout << "     _  _  _____  __  __  ____      ___   ___  _____  ____  ____   _       ___   ___   _  _  " << endl;
+		cout << "    ( \\/ )(  _  )(  )(  )(  _ \\    / __) / __)(  _  )(  _ \\( ___) (_)     (__ ) / _ \\ (_)/ ) " << endl;
+		cout << "     \\  /  )(_)(  )(__)(  )   /    \\__ \\( (__  )(_)(  )   / )__)   _       (_ \\( (_) )  / /_ " << endl;
+		cout << "     (__) (_____)(______)(_)\\_)    (___/ \\___)(_____)(_)\\_)(____) (_)     (___/ \\___/  (_/(_)" << endl;
+		break;
+	}
+
+	case 4:
+	{
+		cout << "     _  _  _____  __  __  ____      ___   ___  _____  ____  ____   _        __    ___   _  _" << endl;
+		cout << "    ( \\/ )(  _  )(  )(  )(  _ \\    / __) / __)(  _  )(  _ \\( ___) (_)      /. |  / _ \\ (_)/ )" << endl;
+		cout << "     \\  /  )(_)(  )(__)(  )   /    \\__ \\( (__  )(_)(  )   / )__)   _      (_  _)( (_) )  / /_" << endl;
+		cout << "     (__) (_____)(______)(_)\\_)    (___/ \\___)(_____)(_)\\_)(____) (_)       (_)  \\___/  (_/(_)" << endl;
+		break;
+	}
+
+	case 5:
+	{
+		cout << "     _  _  _____  __  __  ____      ___   ___  _____  ____  ____   _       ___   ___   _  _" << endl;
+		cout << "    ( \\/ )(  _  )(  )(  )(  _ \\    / __) / __)(  _  )(  _ \\( ___) (_)     | __) / _ \\ (_)/ )" << endl;
+		cout << "     \\  /  )(_)(  )(__)(  )   /    \\__ \\( (__  )(_)(  )   / )__)   _      |__ \\( (_) )  / /_" << endl;
+		cout << "     (__) (_____)(______)(_)\\_)    (___/ \\___)(_____)(_)\\_)(____) (_)     (___/ \\___/  (_/(_)" << endl;
+		break;
+	}
+
+	case 6:
+	{
+		cout << "     _  _  _____  __  __  ____      ___   ___  _____  ____  ____   _        _    ___   _  _" << endl;
+		cout << "    ( \\/ )(  _  )(  )(  )(  _ \\    / __) / __)(  _  )(  _ \\( ___) (_)      / )  / _ \\ (_)/ )" << endl;
+		cout << "     \\  /  )(_)(  )(__)(  )   /    \\__ \\( (__  )(_)(  )   / )__)   _      / _ \\( (_) )  / /_" << endl;
+		cout << "     (__) (_____)(______)(_)\\_)    (___/ \\___)(_____)(_)\\_)(____) (_)     \\___/ \\___/  (_/(_)" << endl;
+		break;
+	}
+
+	case 7:
+	{
+		cout << "     _  _  _____  __  __  ____      ___   ___  _____  ____  ____   _       ___   ___   _  _" << endl;
+		cout << "    ( \\/ )(  _  )(  )(  )(  _ \\    / __) / __)(  _  )(  _ \\( ___) (_)     (__ ) / _ \\ (_)/ )" << endl;
+		cout << "     \\  /  )(_)(  )(__)(  )   /    \\__ \\( (__  )(_)(  )   / )__)   _       / / ( (_) )  / /_" << endl;
+		cout << "     (__) (_____)(______)(_)\\_)    (___/ \\___)(_____)(_)\\_)(____) (_)     (_/   \\___/  (_/(_)" << endl;
+		break;
+	}
+
+	case 8:
+	{
+		cout << "     _  _  _____  __  __  ____      ___   ___  _____  ____  ____   _       ___   ___   _  _" << endl;
+		cout << "    ( \\/ )(  _  )(  )(  )(  _ \\    / __) / __)(  _  )(  _ \\( ___) (_)     ( _ ) / _ \\ (_)/ )" << endl;
+		cout << "     \\  /  )(_)(  )(__)(  )   /    \\__ \\( (__  )(_)(  )   / )__)   _      / _ \\( (_) )  / /_" << endl;
+		cout << "     (__) (_____)(______)(_)\\_)    (___/ \\___)(_____)(_)\\_)(____) (_)     \\___/ \\___/  (_/(_)" << endl;
+		break;
+	}
+
+	case 9:
+	{
+		cout << "     _  _  _____  __  __  ____      ___   ___  _____  ____  ____   _       ___   ___   _  _" << endl;
+		cout << "    ( \\/ )(  _  )(  )(  )(  _ \\    / __) / __)(  _  )(  _ \\( ___) (_)     / _ \\ / _ \\ (_)/ )" << endl;
+		cout << "     \\  /  )(_)(  )(__)(  )   /    \\__ \\( (__  )(_)(  )   / )__)   _      \\_  /( (_) )  / /_" << endl;
+		cout << "     (__) (_____)(______)(_)\\_)    (___/ \\___)(_____)(_)\\_)(____) (_)      (_/  \\___/  (_/(_)" << endl;
+		break;
+	}
+
+	case 10:
+	{
+		cout << "     _  _  _____  __  __  ____      ___   ___  _____  ____  ____   _       __   ___    ___   _  _" << endl;
+		cout << "    ( \\/ )(  _  )(  )(  )(  _ \\    / __) / __)(  _  )(  _ \\( ___) (_)     /  ) / _ \\  / _ \\ (_)/ )" << endl;
+		cout << "     \\  /  )(_)(  )(__)(  )   /    \\__ \\( (__  )(_)(  )   / )__)   _       )( ( (_) )( (_) )  / /_" << endl;
+		cout << "     (__) (_____)(______)(_)\\_)    (___/ \\___)(_____)(_)\\_)(____) (_)     (__) \\___/  \\___/  (_/(_)" << endl;
+		break;
+	}
+	}
+	cout << endl << endl;
 	string nextChoice;
-	cout << " What do you want to do now?" << endl;
-	cout << " __________________________________________" << endl;
-	cout << " 1) review" << endl;
-	cout << " 2) retake the test" << endl;
-	cout << " 3) go back" << endl << endl;
-	cout << " Select >> ";
+	cout << "    What do you want to do now?" << endl;
+	cout << "    __________________________________________\n" << endl;
+	cout << "    1) review" << endl;
+	cout << "    2) retake the test" << endl;
+	cout << "    3) go back" << endl << endl;
+	cout << "    Select >> ";
 
 	cin >> nextChoice;
 	if (nextChoice == "1")
@@ -47,15 +149,16 @@ void displayMenuAfterTheTest()
 // displays the first question 
 void answerQuestionOne()
 {
-	cout << "Question " << countQuestions << endl;
-	cout << "_____________________________" << endl << endl;
+	cout << endl;
+	cout << "   Question " << countQuestions << endl;
+	cout << "   _____________________________" << endl << endl;
 
-	cout << "What do you measure with ammeter?" << endl << endl;
-	cout << "a) electric current" << endl;
-	cout << "b) resistance" << endl;
-	cout << "c) voltage" << endl << endl;
+	cout << "   What do you measure with ammeter?" << endl << endl;
+	cout << "   a) electric current" << endl;
+	cout << "   b) resistance" << endl;
+	cout << "   c) voltage" << endl << endl;
 
-	cout << "Enter your answer >> ";
+	cout << "   Enter your answer >> ";
 
 	cin >> answers[0];
 	if (answers[0] != "a" && answers[0] != "b" && answers[0] != "c")
@@ -72,15 +175,16 @@ void answerQuestionOne()
 // displays the second question 
 void answerQuestionTwo()
 {
-	cout << "Question " << countQuestions << endl;
-	cout << "_____________________________" << endl << endl;
+	cout << endl;
+	cout << "   Question " << countQuestions << endl;
+	cout << "   _____________________________" << endl << endl;
 
-	cout << "What do you measure with voltmeter?" << endl << endl;
-	cout << "a) electric current" << endl;
-	cout << "b) resistance" << endl;
-	cout << "c) voltage" << endl << endl;
+	cout << "   What do you measure with voltmeter?" << endl << endl;
+	cout << "   a) electric current" << endl;
+	cout << "   b) resistance" << endl;
+	cout << "   c) voltage" << endl << endl;
 
-	cout << "Enter your answer >> ";
+	cout << "   Enter your answer >> ";
 
 	cin >> answers[1];
 	if (answers[1] != "a" && answers[1] != "b" && answers[1] != "c")
@@ -97,15 +201,16 @@ void answerQuestionTwo()
 // displays the third question 
 void answerQuestionThree()
 {
-	cout << "Question " << countQuestions << endl;
-	cout << "_____________________________" << endl << endl;
+	cout << endl;
+	cout << "   Question " << countQuestions << endl;
+	cout << "   _____________________________" << endl << endl;
 
-	cout << "What do you measure with resistor?" << endl << endl;
-	cout << "a) electric current" << endl;
-	cout << "b) resistance" << endl;
-	cout << "c) voltage" << endl << endl;
+	cout << "   What do you measure with resistor?" << endl << endl;
+	cout << "   a) electric current" << endl;
+	cout << "   b) resistance" << endl;
+	cout << "   c) voltage" << endl << endl;
 
-	cout << "Enter your answer >> ";
+	cout << "   Enter your answer >> ";
 
 	cin >> answers[2];
 	if (answers[2] != "a" && answers[2] != "b" && answers[2] != "c")
@@ -122,10 +227,11 @@ void answerQuestionThree()
 // displays the fourth question 
 void answerQuestionFour()
 {
-	cout << "Question " << countQuestions << endl;
-	cout << "_____________________________" << endl << endl;
+	cout << endl;
+	cout << "   Question " << countQuestions << endl;
+	cout << "   _____________________________" << endl << endl;
 
-	cout << " " << char(201);
+	cout << "    " << char(201);
 	for (int i = 0; i < 14; i++)
 	{
 		cout << char(205);
@@ -136,16 +242,16 @@ void answerQuestionFour()
 		cout << char(205);
 	}
 	cout << char(187) << endl;
-	cout << " " << char(186) << setw(36) << char(186) << endl;
-	cout << " " << char(186) << setw(36) << char(186) << endl;
-	cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(187) << endl;
-	cout << " " << char(186) << setw(36) << char(186) << setw(7) << char(186) << endl;
-	cout << RED << " / " << RESET << setw(44) << "( 1 )  ( 2 )" << endl;
-	cout << " " << char(186) << setw(36) << char(186) << setw(7) << char(186) << endl;
-	cout << " " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(188) << endl;
-	cout << " " << char(186) << setw(36) << char(186) << endl;
-	cout << " " << char(186) << setw(36) << char(186) << endl;
-	cout << " " << char(200);
+	cout << "    " << char(186) << setw(36) << char(186) << endl;
+	cout << "    " << char(186) << setw(36) << char(186) << endl;
+	cout << "    " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(187) << endl;
+	cout << "    " << char(186) << setw(36) << char(186) << setw(7) << char(186) << endl;
+	cout << "   " << RED << " / " << RESET << setw(44) << "( 1 )  ( 2 )" << endl;
+	cout << "    " << char(186) << setw(36) << char(186) << setw(7) << char(186) << endl;
+	cout << "    " << char(186) << setw(36) << char(204) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(188) << endl;
+	cout << "    " << char(186) << setw(36) << char(186) << endl;
+	cout << "    " << char(186) << setw(36) << char(186) << endl;
+	cout << "    " << char(200);
 	for (int i = 0; i < 15; i++)
 	{
 		cout << char(205);
@@ -157,11 +263,11 @@ void answerQuestionFour()
 	}
 	cout << char(188) << endl << endl;
 
-	cout << "a) 1-ammeter, 2-voltmeter, 3-lamp" << endl;
-	cout << "b) 1-voltmeter, 2-ammeter, 3-lamp" << endl;
-	cout << "c) 1-lamp, 2-voltmeter, 3-ammeter" << endl << endl;
+	cout << "   a) 1-ammeter, 2-voltmeter, 3-lamp" << endl;
+	cout << "   b) 1-voltmeter, 2-ammeter, 3-lamp" << endl;
+	cout << "   c) 1-lamp, 2-voltmeter, 3-ammeter" << endl << endl;
 
-	cout << "Enter your answer >> ";
+	cout << "   Enter your answer >> ";
 
 	cin >> answers[3];
 	if (answers[3] != "a" && answers[3] != "b" && answers[3] != "c")
@@ -178,17 +284,18 @@ void answerQuestionFour()
 // displays the fifth question 
 void answerQuestionFive()
 {
-	cout << "Question " << countQuestions << endl;
-	cout << "_____________________________" << endl << endl;
+	cout << endl;
+	cout << "   Question " << countQuestions << endl;
+	cout << "   _____________________________" << endl << endl;
 
-	cout << setw(5) << "q" << endl;
-	cout << "I = " << char(196) << " is a formula for finding electric current" << endl;
-	cout << setw(5) << "t" << endl << endl;
+	cout << setw(8) << "q" << endl;
+	cout << "   I = " << char(196) << " is a formula for finding electric current" << endl;
+	cout << setw(8) << "t" << endl << endl;
 
-	cout << "a) True" << endl;
-	cout << "b) False" << endl << endl;
+	cout << "   a) True" << endl;
+	cout << "   b) False" << endl << endl;
 
-	cout << "Enter your answer >> ";
+	cout << "   Enter your answer >> ";
 
 	cin >> answers[4];
 	if (answers[4] != "a" && answers[4] != "b")
@@ -205,15 +312,16 @@ void answerQuestionFive()
 // displays the sixth question 
 void answerQuestionSix()
 {
-	cout << "Question " << countQuestions << endl;
-	cout << "_____________________________" << endl << endl;
+	cout << endl;
+	cout << "   Question " << countQuestions << endl;
+	cout << "   _____________________________" << endl << endl;
 
-	cout << "q = I * R" << endl << endl;
+	cout << "   q = I * R" << endl << endl;
 
-	cout << "a) True" << endl;
-	cout << "b) False" << endl << endl;
+	cout << "   a) True" << endl;
+	cout << "   b) False" << endl << endl;
 
-	cout << "Enter your answer >> ";
+	cout << "   Enter your answer >> ";
 
 	cin >> answers[5];
 	if (answers[5] != "a" && answers[5] != "b")
@@ -230,15 +338,16 @@ void answerQuestionSix()
 // displays the seventh question 
 void answerQuestionSeven()
 {
-	cout << "Question " << countQuestions << endl;
-	cout << "_____________________________" << endl << endl;
+	cout << endl;
+	cout << "   Question " << countQuestions << endl;
+	cout << "   _____________________________" << endl << endl;
 
-	cout << "U = R * I" << endl << endl;
+	cout << "   U = R * I" << endl << endl;
 
-	cout << "a) True" << endl;
-	cout << "b) False" << endl << endl;
+	cout << "   a) True" << endl;
+	cout << "   b) False" << endl << endl;
 
-	cout << "Enter your answer >> ";
+	cout << "   Enter your answer >> ";
 
 	cin >> answers[6];
 	if (answers[6] != "a" && answers[6] != "b")
@@ -255,16 +364,17 @@ void answerQuestionSeven()
 // displays the eighth question 
 void answerQuestionEight()
 {
-	cout << "Question " << countQuestions << endl;
-	cout << "_____________________________" << endl << endl;
+	cout << endl;
+	cout << "   Question " << countQuestions << endl;
+	cout << "   _____________________________" << endl << endl;
 
-	cout << "In what unit of measurement is the electric current measured?" << endl << endl;
+	cout << "   In what unit of measurement is the electric current measured?" << endl << endl;
 
-	cout << "a) A - ampere" << endl;
-	cout << "b) V - volt" << endl;
-	cout << "c) C - coulomb" << endl << endl;
+	cout << "   a) A - ampere" << endl;
+	cout << "   b) V - volt" << endl;
+	cout << "   c) C - coulomb" << endl << endl;
 
-	cout << "Enter your answer >> ";
+	cout << "   Enter your answer >> ";
 
 	cin >> answers[7];
 	if (answers[7] != "a" && answers[7] != "b" && answers[7] != "c")
@@ -281,16 +391,17 @@ void answerQuestionEight()
 // displays the ninth question 
 void answerQuestionNine()
 {
-	cout << "Question " << countQuestions << endl;
-	cout << "_____________________________" << endl << endl;
+	cout << endl;
+	cout << "   Question " << countQuestions << endl;
+	cout << "   _____________________________" << endl << endl;
 
-	cout << "In what unit of measurement is the voltage measured?" << endl << endl;
+	cout << "   In what unit of measurement is the voltage measured?" << endl << endl;
 
-	cout << "a) A - ampere" << endl;
-	cout << "b) V - volt" << endl;
-	cout << "c) C - coulomb" << endl << endl;
+	cout << "   a) A - ampere" << endl;
+	cout << "   b) V - volt" << endl;
+	cout << "   c) C - coulomb" << endl << endl;
 
-	cout << "Enter your answer >> ";
+	cout << "   Enter your answer >> ";
 
 	cin >> answers[8];
 	if (answers[8] != "a" && answers[8] != "b" && answers[8] != "c")
@@ -307,16 +418,17 @@ void answerQuestionNine()
 // displays the tenth question 
 void answerQuestionTen()
 {
-	cout << "Question " << countQuestions << endl;
-	cout << "_____________________________" << endl << endl;
+	cout << endl;
+	cout << "   Question " << countQuestions << endl;
+	cout << "   _____________________________" << endl << endl;
 
-	cout << "In what unit of measurement is the charge passed measured?" << endl << endl;;
+	cout << "   In what unit of measurement is the charge passed measured?" << endl << endl;;
 
-	cout << "a) A - ampere" << endl;
-	cout << "b) V - volt" << endl;
-	cout << "c) C - coulomb" << endl << endl;
+	cout << "   a) A - ampere" << endl;
+	cout << "   b) V - volt" << endl;
+	cout << "   c) C - coulomb" << endl << endl;
 
-	cout << "Enter your answer >> ";
+	cout << "   Enter your answer >> ";
 
 	cin >> answers[9];
 	if (answers[9] != "a" && answers[9] != "b" && answers[9] != "c")
