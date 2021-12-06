@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Josefin+Sans:wght@500&display=swap");
+/* Body */
 .websiteBody {
   margin: 0;
   overflow-x: hidden;
@@ -32,6 +33,7 @@
   z-index: 2;
 }
 
+/* Starter wave */
 .waves-1 {
   position: relative;
   z-index: 4;
@@ -73,6 +75,7 @@
   display: flex;
 }
 
+/* Heading & button */
 .ChessIt {
   position: relative;
   z-index: 7;
@@ -109,6 +112,7 @@
   display: flex;
 }
 
+/* Starter image */
 .main {
   position: relative;
   z-index: 16;
@@ -149,6 +153,7 @@
   display: flex;
 }
 
+/* Benefits section */
 .BENEFITS {
   position: relative;
   z-index: 33;
@@ -536,6 +541,7 @@
           align-items: center;
 }
 
+/* Phone mockup section */
 .iPhone-12-Pro-Mockup {
   position: relative;
   z-index: 6;
@@ -671,6 +677,7 @@
   border: none;
 }
 
+/* Footer */
 .Copyright-c-2021-New {
   position: relative;
   z-index: 31;
