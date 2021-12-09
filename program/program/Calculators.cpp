@@ -5,23 +5,6 @@
 
 using namespace std;
 
-
-
-// check if a number is an integer
-bool checkInput(double number)
-{
-	if (!number)
-	{
-		system("cls");
-		cout << "Invalid input! Please, try again." << endl << endl;
-		system("PAUSE");
-	}
-	else
-	{
-		return 1;
-	}
-}
-
 // checks for division by zero
 bool divideByZero(double divisor)
 {
@@ -78,72 +61,66 @@ int findNumLength(double number)
 // starts resistance calculator
 void calculateResistance()
 {
-	double voltage;
-	double current;
-
-	system("cls");
-
-	cout << " Resistance calculator" << endl;
-	cout << " ________________________________________" << endl << endl;
-	cout << " Electric current - I (in ampere - A)" << endl;
-	cout << " Resistance - R (in ohm - ?)" << endl;
-	cout << " Voltage - U (in volt - V)" << endl << endl;
-
-	cout << " Write your voltage >> ";
-
-	while (true)
+calculateResis:
 	{
+		double voltage;
+		double current;
+
+		system("cls");
+
+		cout << " Resistance calculator" << endl;
+		cout << " ________________________________________" << endl << endl;
+		cout << " Electric current - I (in ampere - A)" << endl;
+		cout << " Resistance - R (in ohm)" << endl;
+		cout << " Voltage - U (in volt - V)" << endl << endl;
+
+		cout << " Write your voltage >> ";
+
 		cin >> voltage;
-		if (checkInput(voltage) != 1)
+
+		cout << " Write your electric current >> ";
+		cin >> current;
+		if (divideByZero(current) != 1)
 		{
-			cin.clear();
-			calculateResistance();
+			goto calculateResis;
 		}
-		else
-		{
-			break;
-		}
+
+		double resistance = voltage / current;
+
+		displayCalculator("Resistance", 'U', voltage, 'I', current, 'R', resistance, "ohm(s)");
 	}
-
-	cout << " Write your electric current >> ";
-	cin >> current;
-	if (checkInput(current) != 1 or divideByZero(current) != 1)
-	{
-		calculateResistance();
-	}
-
-	double resistance = voltage / current;
-
-	displayCalculator("Resistance", 'U', voltage, 'I', current, 'R', resistance, "ohm(s)");
 }
 
 // starts electric current calculator 
 void calculateElectricCurrent()
 {
-	double chargePassed;
-	double time;
-
-	system("cls");
-
-	cout << " Electric current calculator" << endl;
-	cout << " _________________________________________" << endl << endl;
-	cout << " Electric current - I (in ampere - A)" << endl;
-	cout << " Charge passed - q (in coulomb - C)" << endl;
-	cout << " Time - t (in seconds - s)" << endl << endl;
-
-	cout << " Write your charge passed >> ";
-	cin >> chargePassed;
-	cout << " Write your time >> ";
-	cin >> time;
-
-	if (divideByZero(time) != 1)
+calculateCurrent:
 	{
-		calculateElectricCurrent();
+		double chargePassed;
+		double time;
+
+		system("cls");
+
+		cout << " Electric current calculator" << endl;
+		cout << " _________________________________________" << endl << endl;
+		cout << " Electric current - I (in ampere - A)" << endl;
+		cout << " Charge passed - q (in coulomb - C)" << endl;
+		cout << " Time - t (in seconds - s)" << endl << endl;
+
+		cout << " Write your charge passed >> ";
+		cin >> chargePassed;
+		cout << " Write your time >> ";
+		cin >> time;
+
+		if (divideByZero(time) != 1)
+		{
+			goto calculateCurrent;
+		}
+
+		double current = chargePassed / time;
+
+		displayCalculator("Electric current", 'q', chargePassed, 't', time, 'I', current, "A");
 	}
-
-	double current = chargePassed / time;
-
-	displayCalculator("Electric current", 'q', chargePassed, 't', time, 'I', current, "A");
 }
 
 // starts charge passed calculator 
